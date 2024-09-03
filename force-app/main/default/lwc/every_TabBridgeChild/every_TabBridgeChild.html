@@ -1,0 +1,68 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <template if:true={macsValida}>
+            <template for:each={macs} for:item="mac" for:index="index">
+                <div key={mac} class="slds-col slds-size_1-of-4 slds-mb-around_medium style">
+                    <div class="slds-card slds-macs-card">
+                        <div class="slds-grid textmac">
+                            <div class="slds-col">
+                                <p class="titulo">MAC</p>
+                            </div>
+                        </div>
+                        <div class="slds-card__body slds-grid slds-align_absolute-center">
+                            <div class="slds-col text">
+                                <!-- <p>{mac}</p> -->
+                                <template lwc:if={mac}> {mac} </template>
+                                <template lwc:else> Nulo </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </template>
+    
+        <!-- Exibindo três cartões com títulos da lista de IPs -->
+        <template if:true={ipsValida}>
+            <template for:each={ips} for:item="ip" for:index="index">
+                <div key={ip} class="slds-col slds-size_1-of-4 slds-mb-around_medium style">
+                    <div class="slds-card slds-ip-card">
+                        <div class="slds-grid textip">
+                            <div class="slds-col">
+                                <p class="titulo">IP</p>
+                            </div>
+                        </div>
+                        <div class="slds-card__body slds-grid slds-align_absolute-center">
+                            <div class="slds-col text">
+                                <!-- <p>{ip}</p> -->
+                                <template lwc:if={ip}> {ip} </template>
+                                <template lwc:else> Nulo </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </template>
+         <!-- Exibindo a mensagem de erro caso não existam informações de MACs ou IPs -->
+         <template if:true={bridgeInfoError}>
+            <div class="slds-col slds-size_1-of-1 slds-mb-around_medium">
+                <div class="slds-card">
+                    <div class="slds-card__header slds-p-around_medium">
+                        <p class="slds-text-heading_medium"><strong>
+                            Não foi encontrado informações para a bridge selecionada. Por favor, tente novamente.
+                        </strong></p>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+        <!-- <template if:true={bridgeInfoError}>
+            <div class="slds-col">
+                <div class="slds-card slds-card_boundary">
+                    <div class="slds-card__header">
+                        <p class="slds-text-heading_medium"> Não foi encontrado informações para a bridge selecionada. Por favor, tente novamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </template> -->
+</template>

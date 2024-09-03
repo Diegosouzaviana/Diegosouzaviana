@@ -1,0 +1,36 @@
+<template> 
+   
+    <div if:true={showValidation} class="slds-text-color_error">{steperrormessage}</div>
+    <div if:true={showSpinner} class="demo-only" >
+        <div class="slds-spinner_container">
+            <div role="status" class="slds-spinner slds-spinner_large">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+
+    <p class="upgrade-downgrade-title">Planos disponíveis para o contrato.</p>
+    <template for:each={productList} for:item='product' for:index="index"  >
+        <template if:true={product.isUpgrade}>
+            <c-l-x-d_-select-plan-items index={index}  customlabels={customlabels}
+            onclick={handleClick} data-name={index} product={product}  userprofile={userprofile}
+            key={product.planName} oncancelarproduct={cancelProduct} defaultproductimage={defaultProductImage}>
+            </c-l-x-d_-select-plan-items>
+        </template>
+    </template>
+    <div if:false={crm}>
+        <div class="h_line slds-size--10-of-12"></div>
+        <p class="upgrade-downgrade-title">Planos que possibilitem fazer o downgrade.</p>
+        <template for:each={productList} for:item='product' for:index="index"  >
+            <template if:false={product.isUpgrade}>
+                <c-l-x-d_-select-plan-items index={index}  customlabels={customlabels}
+                onclick={handleClick} data-name={index} product={product}  userprofile={userprofile}
+                key={product.planName} oncancelarproduct={cancelProduct} defaultproductimage={defaultProductImage}>
+                </c-l-x-d_-select-plan-items>
+            </template>
+        </template>
+    </div>
+     
+</template>

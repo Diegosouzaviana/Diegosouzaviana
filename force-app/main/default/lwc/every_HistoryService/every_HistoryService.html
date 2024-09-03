@@ -1,0 +1,106 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_xx-small">
+            <template if:true={erroAtivoContrato}>
+                <p style="font-size: 20px;"><strong>Erro</strong></p>
+          
+                <div class="ErrorImage">
+                  <img src="/resource/1663183427000/icon_sideBar/Datos_360/IconError.png" />
+                </div>
+                <div class="ErrorMenssage">
+                  <strong>
+                    <p>Erro no Caso</p>
+                  </strong>
+                </div>
+                <p>Não é possivel prosseguir sem:</p>
+                <ul class="ativocantrato">
+                  <li if:true={erroAtivo}><strong>
+                      <p>Ativo</p>
+                    </strong></li>
+                  <li if:true={erroContrato}><strong>
+                      <p>Contrato</p>
+                    </strong></li>
+                </ul>
+              </template>
+
+              <template if:true={errorcampobrigatorio}>
+                <div>
+                  <strong>
+                    <p style="font-size: 20px;">Erro</p>
+                  </strong>
+                </div>
+                <div class="ErrorImage">
+                  <img src="/resource/1663183427000/icon_sideBar/Datos_360/IconError.png" />
+                </div>
+                <div class="ErrorMenssage">
+                  <strong>
+                    <p>Erro na Conta</p>
+                  </strong>
+                </div>
+                <p>Não é possivel prosseguir sem:</p>
+                <ul class="ativocantrato">
+                  <li><strong>
+                      <p>ADM</p>
+                    </strong></li>
+                </ul>
+                
+              </template>
+
+            <template if:true={errorGeral}>
+                <div class="ErrorImage">
+                    <img src="/resource/1663183427000/icon_sideBar/Datos_360/IconError.png" />
+                </div>
+                <div class="ErrorMenssage">
+                    <strong>
+                        <p>{mensageErrorGeral}</p>
+                    </strong>
+                </div>
+            </template>
+
+            <template if:true={showGeral}>
+                <h5 style="font-size:19px;"><strong>Histórico de Atendimento</strong></h5>
+                <br/>
+                <div class="barra"></div>
+
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_2-of-8">
+                        <lightning-combobox class="slds-text-align_right slds-m-top_medium" name="progress"
+                            value={itemsPerPage} placeholder="Selecione" options={itemsPerPageOptions}
+                            onchange={handleItemsPerPageChange}>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-size_4-of-8 textspan">
+                        <span>Registros por página</span>
+                    </div>
+                    <div class="slds-col slds-size_2-of-8">
+                        <lightning-input class="slds-text-left slds-m-top_medium half-width" type="search"
+                            placeholder="Procurar" onchange={handleSearchChange}>
+                        </lightning-input>
+                    </div>
+                </div>
+                <br />
+                <lightning-datatable key-field="id" data={paginatedData} columns={columns} hide-checkbox-column
+                    column-widths-mode="fixed"></lightning-datatable>
+                <br />
+                <div style="display: flex; justify-content: space-between;">
+                    <p class="slds-text-align_right slds-m-top_medium">{paginationInfo}</p>
+                    <div class="slds-text-left slds-m-top_medium">
+                        <lightning-button-group>
+                            <lightning-button if:true={showPreviousButton} label="Anterior"
+                                onclick={handlePrevious}></lightning-button>
+                            <template if:true={shouldShowPagination}>
+                                <template for:each={pagesList} for:item="pageNumber">
+                                    <lightning-button key={pageNumber} data-id={pageNumber} label={pageNumber}
+                                        onclick={handlePageClick}></lightning-button>
+                                </template>
+                            </template>
+                            <lightning-button if:true={showNextButton} label="Próximo"
+                                onclick={handleNext}></lightning-button>
+                        </lightning-button-group>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

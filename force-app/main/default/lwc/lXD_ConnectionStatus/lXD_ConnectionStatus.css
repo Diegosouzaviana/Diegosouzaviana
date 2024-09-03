@@ -1,0 +1,99 @@
+.tab-container {
+    --slds-c-tabs-item-color-border-active: #BE3838;
+    --slds-c-tabs-item-color-border-hover: #BE3838;
+    --slds-c-tabs-item-sizing-height: 3.0rem;
+    --slds-c-tabs-list-sizing-border: 1px;
+}
+
+.tab-size {
+    /* width: 25%; */
+    font-size: small;
+    min-width: 90px;
+}
+
+.tab-icon {
+    height: 17px; 
+    width: 17px;
+}
+
+.color-icon{
+    color:#868686;
+    height: 1rem;
+    width: 16px;
+}
+.custom-brand {
+    --slds-c-button-brand-color-background: #1EB0E3;
+    --slds-c-button-brand-color-border: #1EB0E3;
+}
+
+.card-buttons {
+    --slds-c-button-radius-border: 0rem;
+}
+
+.card-container {
+    min-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.reset-icon {
+    height: 14px; 
+    width: 15px;
+}
+
+.reset-onu-icon {
+    height: 14px; 
+    width: 16px;
+}
+
+/* .spinner-container {
+    position: relative;
+    height: 50px;
+} */
+
+.box-success {
+    background-color: #BCE2C9;
+    color: #027E46;
+    font-weight: bold;
+    border: 1px solid rgb(163, 162, 162);
+    border-top: 0px;
+}
+
+.box-error {
+    background-color: #EFC9C9;
+    color: #CF3B37;
+    font-weight: bold;
+    border: 1px solid rgb(163, 162, 162);
+    border-top: 0px;
+}
+
+.sizeContainer {
+    height: auto;
+    width: auto;
+    min-height: 300px;
+}
+
+.spinnerIntegracao{
+    width: 80px;
+    height: 80px;
+}
+
+.ErrorImage{
+    display: flex;
+    justify-content: center;
+    height: 130px;
+}
+
+.ErrorMenssage{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: bold;
+    margin-top: 5px;
+}
+
+.ativocantrato{
+    list-style-type: disc;
+    padding: revert-layer;
+    margin: revert-layer;
+}

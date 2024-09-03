@@ -1,0 +1,51 @@
+.half-width {
+    width: 100%;
+}
+.textspan{
+    padding: 3rem 0 0 0;
+}
+
+.ErrorImage{
+    display: flex;
+    justify-content: center;
+    height: 130px;
+}
+
+.ErrorMenssage{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: bold;
+    margin-top: 5px;
+}
+
+.barra {
+    width: 8%;
+    height: 3px;
+    background-color: #FFC721;
+}
+
+.ErrorImage{
+    display: flex;
+    justify-content: center;
+    height: 130px;
+}
+
+.ErrorMenssage{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: bold;
+    margin-top: 5px;
+}
+
+.ativocantrato{
+    list-style-type: disc;
+    padding: revert-layer;
+    margin: revert-layer;
+}
+
+.spinnerIntegracao{
+    width: 80px;
+    height: 80px;
+}

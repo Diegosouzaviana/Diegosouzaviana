@@ -1,0 +1,65 @@
+/* Este é um exemplo simples de como você pode estilizar a estrutura */
+/* Adapte os estilos conforme necessário para atender às suas necessidades exatas */
+
+/* Estilos para os ícones */
+.slds-icon {
+    fill: #999; /* Cor dos ícones */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+}
+.posicaoIcon {
+    margin: 7px;
+}
+/* Estilos para o ícone e seu contêiner */
+.slds-align_absolute-center {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajuste de margem para os ícones */
+.slds-align-middle lightning-icon {
+    margin-right: 0.5rem;
+    fill: #666; /* Cor dos ícones */
+}
+
+/* Estilos para o container do card */
+.slds-card {
+    margin: 20px; /* Margem externa do card */
+    border: 1px solid #ccc; /* Borda do card */
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para o corpo do card */
+/* .slds-card__body {
+    padding: 20px;
+} */
+
+/* Estilos para os campos de telefone */
+.stiloemail {
+    padding: 11px;
+}
+
+/* Estilos para os campos de entrada */
+lightning-input {
+    width: 100%; /* Largura total dos campos de entrada */
+}
+
+/* Estilos para o texto 'Telefone {phone.index}' */
+span {
+    font-weight: bold; /* Texto em negrito */
+}
+.myspan {
+    margin-bottom: 12px; 
+}
+.mensagem-alterada {
+    color: #ba0517;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+}
+.mensagem-suseco {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+    color: green;
+    font-size: 12px;
+    font-weight: 400;
+}

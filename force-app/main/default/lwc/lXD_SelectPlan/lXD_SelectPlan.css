@@ -1,0 +1,22 @@
+.subtitulo {
+    font-size: 10px;
+    color: #191919;
+}
+
+.titulo{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.line {
+    border-left-color: blue;
+    border-left-width: 4px;
+}
+.upgrade-downgrade-title{
+    margin-bottom: 2rem;
+}
+.h_line{
+    height: 1px;
+    border: 1px solid rgba(151,151,151,0.33);
+    margin: 20px 0 20px 0;
+}

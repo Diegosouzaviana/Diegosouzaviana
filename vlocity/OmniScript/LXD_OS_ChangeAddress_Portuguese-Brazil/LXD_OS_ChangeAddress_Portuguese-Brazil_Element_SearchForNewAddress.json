@@ -1,0 +1,73 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "OS_ChangeAddress",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "OS_ChangeAddress",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "Step_NewAddress",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)/Step_NewAddress",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "Step_NewAddress",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "callFrequency": 300,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "dataJsonPath": "",
+        "dataProcessorFunction": "",
+        "debounceValue": 0,
+        "disableDataFilter": true,
+        "editMode": false,
+        "enableGoogleMapsAutocomplete": true,
+        "enableLookup": false,
+        "googleAddressCountry": "br",
+        "googleMapsAPIKey": "AIzaSyB7GlQHhzLKRVIeFOEWV2eUK7qJ2wo3b0g",
+        "googleTransformation": {
+            "administrative_area_level_1": "State",
+            "administrative_area_level_2": "City",
+            "country": "Country",
+            "geometry:location:lat": "lat",
+            "geometry:location:lng": "lng",
+            "locality": "",
+            "postal_code": "PostalCode",
+            "route": "Street",
+            "street_number": "Number",
+            "sublocality_level_1": "Neighborhood"
+        },
+        "help": true,
+        "helpText": "Exemplo: R. Ângelo Sinoti, 2857 - Jardim Olimpio Felicio",
+        "helpTextPos": "bottom-right",
+        "hideEditButton": false,
+        "hideMap": true,
+        "inputWidth": 12,
+        "label": "Realizar pesquisa por Rua ou CEP",
+        "maxLength": 255,
+        "minLength": 0,
+        "newItemLabel": "New",
+        "readOnly": false,
+        "required": true,
+        "show": null,
+        "showInputWidth": false,
+        "typeAheadKey": "",
+        "useDataJson": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Type Ahead Block",
+    "Name": "SearchForNewAddress",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)/SearchForNewAddress"
+}

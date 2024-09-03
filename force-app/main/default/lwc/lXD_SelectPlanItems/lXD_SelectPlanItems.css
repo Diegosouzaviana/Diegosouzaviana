@@ -1,0 +1,202 @@
+.product__container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.product__info{
+    margin: 0;   
+}
+
+.card__container{
+    box-sizing: border-box;
+    /* height: 120px; */
+    max-width: 905px;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    position: relative;
+    cursor: pointer;
+    margin: 0 0 8px 0;
+    box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.14);
+}
+
+.title{
+    font-size: 17px;
+    font-weight: bold !important;
+    color: #272626;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.title[c-LXD_SelectPlanItems_LXD_SelectPlanItems] {
+    font-size: 18px !important;
+}
+
+.subtitle {
+    font-size: 11px;
+    color: #272626;
+    line-height: 11px;
+}
+
+.description {
+    font-size: 12px;
+    color: #272626;
+    letter-spacing: 0;
+    line-height: 13px;
+}
+
+.btn__selected{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background-color: #F9B80C;
+    border-radius: 50%; 
+    height: 15px; 
+    width: 15px;
+}
+
+.radius{
+    background-color: #6a7cfb;
+    border: none;
+    border-radius: 50% !important ;
+}
+
+.image{
+    height: 88px;
+    min-height: 88px;
+    max-height: 88px;
+    width: 169px;
+    min-width: 169px;
+    max-width: 169px;
+}
+
+.price__container{
+    margin-right: 5px;
+}
+
+.price__container, .price__container > .price__container_child{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.price__container_child > p{
+    text-align: end;
+}
+
+.price__container_child:not(:last-of-type){
+    margin-bottom: 10px;
+}
+
+.price__container_child > .price{
+    margin-bottom: 8px;
+}
+
+.listPrice{
+    color: #272626;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 11px;
+    text-align: right;
+}
+
+.recurringPrice{
+    color: #272626;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 11px;
+    text-align: right;
+}
+
+.svg__icon{
+    fill: #fff; 
+    padding: 0px; 
+    height: 10px
+}
+@media screen and (max-width: 480px) {
+    .card__container{
+        box-sizing: border-box;
+        height: auto;
+        max-width: 905px;
+        border: 1px solid #CFCFCF;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        position: relative;
+        cursor: pointer;
+        margin: 0 0 8px 0 !important;
+        box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.14);
+        padding-left: 10px;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+
+    .image{
+        height: 65px;
+        min-height: 65px;
+        max-height: 65px;
+        width: 95%;
+        min-width: 95%;
+        max-width: 95%;
+        margin-top: 25px;
+    }
+
+    .product__container{
+        display:block !important;
+        width: 100%;
+    }
+
+    .product__info{
+        margin: 0;
+        width: 100% !important;   
+    }
+
+    .title[c-LXD_SelectPlanItems_LXD_SelectPlanItems] {
+        font-size: 14px !important;
+    }
+
+    .subtitle {
+        font-size: 10px;
+    }
+
+    .description {
+        font-size: 10px !important;
+    }
+    .price__container[c-lXD_SelectPlanItems_lXD_SelectPlanItems]{
+        display: flex;
+        justify-content: top !important;
+        flex-direction: row !important; 
+    }
+    .price__container[c-lXD_SelectPlanItems_lXD_SelectPlanItems], .price__container[c-lXD_SelectPlanItems_lXD_SelectPlanItems] > .price__container_child[c-lXD_SelectPlanItems_lXD_SelectPlanItems] {
+        margin-left: 26px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .price__container_child:not(:last-of-type)[c-lXD_SelectPlanItems_lXD_SelectPlanItems] {
+        margin-bottom: 0px;
+    }
+  
+    .listPrice{
+        font-size: 13px;
+    }
+    
+    .recurringPrice{
+        font-size: 13px;
+    }
+
+    .responsivemovil{
+        display: flex  !important;
+        justify-content: center;
+        flex-direction:column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn__selected{
+        height: 12px !important; 
+        width: 12px !important;
+    }
+   }

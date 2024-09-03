@@ -1,0 +1,142 @@
+/* SEPARATOR */
+/* .vlc-separator[vlocity_cmt-omniscriptStep_omniscriptStep] { */
+  /* Styles for a separator with a yellow border */
+  /* border-width: 0.1rem;
+  width: 4rem;
+  border-color: #ffc721;
+} */
+
+.vlc-separator {
+  /* Styles for a separator with a yellow border */
+  border-width: 0.1rem;
+  width: 4rem;
+  border-color: #ffc721 !important;
+}
+
+/* BUTTON */
+.slds-text-align_center {
+  /* Styles for buttons with red background and white text */
+  --slds-c-button-text-color: #FFFFFF !important;
+  --slds-c-button-color-background: #BA1212 !important;
+  --slds-c-button-brand-color-background: #BA1212 !important;
+  --slds-c-button-text-color: #FFFFFF !important;
+  --slds-c-button-border:none!important;
+  --slds-c-button-brand-color-background-hover:var(--slds-c-button-brand-color-background) !important;
+  --slds-c-button-brand-color-border-hover:var(--slds-c-button-brand-color-background) !important;
+  --slds-c-button-brand-color-border:var(--slds-c-button-brand-color-background) !important;
+  --slds-c-button-brand-color-background-active:var(--slds-c-button-brand-color-background) !important;
+  --slds-c-button-button-brand-colorbutton-custom:active {
+    background-color: #BA1212 !important;
+  }
+}
+.slds-modal__content.slds-p-around_medium{
+  min-height: 340px !important;
+}
+/* Additional styles for buttons */
+.slds-button_brand, .slds-button_stretch {
+  /* Duplicate styles for buttons (might consider removing) */
+  --slds-c-button-text-color: #FFFFFF !important;
+  --slds-c-button-color-background: #BA1212 !important;
+  --slds-c-button-brand-color-background: #BA1212 !important;
+  --slds-c-button-text-color: #FFFFFF !important;
+  --slds-c-button-border:none!important;
+  --slds-c-button-brand-color-background-hover:var(--slds-c-button-brand-color-background) !important;
+  --slds-c-button-brand-color-border-hover:var(--slds-c-button-brand-color-background) !important;
+  --slds-c-button-brand-color-border:var(--slds-c-button-brand-color-background) !important;
+  --slds-c-button-brand-color-background-active:var(--slds-c-button-brand-color-background) !important;
+  --slds-c-button-button-brand-colorbutton-custom:active {
+    background-color: #BA1212 !important;
+  }
+}
+
+.slds-button_brand{
+  /* margin-top: 1rem; */
+  background-color: #BA1212 !important;
+}
+
+/* PROGRESS BAR STYLES */
+.slds-progress__item.slds-is-active .slds-progress__marker {
+  /* Styles for active progress markers */
+  color: #D71917 !important;
+}
+.slds-progress__item.slds-is-active .slds-progress__marker {
+  /* Additional styles for active progress markers */
+  background: var(--lwc-progressColorBackground, #FFFFFF);
+  border-color: #D71917;
+}
+.slds-progress__item.slds-is-completed .slds-progress__marker_icon,
+.slds-progress__item.slds-is-completed .slds-progress__marker--icon {
+  /* Styles for completed progress markers */
+  color: #D71917;
+}
+.slds-progress-bar__value {
+  /* Styles for progress bar values */
+  background: #D71917;
+}
+
+/* LABEL AND STEP STYLES */
+.os-step-label[vlocity_cmt-omniscriptStep_omniscriptStep]{
+  text-align: left !important;
+}
+
+.os-step-label[vlocity_cmt-omniscriptStep_omniscriptStep]{
+   font-weight: bold !important;
+}
+
+/* READ-ONLY INPUT STYLES */
+.omni-read-only [data-omni-input] .slds-checkbox_faux,
+.omni-read-only [data-omni-input] .slds-radio_faux,
+.omni-read-only [data-omni-input] input:not([type=range]):not([type=checkbox]):not([type=radio]),
+.omni-read-only [data-omni-input] select,
+.omni-read-only [data-omni-input] textarea {
+  /* Styles for read-only input elements */
+  background-color: #0000002e;
+}
+
+/* ADDITIONAL STYLES */
+.omni-hz-stepchart-list-item:hover[vlocity_cmt-omniscriptStepChartItems_omniscriptStepChartItems_horizontal]
+  .omni-hz-stepchart-popover[vlocity_cmt-omniscriptStepChartItems_omniscriptStepChartItems_horizontal] {
+  /* Styles for hiding popover on hover */
+  visibility: hidden !important;
+}
+.omni-hz-stepchart-label[vlocity_cmt-omniscriptStepChartItems_omniscriptStepChartItems_horizontal] {
+  /* Styles for step chart labels */
+  color: #D71917 !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  font-size: 11px;
+  line-height: 0px;
+}
+
+/* Specific styles for certain components */
+vlocity_cmt-omniscript-text-block[data-omni-key="upgrade_plans_text"],
+vlocity_cmt-omniscript-text-block[data-omni-key="downgrade_plans_text"] {
+  /* Margin for specific text blocks */
+  margin-bottom: 2rem !important;
+}
+
+vlocity_cmt-omniscript-custom-lwc[data-omni-key="LineSeparator"]
+  >slot
+  >c-cf-l-x-d_-line-separator
+  >div
+  >vlocity_cmt-flex-card-state
+  >div
+  >slot
+  >div {
+    /* Padding adjustment for a specific component */
+    padding-left: 0px !important;
+  }
+
+vlocity_cmt-omniscript-step-chart .slds-progress {
+  /* Width adjustment for step chart progress */
+  width: 30% !important;
+}
+
+/* Styles for specific omniscript bodies based on data attributes */
+.omniscript-body[data-stepborder='right'][c-lXDGetContractDataEnglish_lXDGetContractDataEnglish] {
+  border-right: 0px !important;
+}
+
+.omniscript-body[data-stepborder='right'][c-oSDueDatePortugueseBrazil_oSDueDatePortugueseBrazil] {
+  border-right: 0px solid rgb(255, 255, 255) !important;
+}

@@ -1,0 +1,37 @@
+/* Estilos padrão para a classe .text */
+.text {
+    color: aliceblue;
+    font-size: 16px;
+    text-align: center;
+    margin: 9px;
+}
+.style{
+    margin: 10px;
+}
+.textip {
+    background-color: #1bc2a1;
+}
+.textmac {
+    background-color: #76d3f4;
+}
+.slds-ip-card {
+    background-color: #16a085;
+    border-radius: 0px;
+    height: 80px;
+}
+.slds-macs-card {
+    background-color: #1eb0e3;
+    border-radius: 0px;
+    height: 80px;
+}
+.titulo {
+    font-size: 16px !important;
+    padding: 10px;
+    color: aliceblue;
+}
+@media screen and (max-width: 600px) {
+    .text {
+        font-size: 16px;
+        text-align: center;
+    }
+}

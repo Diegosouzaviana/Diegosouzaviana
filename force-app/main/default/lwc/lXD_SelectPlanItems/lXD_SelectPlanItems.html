@@ -1,0 +1,66 @@
+<template>
+    <div
+        class='slds-p-top_large slds-p-bottom_large slds-p-horizontal_large slds-theme_default slds-m-around_medium slds-grid slds-wrap slds-grid_vertical-align-center productBox card__container'>
+        <button class="slds-button slds-button_icon btn__selected" title="Product Selected" if:true={product.selected}>
+            <svg class="slds-icon slds-icon-text-default icon svg__icon" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52" id="check">
+                <path
+                    d="M19.1 42.5L2.6 25.9c-.6-.6-.6-1.6 0-2.2l2.2-2.2c.6-.6 1.6-.6 2.2 0L19.4 34c.4.4 1.1.4 1.5 0L45.2 9.5c.6-.6 1.6-.6 2.2 0l2.2 2.2c.6.6.6 1.6 0 2.2L21.3 42.5c-.6.7-1.6.7-2.2 0z">
+                </path>
+            </svg>
+        </button>
+        <div class="slds-grid slds-size--1-of-1">
+            <div class="product__container">
+                <img if:true={product.Image} class="slds-size--3-of-12 image" src={defaultproductimage}></img>
+                <img if:false={product.Image} class="slds-size--3-of-12 image" src={defaultproductimage}></img>
+
+                <div class="slds-size--9-of-12 slds-grid slds-grid_vertical-align-center responsivemovil">
+                    <div class="product__info">
+
+                        <p class="title">{product.planCommercialName}</p>
+                        <p class="slds-form__element__label ng-binding description">{product.planName}<br></p>
+
+                    </div>
+                    <div class="slds-float_right slds-col price__container">
+                        <div if:true={hasListPrice} class="price__container_child">
+                            <p class="listPrice price"><lightning-formatted-number value={product.price} maximum-fraction-digits="2" minimum-fraction-digits="2"></lightning-formatted-number></p>
+                            <p class="slds-form__element__label ng-binding subtitle">{customlabels.ListPrice}</p>
+                        </div>
+
+                        <!-- <div if:true={hasRecurringPrice} class="price__container_child">
+                            <p class="recurringPrice price">{product.RecurringPrice}</p>
+                            <p class="subtitle">{customlabels.RecurringPrice}<br></p>
+                        </div> -->
+                    </div>
+                </div>       
+            </div>
+        </div>
+        <div if:true={product.promoid} class="slds-col slds-p-around_x-small slds-size_12-of-12 " >
+            <vlocity_cmt-block data-style-id="state0element1_child" card={card} record={record} label="Promoção" collapsible="true" collapsed-by-default="true" theme="slds">
+                <div class="product__container">
+                    <img if:true={product.Image} class="slds-size--3-of-12 image" src={defaultproductimage}></img>
+                    <img if:false={product.Image} class="slds-size--3-of-12 image" src={defaultproductimage}></img>
+                    <div class="slds-size--9-of-12 slds-grid slds-grid_vertical-align-center responsivemovil">
+                        <div class="product__info">
+
+                            <p class="title">{product.planCommercialName}</p>
+                            <p class="slds-form__element__label ng-binding description">{product.planName}<br></p>
+
+                        </div>
+                        <div class="slds-float_right slds-col price__container">
+                            <div if:true={hasListPrice} class="price__container_child">
+                                <p class="listPrice price"><lightning-formatted-number value={product.promotionalValue} maximum-fraction-digits="2" minimum-fraction-digits="2"></lightning-formatted-number></p>
+                                <p class="slds-form__element__label ng-binding subtitle">{customlabels.ListPrice}</p>
+                            </div>
+
+                            <!-- <div if:true={hasRecurringPrice} class="price__container_child">
+                                <p class="recurringPrice price">{product.RecurringPrice}</p>
+                                <p class="subtitle">{customlabels.RecurringPrice}<br></p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </vlocity_cmt-block>                        
+        </div> 
+    </div>
+</template>

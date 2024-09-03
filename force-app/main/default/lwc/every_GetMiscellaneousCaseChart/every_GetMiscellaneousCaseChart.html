@@ -1,0 +1,163 @@
+<template>
+    <lightning-card >
+        <div class="icon-header">
+            <lightning-icon icon-name="standard:chart" variant="narrow"></lightning-icon>
+            <h1 class="header-text">Resolutividade</h1>
+        </div>
+        <div class="slds-box slds-m-around_xxx-small">
+            <div class="slds-m-around_small">
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-text-align_left">
+                        <div class="slds-grid slds-gutters slds-wrap">
+                            <div class="slds-col slds-size_1-of-12 slds-p-top_large">
+                                <span>Data início</span>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12">
+                                <lightning-input type="date" value={startDate} onchange={handleInputDate} data-id="startDate"
+                                    date-style="short" style="width: fit-content;"></lightning-input>
+                                <div class="error-message-data" style="height: 20px; font-size: 11px; color: red;" data-id="startError"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-text-align_left">
+                        <div class="slds-grid slds-gutters slds-wrap ">
+                            <div class="slds-col slds-size_1-of-12 slds-p-top_large">
+                                <span>Data fim</span>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12">
+                                <lightning-input type="date" value={endDate} onchange={handleInputDate} data-id="endDate"
+                                    date-style="short" style="width: fit-content;"></lightning-input>
+                                <div class="error-message-data" style="height: 20px; font-size: 11px; color: red;" data-id="endError"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr>
+            <div class="slds-m-around_small">
+                <div class="slds-grid slds-gutters slds-wrap">
+                    <div class="slds-col slds-size_12-of-12">
+                        <div class="slds-grid"  style="align-items: center;">
+                            <div class="slds-col slds-size_3-of-12">
+                                <lightning-input type="number" value={newColumnValue} onchange={handleNewColumnValue} data-id="metricaInput" 
+                                    label="Incluir quantidade de dias para cálculo de resolutividade"></lightning-input>
+                                <div class="error-message" style="height: 20px; font-size: 11px; color: red;"></div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12">
+                                <button class="slds-button slds-button_neutral" onclick={handleAddMetrica}>
+                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                        <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#add"></use>
+                                    </svg>
+                                    Adicionar
+                                </button>
+                            </div>
+                            <div class="slds-col slds-size_3-of-12">
+                                <button class="slds-button slds-button_neutral" onclick={handleReset}>
+                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                        <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#refresh"></use>
+                                    </svg>
+                                    Limpar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12" style="margin-bottom: auto;">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <lightning-select
+                                            label="Tipo de atendimento"
+                                            value={atendimentoValue}
+                                            options={options}
+                                            onchange={handleSelectChange}
+                                            >
+                                        </lightning-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="slds-box slds-m-around_xxx-small">
+            <div class="slds-p-around_medium">
+                <template if:true={showTable}>
+                    <!-- <h1 style="font-size: medium; padding-bottom: 10px;">Resolutividade por Motivo</h1> -->
+                    <table class="slds-table slds-cell-buffer_left slds-table_bordered slds-table_striped">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="col-title" style="background-color: #C41010; color: white; border: 1px solid #ddd; padding-top: 10px; padding-bottom: 10px;">Motivo do contato</th>
+                                <template for:each={colunasMetricas} for:item="coluna" for:index="index">
+                                    <th scope="col" style="background-color: #C41010; color: white; border: 1px solid #ddd; padding-top: 10px; padding-bottom: 10px; text-align: center;" 
+                                    key={coluna.id} data-index={index} class={coluna.classToAdd}>{coluna.name}</th>
+                                </template>
+                                    <!-- <th scope="col" style="background-color: #C41010; color: white; border: 1px solid #ddd;" key={coluna.id}>Total</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={rowsMetricas} for:item="row">
+                                <tr key={row.motivo} onclick={handleRowClick} data-motivo={row.motivo} class="slds-hint-parent">
+                                    <td style="border: 1px solid #ddd; cursor: pointer; text-align: center; text-decoration: underline; " data-id={row.motivo} class={row.classToAdd}>{row.motivo}</td>
+                                    <template for:each={row.metricas} for:item="metrica" for:index="index">
+                                        <td style="border: 1px solid #ddd; cursor: pointer; text-align: center; text-decoration: underline;" class={metrica.classToAdd} key={metrica.id}>{metrica.value}%</td>
+                                    </template>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </template>
+                <template if:true={showSpinner}>
+                    <div class="exampleHolder">
+                        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <template if:true={showNewTable}>
+            <div class="slds-box slds-m-around_xxx-small">
+                <div class="slds-p-around_medium">
+                    <template if:true={showTable}>
+                        <h1 style="font-size: medium; padding-bottom: 10px;">{motivoSelected}</h1>
+                        <table class="slds-table slds-cell-buffer_left slds-table_bordered slds-table_striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="background-color: #C41010; color: white; border: 1px solid #ddd; padding-top: 10px; padding-bottom: 10px;">Submotivo do contato</th>
+                                    <template for:each={colunasMetricas} for:item="coluna">
+                                        <th scope="col" style="background-color: #C41010; color: white; border: 1px solid #ddd; padding-top: 10px; padding-bottom: 10px; text-align: center;"
+                                         key={coluna.id} class={coluna.classToAdd}>{coluna.name}</th>
+                                    </template>
+                                        <!-- <th scope="col" style="background-color: #C41010; color: white; border: 1px solid #ddd;" key={coluna.id}>Total</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={rowsMetricasSubmotivos} for:item="row">
+                                    <tr class="slds-hint-parent" key={row.submotivo} >
+                                        <td style="border: 1px solid #ddd; text-align: center; cursor: default !important;">{row.submotivo}</td>
+                                        <template for:each={row.metricas} for:item="metrica">
+                                            <td style="border: 1px solid #ddd; text-align: center; cursor: default !important;" key={metrica.id}>{metrica.value}%</td>
+                                        </template>
+                                        <!-- <td style="border: 1px solid #ddd;" key={metrica.id}>{row.total}</td> -->
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </template>
+                    <!-- <template if:true={showSpinner}>
+                        <div class="exampleHolder">
+                            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                        </div>
+                    </template> -->
+                </div>
+            </div>
+        </template>
+        <div class="slds-col slds-size_1-of-1 slds-text-align_left" style="padding-left: 35px; padding-top: 15px; padding-bottom: 15px;">
+            <c-every-resolution-indicator cases={casesExport}></c-every-resolution-indicator>
+        </div>
+        <template if:true={showGrafico}>
+            <c-every_-grafico-evolucao-resolutividade metricas={colunasMetricas} atendimento-misto={atendimentoMisto}></c-every_-grafico-evolucao-resolutividade>
+        </template>
+        
+    
+    </lightning-card>
+    
+</template>

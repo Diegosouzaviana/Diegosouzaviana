@@ -1,0 +1,18 @@
+{
+    "Input_CEP": "13700-000",
+    "Input_CEP1": "13700-000",
+    "Input_CEP2": null,
+    "Input_City": "Casa Branca",
+    "Input_Country": "Brazil",
+    "Input_Neighborhood": "Jardim Paulista",
+    "Input_Number": "274",
+    "Input_State": "SP",
+    "Input_Street": "Rua Luís Gama",
+    "Input_TypeAddress": "Casa",
+    "Input_TypeAddress1": "Casa",
+    "Input_TypeAddress2": null,
+    "Messaging1": null,
+    "Messaging2": null,
+    "formulaAddress": "Rua Luís Gama, 274 - Jardim Paulista,Casa Branca - SP,Brazil",
+    "responseformulaAddress": "RuaLuísGama,274-JardimPaulista,CasaBranca-SP,Brazil"
+}

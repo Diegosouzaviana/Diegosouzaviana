@@ -1,0 +1,159 @@
+<template>
+  <lightning-card class="slds-grid_align-center slds-grid_vertical-align-center">
+
+    <template if:true={showSpinner}>
+      <div class="spinnerIntegracao">
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+      </div>
+    </template>
+
+    <template if:true={erroAtivoContrato}>
+      <p style="font-size: 20px;"><strong>Erro</strong></p>
+
+      <div class="ErrorImage">
+        <img src="/resource/1663183427000/icon_sideBar/Datos_360/IconError.png" />
+      </div>
+      <div class="ErrorMenssage">
+        <strong>
+          <p>Erro no Caso</p>
+        </strong>
+      </div>
+      <p>Não é possivel prosseguir sem:</p>
+      <ul class="ativocantrato">
+        <li if:true={erroAtivo}><strong>
+            <p>Ativo</p>
+          </strong></li>
+        <li if:true={erroContrato}><strong>
+            <p>Contrato</p>
+          </strong></li>
+      </ul>
+    </template>
+
+    <template if:true={errorGeral}>
+      <div class="ErrorImage">
+        <img src="/resource/1663183427000/icon_sideBar/Datos_360/IconError.png" />
+      </div>
+      <div class="ErrorMenssage">
+        <strong>
+          <p>{mensageErrorGeral}</p>
+        </strong>
+      </div>
+    </template>
+
+    <template if:true={errorcampobrigatorio}>
+      <div>
+        <strong>
+          <p style="font-size: 20px;">Erro</p>
+        </strong>
+      </div>
+      <div class="ErrorImage">
+        <img src="/resource/1663183427000/icon_sideBar/Datos_360/IconError.png" />
+      </div>
+      <div class="ErrorMenssage">
+        <strong>
+          <p>{mensageErrorGeral}</p>
+        </strong>
+      </div>
+      <p>Não é possivel prosseguir sem:</p>
+      <ul class="ativocantrato">
+        <li><strong>
+            <p>Planlogin</p>
+          </strong></li>
+      </ul>
+      
+    </template>
+
+    <template if:true={showItem}>
+      <div class="slds-tabs_default slds-tabs_medium tab-container sizeContainer" if:false={showSpinner}>
+
+        <ul class="slds-tabs_default__nav" role="tablist" style="display: flex; flex-wrap: wrap;">
+
+          <li class="tab-size slds-tabs_default__item slds-is-active" title="Status" role="presentation">
+            <a class="slds-tabs_default__link" onclick={handleTabs} data-tab="status" role="tab">
+              <img src={tabs.status} class="tab-icon">
+              <span class="slds-p-left_small slds-m-top_medium">Status</span>
+            </a>
+          </li>
+          <li class="tab-size slds-tabs_default__item" title="Tráfego" role="presentation">
+            <a class="slds-tabs_default__link" onclick={handleTabs} data-tab="trafego" role="tab">
+              <img src={tabs.trafego} class="tab-icon">
+              <span class="slds-p-left_small slds-m-top_medium">Tráfego</span>
+            </a>
+          </li>
+          <li class="tab-size slds-tabs_default__item" title="Conexões" role="presentation">
+            <a class="slds-tabs_default__link" onclick={handleTabs} data-tab="conexoes" role="tab">
+              <img src={tabs.conexoes} class="tab-icon">
+              <span class="slds-p-left_small slds-m-top_medium">Conexões</span>
+            </a>
+          </li>
+          <li class="tab-size slds-tabs_default__item" title="GPON" role="presentation">
+            <a class="slds-tabs_default__link" onclick={handleTabs} data-tab="gpon" role="tab">
+              <img src={tabs.gpon} class="tab-icon">
+              <span class="slds-p-left_small slds-m-top_medium">GPON</span>
+            </a>
+          </li>
+          <li class="tab-size slds-tabs_default__item" title="Status de Rede" role="presentation">
+            <a class="slds-tabs_default__link" onclick={handleTabs} data-tab="bridger" role="tab">
+              <img src={tabs.bridger} class="tab-icon">
+              <span class="slds-p-left_small slds-m-top_medium">Status de Rede</span>
+            </a>
+          </li>
+          <li class="tab-size slds-tabs_default__item" title="Consumo" role="presentation">
+            <a class="slds-tabs_default__link" onclick={handleTabs} data-tab="consumo" role="tab">
+              <img src={tabs.consumo} class="tab-icon">
+              <span class="slds-p-left_small slds-m-top_medium">Consumo</span>
+            </a>
+          </li>
+          <li class="tab-size slds-tabs_default__item" title="ultimos Logs" role="presentation">
+            <a class="slds-tabs_default__link" onclick={handleTabs} data-tab="ultimologs" role="tab">
+              <img src={tabs.ultimoslogs} class="tab-icon slds-icon slds-icon-text-default slds-icon_small">
+              <span class="slds-p-left_small slds-m-top_medium">Últimos Logs</span>
+            </a>
+          </li>
+          <li class="tab-size slds-tabs_default__item" title="Caixa" role="presentation">
+            <a class="slds-tabs_default__link" onclick={handleTabs} data-tab="caixa" role="tab">
+              <img src={tabs.caixa} class="tab-icon">
+              <span class="slds-p-left_small slds-m-top_medium">Caixa {items.cto}</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="slds-tabs_default__content slds-show" data-content="status" role="tabpanel" style="flex-grow: 1;">
+          <c-cf-every_-connection-inf-home record-id={items.AssetId}></c-cf-every_-connection-inf-home>
+        </div>
+
+        <div class="slds-tabs_default__content slds-hide" data-content="trafego" role="tabpanel" style="flex-grow: 1;">
+          <c-cf-flex_-tab-trafego record-id={items.AssetId}></c-cf-flex_-tab-trafego>
+        </div>
+
+        <div class="slds-tabs_default__content slds-hide" data-content="conexoes" role="tabpanel" style="flex-grow: 1;">
+          <c-cf-l-x-d_-Tab-Conexoes record-id={items.AssetId}></c-cf-l-x-d_-Tab-Conexoes>
+        </div>
+
+        <div class="slds-tabs_default__content slds-hide" data-content="gpon" role="tabpanel" style="flex-grow: 1;">
+          <c-cf-every_-G-P-O-N-Home record-id={items.AssetId} parent-attribute={items}></c-cf-every_-G-P-O-N-Home>
+        </div>
+
+        <div class="slds-tabs_default__content slds-hide" data-content="bridger" role="tabpanel" style="flex-grow: 1;">
+          <c-cf-l-x-d_-tab-bridge-childv3 record-id={items.AssetId}
+            parent-attribute={tipoBridge}></c-cf-l-x-d_-tab-bridge-childv3>
+        </div>
+
+        <div class="slds-tabs_default__content slds-hide" data-content="consumo" role="tabpanel" style="flex-grow: 1;">
+          <c-cf-f-l-x_-tab_-consumo record-id={items.AssetId}></c-cf-f-l-x_-tab_-consumo>
+        </div>
+
+        <div class="slds-tabs_default__content slds-hide" data-content="ultimologs" role="tabpanel"
+          style="flex-grow: 1;">
+          <c-cf-f-l-x_-tab-ultimos-logs record-id={items.AssetId}></c-cf-f-l-x_-tab-ultimos-logs>
+        </div>
+
+        <div class="slds-tabs_default__content slds-hide" data-content="caixa" role="tabpanel" style="flex-grow: 1;">
+          <c-cf-l-x-d_-Tab-Caixastatus record-id={items.AssetId} parent-attribute={items}></c-cf-l-x-d_-Tab-Caixastatus>
+        </div>
+
+      </div>
+
+    </template>
+  </lightning-card>
+</template>

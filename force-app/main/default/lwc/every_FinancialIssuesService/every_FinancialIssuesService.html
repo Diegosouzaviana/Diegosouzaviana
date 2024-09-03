@@ -1,0 +1,108 @@
+<template>
+    <lightning-card>
+        <template if:true={showSpinner}>
+            <div class="spinnerIntegracao">
+              <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+          </template>
+        <div class="slds-m-around_xx-small">
+            <template if:true={erroAtivoContrato}>
+                <p style="font-size: 20px;"><strong>Erro</strong></p>
+          
+                <div class="ErrorImage">
+                  <img src="/resource/1663183427000/icon_sideBar/Datos_360/IconError.png" />
+                </div>
+                <div class="ErrorMenssage">
+                  <strong>
+                    <p>Erro na Conta</p>
+                  </strong>
+                </div>
+                <p>Não é possivel prosseguir sem:</p>
+                <ul class="ativocantrato">
+                  <li if:true={errocpf}><strong>
+                      <p>CPF - CNPJ</p>
+                    </strong></li>
+                  <li if:true={erroadm}><strong>
+                      <p>ADM</p>
+                    </strong></li>
+                </ul>
+              </template>
+
+            <template if:true={errorGeral}>
+                <div class="ErrorImage">
+                    <img src="/resource/1663183427000/icon_sideBar/Datos_360/IconError.png" />
+                </div>
+                <div class="ErrorMenssage">
+                    <strong>
+                        <p>{mensageErrorGeral}</p>
+                    </strong>
+                </div>
+            </template>
+
+            <template if:true={showdado}>
+                <h5 style="font-size:19px;"><strong>Pendências Financeiras</strong></h5>
+                <br />
+                <div class="barra"></div>
+                <br/>
+                
+                <div style="display: flex; justify-content: space-between;">
+                    <p>
+                        PPPOE: {pppoe}
+                        <br />
+                        Último Acesso: {ultimoAcesso}
+                    </p>
+                </div>
+
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_2-of-8">
+                        <lightning-combobox class="slds-text-align_right slds-m-top_medium" name="progress"
+                            value={itemsPerPage} placeholder="Selecione" options={itemsPerPageOptions}
+                            onchange={handleItemsPerPageChange}>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-size_4-of-8 textspan">
+                        <span>Registros por página</span>
+                    </div>
+                    <div class="slds-col slds-size_2-of-8">
+                        <lightning-input class="slds-text-left slds-m-top_medium half-width" type="search"
+                            placeholder="Procurar" onchange={handleSearchChange}>
+                        </lightning-input>
+                    </div>
+                </div>
+                <br />
+                <lightning-datatable key-field="id" data={paginatedData} columns={columns} hide-checkbox-column
+                    column-widths-mode="fixed"></lightning-datatable>
+                <br />
+                <table style="width: 100%; display: table; table-layout: fixed;">
+                    <tr>
+                        <td style="width: 20%;"></td>
+                        <td style="width: 20%;"></td>
+                        <td style="width: 20%;"></td>
+                        <td style="width: 20%;"></td>
+                        <td style="width: 20%; text-align: right; "><strong>Total:&nbsp;</strong></td>
+                        <td style="width: 20%;"><strong>&nbsp;&nbsp;R$ {pageTotalSum}</strong></td>
+                    </tr>
+                </table>
+                <br />
+                <div style="display: flex; justify-content:space-between;">
+                    <p class="slds-text-align_right slds-m-top_medium">{paginationInfo}</p>
+                    <div class="slds-text-left slds-m-top_medium">
+                        <lightning-button-group>
+                            <lightning-button if:true={showPreviousButton} label="Anterior"
+                                onclick={handlePrevious}></lightning-button>
+                            <template if:true={shouldShowPagination}>
+                                <template for:each={pagesList} for:item="pageNumber">
+                                    <lightning-button key={pageNumber} data-id={pageNumber} label={pageNumber}
+                                        onclick={handlePageClick}></lightning-button>
+                                </template>
+                            </template>
+                            <lightning-button if:true={showNextButton} label="Próximo"
+                                onclick={handleNext}></lightning-button>
+                        </lightning-button-group>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

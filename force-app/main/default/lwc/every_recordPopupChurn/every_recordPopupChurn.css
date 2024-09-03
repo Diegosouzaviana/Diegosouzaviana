@@ -1,0 +1,43 @@
+.popup {
+    display: none;
+}
+.tab-icon {
+    height: 17px; 
+    width: 17px;
+}
+.high-priority {
+    color: #080000;
+    font-size: 2em;
+}
+
+.medium-priority {
+    color: #ffc002ff;
+    font-size: 2em;
+}
+
+.low-priority {
+    color: green;
+    font-size: 2em;
+}
+.validatrue{
+    text-align:center; 
+    font-size: 2em;
+}
+.validafalse{
+    font-size: medium;
+}
+.special-segment {
+    font-size: 24px; /* Aumenta a fonte */
+    color: #800080; /* Cor roxa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.special-segment lightning-icon {
+    margin-left: 5px; /* Espaçamento entre o texto e o ícone */
+}
+
+.dim-opacity {
+    opacity: 0.5; /* Opacidade reduzida */
+}

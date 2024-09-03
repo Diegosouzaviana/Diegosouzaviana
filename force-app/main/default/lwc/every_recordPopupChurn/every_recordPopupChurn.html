@@ -1,0 +1,93 @@
+<template>
+    <template if:true={motivofianlizado}>
+        <template if:true={isOpen}>
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleClose}>
+                            <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small"></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 class="slds-text-heading_medium">Análise do atendimento</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout slds-table_striped">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    
+                                    <th class="slds-size_1-of-12">
+                                        <div class="slds-truncate" title="Prioridade de Atendimento" style="text-align:center;">
+                                            <lightning-icon class="slds-m-right_x-small" style="text-align:center;" icon-name="utility:priority" alternative-text="Prioridade de Atendimento" size="small"></lightning-icon>
+                                            Prioridade de Atendimento
+                                        </div>
+                                    </th>
+                                    <th class="slds-size_1-of-12">
+                                        <div class="slds-truncate" title="Chance de Churn" style="text-align:center;">
+                                            <lightning-icon class="slds-m-right_x-small"  icon-name="utility:opportunity" alternative-text="Chance de Churn" size="small"></lightning-icon>
+                                            Risco de Churn
+                                        </div>
+                                    </th>
+                                    <th class="slds-size_1-of-12">
+                                        <div class="slds-truncate" title="Segmento" style="text-align:center;">
+                                            <lightning-icon class="slds-m-right_x-small" style="text-align:center;" icon-name="utility:segments" alternative-text="Segmento" size="small"></lightning-icon>
+                                            Nível de Associação
+                                        </div>
+                                    </th>
+                                    <th class={prioridadeValitacaosldssize}>
+                                        <div class="slds-truncate" title="Segmento" style="text-align:center;">
+                                            <lightning-icon class="slds-m-right_x-small" style="text-align:center;" icon-name="utility:crossfilter" alternative-text="Reincidência" size="small"></lightning-icon>
+                                            Reincidência
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="slds-hint-parent">
+                                    <td rowspan="2" class="slds-size_1-of-12">
+                                        <div class="high-priority" title={prioridadeAtendimento} style="text-align:center;">{prioridadeAtendimento}</div>
+                                    </td>                               
+                                    <td rowspan="2" class="slds-size_1-of-12">
+                                        <div style="text-align:center;">
+                                            <img src={prioridadeClass} alt={chancedeChurn} style="max-width: 40px;"/>
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="slds-size_1-of-12">
+                                        <div style="text-align:center;">
+                                            <template for:each={segmentClasses} for:item="segment">
+                                                <div key={segment.name} data-id={item} class={segment.className}>
+                                                    {segment.name}
+                                                    <template if:true={segment.isCurrent}>
+                                                        <!-- <lightning-icon icon-name="utility:diamond" alternative-text="Diamond" size="small"></lightning-icon> -->
+                                                        <img src="/resource/iconChurn/icon/diamante.png" alt={segment.name} style="max-width: 12%;"/>
+                                                    </template>
+                                                </div>
+                                            </template>
+                                        </div>                    
+                                    </td>
+                                    <template if:true={verificaTipoValitacao}>
+                                        <td rowspan="2" class={prioridadeValitacaosldssize}>
+                                            <div class={prioridadeValitacao} title={Valitacao}>
+                                                {Valitacao}
+                                            </div>
+                                        </td>
+                                    </template>
+                                    <template if:false={verificaTipoValitacao}>
+                                        <td rowspan="2" class={prioridadeValitacaosldssize}>
+                                            <div class={prioridadeValitacao} title={Valitacao}>
+                                                {Valitacao}<br><br>
+                                                Caso: <a href={formattedValitacao} target="_blank">{valitacaoLabel}</a> Motivo: {Motivo}
+                                            </div>
+                                        </td>
+                                    </template>
+                                </tr>
+                                <tr>                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+    </template>
+</template>

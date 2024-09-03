@@ -1,0 +1,48 @@
+.slds-table {
+    width: auto;
+}
+.coll{
+    color: aliceblue;
+    padding: 4% 4%;
+    background: red;
+}
+
+.slds-hint-parent{
+    background: #C0C0C0;
+}
+
+.icon-header {
+    display: flex;
+    align-items: center; 
+    padding-left: 10px;
+}
+
+.header-text {
+    font-size: large;
+    margin-left: 10px; 
+    margin-bottom: 10px;
+}
+.nova-coluna-header {
+    background-color: #7f0a0a !important; /* Cor de fundo para novas colunas */
+}
+
+.hover-effect:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important; 
+    cursor: pointer !important; 
+}
+
+.selected {
+    /* background-color: #f00 !important; */
+    color: #ff0000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.selected:hover {
+    background-color: #f00 !important;
+    cursor: pointer !important; /* Altere para a cor desejada */
+}
+
+.total{
+    font-weight: bold !important; 
+    cursor: default !important;
+}

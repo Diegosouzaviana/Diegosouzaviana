@@ -1,0 +1,14 @@
+.slds-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slds-col.slds-size_4-of-12 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.slds-col.slds-size_4-of-12 lightning-button {
+  margin-left: 8px; /* Ajuste o valor conforme necessário */
+}

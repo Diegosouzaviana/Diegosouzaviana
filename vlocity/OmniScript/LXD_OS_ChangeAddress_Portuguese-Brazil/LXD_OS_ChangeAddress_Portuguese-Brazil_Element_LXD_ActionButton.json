@@ -1,0 +1,76 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "OS_ChangeAddress",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "OS_ChangeAddress",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "Step_NewAddress2",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)/Step_NewAddress2",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "Step_NewAddress2",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "bStandalone": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "customAttributes": [
+            {
+                "name": "method-name",
+                "source": "LXD_APIAdressChange"
+            },
+            {
+                "name": "input-node",
+                "source": "Step_NewAddress2"
+            },
+            {
+                "name": "button-text",
+                "source": "Validar endereço"
+            },
+            {
+                "name": "style-in-line",
+                "source": "color: #D71917;margin-top:16px;"
+            },
+            {
+                "name": "formula-address-node",
+                "source": "formulaAddress"
+            }
+        ],
+        "hide": false,
+        "label": "LXD_ActionButton",
+        "lwcName": "lXD_ActionButton",
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": null,
+                        "field": "result:IPResult:MudancaEndereco:availability"
+                    },
+                    {
+                        "condition": "=",
+                        "data": null,
+                        "field": "SV_CleanAddressData"
+                    }
+                ]
+            }
+        }
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Custom Lightning Web Component",
+    "Name": "LXD_ActionButton",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)/LXD_ActionButton"
+}

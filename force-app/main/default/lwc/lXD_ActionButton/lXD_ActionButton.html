@@ -1,0 +1,24 @@
+<template>
+  <template if:true={showSpinner}>
+    <div class="demo-only" style="height:6rem;position:relative">
+      <div class="slds-spinner_container">
+        <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+          <span class="slds-assistive-text">Loading</span>
+          <div class="slds-spinner__dot-a"></div>
+          <div class="slds-spinner__dot-b"></div>
+        </div>
+      </div>
+    </div>
+  </template>
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_8-of-12">
+        <button if:true={showbuttom} title={buttonText} onclick={handleClick} class={cssClass} disabled={showSpinner}>
+          {buttonText}
+        </button>
+      </div>
+      <div class="slds-col slds-size_4-of-12 slds-text-align_right">
+        <lightning-button if:true={showPreviousButton} variant="brand" label="&nbsp;&nbsp;&nbsp; Voltar &nbsp;&nbsp;&nbsp;" onclick={prevButton}></lightning-button>
+        <lightning-button if:true={showNextButton} variant="brand" label="&nbsp;&nbsp; Avançar &nbsp;&nbsp;" onclick={nextButton}></lightning-button>
+      </div>
+    </div>  
+  </template>

@@ -1,0 +1,10 @@
+<template> 
+    <div class="custom-button" onclick={copiarTexto} aria-disabled={naoTemTexto} style="position: relative;">
+        <!-- Help text -->
+        <div if:true={mostrarHelpText} class="slds-popover slds-popover_tooltip slds-nubbin_bottom-right" role="tooltip" id="popover" style="position:absolute; top:-45px; right: 50%; transform: translateX(50%);">
+            <div class="slds-popover__body"> PIX </div>
+        </div>
+        <!-- Button -->
+        <img src={imagemBotao} alt="Copiar" style="width: 24px; height: 24px;" onmouseover={alterarCursor} onmouseout={resetarCursor}/>
+    </div>
+</template>
