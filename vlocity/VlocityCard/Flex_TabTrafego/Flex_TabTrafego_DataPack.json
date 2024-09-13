@@ -1,0 +1,45 @@
+{
+    "%vlocity_namespace%__Author__c": "Desktop",
+    "%vlocity_namespace%__CardType__c": "flex",
+    "%vlocity_namespace%__Datasource__c": {
+        "dataSource": {
+            "contextVariables": [
+                {
+                    "id": 1,
+                    "name": "recordId",
+                    "val": "02iHa000000BltFIAS"
+                }
+            ],
+            "orderBy": {
+                "isReverse": "",
+                "name": ""
+            },
+            "type": "ApexRemote",
+            "value": {
+                "dsDelay": "",
+                "inputMap": {
+                    "AssetId": "{recordId}",
+                    "Url": "https://api-sandbox.desktop.com.br/cx/v1/service/technical-tests/traffic-controller/<planlogin>/3/3"
+                },
+                "jsonMap": "{\"recordId\":\"{recordId}\"}",
+                "remoteClass": "Every_ApiTrafficController",
+                "remoteMethod": "callTrafficControllerApi",
+                "resultVar": "[\"Response\"]",
+                "vlocityAsync": false
+            }
+        }
+    },
+    "%vlocity_namespace%__Definition__c": "Flex_TabTrafego.json",
+    "%vlocity_namespace%__Description__c": "",
+    "%vlocity_namespace%__GlobalKey__c": "Flex_TabTrafego/Desktop/6/1707141844448",
+    "%vlocity_namespace%__IsChildCard__c": true,
+    "%vlocity_namespace%__ParentID__c": "",
+    "%vlocity_namespace%__SampleData__c": "{\"Response\":{\"brasLast\":{\"input\":0,\"output\":0,\"ping\":\"\",\"Tentativa\":\"#3\"},\"bras\":[{\"input\":0,\"output\":0,\"ping\":\"\",\"Tentativa\":\"#1\"},{\"input\":0,\"output\":0,\"ping\":\"\",\"Tentativa\":\"#2\"},{\"input\":0,\"output\":0,\"ping\":\"\",\"Tentativa\":\"#3\"}],\"statusCode\":200},\"errorCode\":\"INVOKE-200\",\"error\":\"OK\"}",
+    "%vlocity_namespace%__Styles__c": "",
+    "%vlocity_namespace%__Type__c": "",
+    "%vlocity_namespace%__Version__c": 6,
+    "Name": "Flex_TabTrafego",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__VlocityCard__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__VlocityCard__c/Flex_TabTrafego"
+}

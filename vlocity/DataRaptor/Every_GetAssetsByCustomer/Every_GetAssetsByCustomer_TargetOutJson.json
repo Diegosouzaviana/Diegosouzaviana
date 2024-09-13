@@ -1,0 +1,21 @@
+{
+    "Asset": [
+        {
+            "%vlocity_namespace%__RecurringCalculatedPrice__c": 169.99,
+            "AccountId": "0016t00000ljlm2AAA",
+            "ContractNumber": "00000959",
+            "ContractType": "Combo",
+            "Equipamento__c": null,
+            "Id": "02i6t000001ZIHyAAO",
+            "LXD_TrustUnlockDate__c": null,
+            "LXD_TrustUnlock__c": false,
+            "LegacyId__c": "43429",
+            "Name": "Fibra Business 300M 2023",
+            "PlanLogin__c": "josiasbo@desktop.com.br",
+            "Product2": "01t6t000002k3pYAAQ",
+            "ProductFamily": null,
+            "ProductType": "Product",
+            "Status": "ATIVO"
+        }
+    ]
+}

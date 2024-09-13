@@ -1,0 +1,16 @@
+{
+    "acs": null,
+    "olts": {
+        "gpon_port": "19",
+        "ips": [
+        ],
+        "macs": [
+            "74:6f:88:f4:c2:af"
+        ],
+        "olt": "3",
+        "slot": "3",
+        "vlan_id": "2087"
+    },
+    "status": "found",
+    "statusCode": 200
+}
