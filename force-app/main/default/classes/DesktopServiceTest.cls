@@ -231,16 +231,93 @@ public class DesktopServiceTest {
     @IsTest
     static void AtivacaoWO() {
         try {
-            WorkStep wt = [SELECT WorkOrderId, Id FROM WorkStep WHERE WorkOrder.Work_Type_WO__c = 'Ativação' LIMIT 1];
+            //WorkStep wt = [SELECT WorkOrderId, Id FROM WorkStep WHERE WorkOrder.Work_Type_WO__c = 'Ativação' LIMIT 1];
+            WorkStep ws = [SELECT WorkOrder.Work_Type_WO__c, WorkOrder.Work_Subtype_WO__c, WorkOrderId,
+                                        WorkOrder.Case.Contrato__r.ContractNumber, 
+                                        WorkOrder.Case.Contrato__c,
+                                        WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c,
+                                        WorkOrder.Case.Contrato__r.Prospect__c,
+                                        WorkOrder.Case.Contrato__r.Id,
+                                        WorkOrder.Case.Asset.IdPlanoUsuario__c,
+                                        WorkOrder.Case.LXD_ProtocolNumber__c,
+                                        WorkOrder.Case.Contrato__r.IdPromocao__c,
+                                        WorkOrder.Case.PlanoNovo__c, 
+                                        WorkOrder.Case.PlanoNovo__r.ProductCode, 
+                                        WorkOrder.Case.PlanoAntigo__r.ProductCode, 
+                                        WorkOrder.Case.vlocity_cmt__BillingAccountId__c, 
+                                        WorkOrder.Case.vlocity_cmt__BillingAccountId__r.BillingStreet, 
+                                        WorkOrder.Case.vlocity_cmt__BillingAccountId__r.BillingAddressNumber__c, 
+                                        WorkOrder.Case.vlocity_cmt__BillingAccountId__r.LXD_NewAddressComplement__c,
+                                        WorkOrder.Case.vlocity_cmt__BillingAccountId__r.BillingPostalCode, 
+                                        WorkOrder.Case.vlocity_cmt__BillingAccountId__r.LXD_AddressNeighborhood__c, 
+                                        WorkOrder.Case.vlocity_cmt__BillingAccountId__r.BillingCity, 
+                                        WorkOrder.Case.vlocity_cmt__BillingAccountId__r.BillingState,
+                                        WorkOrder.Case.LXD_CPF__c,
+                                        WorkOrder.Case.AssetId,  
+                                        CorrelationId__c,
+                                        workorder.Case.PlanoAntigo__c,
+                                        WorkOrder.Account.LegacyId__c, 
+                                        WorkOrder.Account.Name, 
+                                        WorkOrder.Account.LXD_CPF__c, 
+                                        WorkOrder.Account.LXD_RG__c,
+                                        WorkOrder.Contact.Email, 
+                                        WorkOrder.Contact.Phone,
+                                        WorkOrder.Account.ShippingCity, 
+                                        WorkOrder.Account.ShippingCountry,
+                                        WorkOrder.Account.ShippingPostalCode, 
+                                        WorkOrder.Account.ShippingState, 
+                                        WorkOrder.Account.ShippingStreet,
+                                        WorkOrder.Account.BillingCity, 
+                                        WorkOrder.Account.BillingCountry, 
+                                        WorkOrder.Account.BillingPostalCode, 
+                                        WorkOrder.Account.BillingState,
+                                        WorkOrder.Account.BillingStreet,
+                                        WorkOrder.Account.LXD_NewAddressComplement__c,
+                                        WorkOrder.Account.LXD_AddressNumber__c, 
+                                        WorkOrder.Account.LXD_AddressNeighborhood__c,
+                                        WorkOrder.AssetId, 
+                                        WorkOrder.Asset.ProductCode, 
+                                        WorkOrder.Asset.IdPlanoUsuario__c, 
+                                        WorkOrder.Asset.IdPromocao__c,
+                                        Workorder.Case.Asset.Product2.ProductCode,
+                                        WorkOrder.AccountId, 
+                                        WorkOrder.Asset.CodigoAtivo__c, 
+                                        WorkOrder.Asset.ProductCodeFormula__c,
+                                        WorkOrder.Asset.vlocity_cmt__ServiceAccountId__r.ShippingStreet,
+                                        WorkOrder.Asset.vlocity_cmt__ServiceAccountId__r.LXD_AddressNumber__c, 
+                                        WorkOrder.Asset.vlocity_cmt__ServiceAccountId__r.LXD_NewAddressComplement__c, 
+                                        WorkOrder.Asset.vlocity_cmt__ServiceAccountId__r.ShippingPostalCode, 
+                                        WorkOrder.Asset.vlocity_cmt__ServiceAccountId__r.LXD_AddressNeighborhood__c, 
+                                        WorkOrder.Asset.vlocity_cmt__ServiceAccountId__r.ShippingCity, 
+                                        WorkOrder.Asset.vlocity_cmt__ServiceAccountId__r.ShippingState, 
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.ShippingStreet,
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.BillingStreet,
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.BillingPostalCode,
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.LXD_AddressNumber__c, 
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.LXD_NewAddressComplement__c, 
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.BillingAddressNumber__c, 
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.LXD_AddressNeighborhood__c, 
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.BillingCity, 
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.BillingState, 
+                                        WorkOrder.Asset.vlocity_cmt__BillingAccountId__r.LXD_AddressComplement__c,
+                                        WorkOrder.AddressNeighborhoodServiceAccount__c,
+                                        WorkOrder.PostalCode,
+                                        WorkOrder.city,
+                                        WorkOrder.state,
+                                        WorkOrder.street,
+                                        Id 
+                                    FROM WorkStep
+                                    WHERE WorkOrder.Work_Type_WO__c = 'Ativação' LIMIT 1];
             String cto = 'TST-123';
             Integer porta_cto = 1;
             String body = '{"user_plan_id":1090650,"promotion":null,"message_validation_list":null,"fixed_discount":null,"customer_id":745497,"customer_current_plan":"T-G-23.350M.4000G","correlation_id":"LHWecvTIjC","contracted_plan":"T-G-22.600M.4000G.GloboPlay"}';
             Test.startTest();
             Test.setMock(HttpCalloutMock.class, new DesktopServiceHttpCalloutMockImpl(200, 'application/x-www-form-urlencoded', body));
-            DesktopService.DesktopService(wt.Id, cto, porta_cto);
-            updateSA(wt.WorkOrderId);
-            DesktopService.checkCallback(wt.Id);
-            DesktopService.checkProvisioning(wt.Id);
+            DesktopService.DesktopService(ws.Id, cto, porta_cto);
+            updateSA(ws.WorkOrderId);
+            DesktopService.checkCallback(ws.Id);
+            DesktopService.checkProvisioning(ws.Id);
+            CustomerController.NewCustomer(ws, cto, porta_cto);
             Test.stopTest();
         } catch (Exception e) {
             System.debug('erro AtivacaoWO '+ e.getStackTraceString()+' - '+e.getMessage());

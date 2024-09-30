@@ -107,7 +107,16 @@ public with sharing class PlanController {
                 }
             }
             //Integer ContractReferenceNumber = getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato', false, true);
-            Integer ContractReferenceNumber = ws.WorkOrder.Case.Contrato__r.Prospect__c != '' ? getIntegerValue(ws.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato',  false,true) : getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato',  false,true);
+            //Integer ContractReferenceNumber = ws.WorkOrder.Case.Contrato__r.Prospect__c != '' ? getIntegerValue(ws.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato',  false,true) : getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato',  false,true);
+
+            
+            Integer ContractReferenceNumber;
+            if(ws.WorkOrder.Case.Contrato__r.Prospect__c == '' || ws.WorkOrder.Case.Contrato__r.Prospect__c == null){
+                ContractReferenceNumber = 1;
+            }else{
+                ContractReferenceNumber = getIntegerValue(ws.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato', false, true);
+
+            }
 
             planoW.correlation_id           = serviceApp.CorrelationId__c;
             planoW.customer_id              = ContractReferenceNumber;
@@ -290,8 +299,14 @@ public with sharing class PlanController {
                 }
             }
             //Integer ContractReferenceNumber = getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato', false, true);
-            Integer ContractReferenceNumber = ws.WorkOrder.Case.Contrato__r.Prospect__c != '' ? getIntegerValue(ws.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato', false,true) : getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato', false,true);
+            //Integer ContractReferenceNumber = ws.WorkOrder.Case.Contrato__r.Prospect__c != '' ? getIntegerValue(ws.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato', false,true) : getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato', false,true);
 
+            Integer ContractReferenceNumber;
+            if(ws.WorkOrder.Case.Contrato__r.Prospect__c == '' || ws.WorkOrder.Case.Contrato__r.Prospect__c == null){
+                ContractReferenceNumber = 1;
+            }else{
+                ContractReferenceNumber = getIntegerValue(ws.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato', false, true);
+            }
 
             pl.correlation_id           = serviceApp.CorrelationId__c;
             pl.customer_id              = ContractReferenceNumber;

@@ -3,7 +3,7 @@ public class EveryGraficoEvolutividadeControllerTest {
 
     @testSetup
     static void setup() {
-        // Criar casos de teste
+       
         Group testGroup = new Group(Name='test group', type='Queue');
         insert testGroup;
         
@@ -25,42 +25,50 @@ public class EveryGraficoEvolutividadeControllerTest {
         insert accs;
 
         List<Contract> contracts = new List<Contract>();
-
+        Date dt = Date.today();
         for(Account a : accs){
             contracts.add(new Contract(
-                AccountId = a.Id
+                AccountId = a.Id,
+                StartDate = dt
             ));
         }
 
         insert contracts;
 
+        // Criar casos de teste
         List<Case> cases = new List<Case>();
-
         Integer counter = 0;
-        for(Contract c : contracts){
+        for (Integer i = 0; i < contracts.size(); i++) {
             counter++;
+            Contract c = contracts[i];
+            // Casos normais
             cases.add(new Case(
-                motive__c = 'Financeiro',
-                submotive__c = 'Ativo NPS' + counter,
+                Area_de_atendimento__c = 'SAC',
+                Tema__c = 'Ativo',
+                motive__c = 'Ativo NPS',
+                submotive__c = 'Faturamento',
                 Status = 'Finalizado',
-                solution__c = 'Resolvido por operações',
+                Tipo__c = 'Informação',
+                solution__c = 'Sem Retorno',
                 Contrato__c = c.Id,
-                OwnerId = Math.mod(counter,2) == 0 ? UserInfo.getUserId() : testGroup.Id 
+                OwnerId = (Math.mod(counter,2) == 0) ? UserInfo.getUserId() : testGroup.Id
             ));
 
-            if(Math.mod(counter, 2) == 0){
-                //Date dt = Date.today().addMonths(-counter);
+            // Casos com OwnerId começando com "00G" (fila)
+            if (Math.mod(counter,2) != 0) {
                 cases.add(new Case(
-                    motive__c = 'Financeiro',
-                    submotive__c = 'Ativo NPS' + counter,
+                    Area_de_atendimento__c = 'SAC',
+                    Tema__c = 'Ativo',
+                    motive__c = 'Ativo NPS',
+                    submotive__c = 'Faturamento',
                     Status = 'Finalizado',
-                    solution__c = 'Resolvido por operações',
+                    Tipo__c = 'Informação',
+                    solution__c = 'Sem Retorno',
                     Contrato__c = c.Id,
-                    OwnerId = Math.mod(counter,2) == 0 ? UserInfo.getUserId() : testGroup.Id 
+                    OwnerId = testGroup.Id // Owner na fila
                 ));
             }
         }
-
         insert cases;
     }
 
@@ -68,7 +76,6 @@ public class EveryGraficoEvolutividadeControllerTest {
     static void testGetGroupedCasesFromLast12Months() {
         // Preparar métricas JSON
         List<EveryGraficoEvolutividadeController.Metricas> metricas = new List<EveryGraficoEvolutividadeController.Metricas>();
-        //for (Integer i = 1; i <= 5; i++) {
             EveryGraficoEvolutividadeController.Metricas d1 = new EveryGraficoEvolutividadeController.Metricas();
             d1.name = 'D+1';
             d1.id = '1';
@@ -81,47 +88,55 @@ public class EveryGraficoEvolutividadeControllerTest {
             d7.value = '7';
             metricas.add(d7);
         
-        //}
         String metricasJson = JSON.serialize(metricas);
 
-        // Executar o método a ser testado
-        EveryGraficoEvolutividadeController.MetricasResolutividade result = EveryGraficoEvolutividadeController.getGroupedCasesFromLast12Months(metricasJson, true);
+         // Mock para garantir que o CaseSelector e ResolutividadeMetadataUtils funcionem
+         Test.startTest();
+         EveryGraficoEvolutividadeController.MetricasResolutividade result = EveryGraficoEvolutividadeController.getGroupedCasesFromLast12Months(metricasJson, true);
+         Test.stopTest();
 
-        // Verificar resultados
-        /*System.assertNotEquals(null, result);
-        System.assertEquals(12, result.meses.size());
-        System.assertEquals(5, result.metricas.size());
+         // Verificar que o resultado não é nulo
+         System.assertNotEquals(null, result);
+         System.assertEquals(12, result.meses.size());
+ 
+         // Testar se as métricas foram calculadas corretamente
+         System.assertEquals(2, result.metricas.size());
+         
+         for (EveryGraficoEvolutividadeController.MetricaResolutividade metrica : result.metricas) {
+             System.assertNotEquals(null, metrica.nome);
+             System.assertEquals(12, metrica.metricasPorMes.size());
+         }
 
-        for (EveryGraficoEvolutividadeController.MetricaResolutividade metrica : result.metricas) {
-            System.assertNotEquals(null, metrica.nome);
-            System.assertEquals(12, metrica.metricasPorMes.size());
-        }*/
-    }
-
-    @isTest
-    static void testGetGroupedCasesFromLast12Months_AtendimentoMistoFalse() {
-        // Preparar métricas JSON
-        List<EveryGraficoEvolutividadeController.Metricas> metricas = new List<EveryGraficoEvolutividadeController.Metricas>();
-        for (Integer i = 1; i <= 5; i++) {
-            EveryGraficoEvolutividadeController.Metricas metrica = new EveryGraficoEvolutividadeController.Metricas();
-            metrica.name = 'Metrica ' + i;
-            metrica.id = String.valueOf(i);
-            metrica.value = String.valueOf(i * 2); // 2, 4, 6, 8, 10
-            metricas.add(metrica);
+         // Verificar se o agrupamento de casos foi feito corretamente
+        // Teste se os meses estão corretos, se os motivos e contratos estão agrupados corretamente
+        for (String month : result.meses) {
+            // Como adicionamos casos com meses diferentes, eles devem ser agrupados aqui
+            System.assert(result.metricas[0].metricasPorMes.containsKey(month), 'A métrica deve conter o mês ' + month);
         }
-        String metricasJson = JSON.serialize(metricas);
+ 
+        // Teste com atendimentoMisto = false (ignora casos de fila)
+        Test.startTest();
+        EveryGraficoEvolutividadeController.MetricasResolutividade result2 = EveryGraficoEvolutividadeController.getGroupedCasesFromLast12Months(metricasJson, false);
+        Test.stopTest();
 
-        // Executar o método a ser testado
-        EveryGraficoEvolutividadeController.MetricasResolutividade result = EveryGraficoEvolutividadeController.getGroupedCasesFromLast12Months(metricasJson, false);
-
-        // Verificar resultados
-        System.assertNotEquals(null, result);
-        System.assertEquals(12, result.meses.size());
-        System.assertEquals(5, result.metricas.size());
-
-        for (EveryGraficoEvolutividadeController.MetricaResolutividade metrica : result.metricas) {
-            System.assertNotEquals(null, metrica.nome);
-            System.assertEquals(12, metrica.metricasPorMes.size());
-        }
+         // Verificar que o resultado não é nulo
+         System.assertNotEquals(null, result2);
+         System.assertEquals(12, result2.meses.size());
+ 
+         // Testar se as métricas foram calculadas corretamente, mas agora com menos casos
+         System.assertEquals(2, result2.metricas.size());
+ 
+         for (EveryGraficoEvolutividadeController.MetricaResolutividade metrica : result2.metricas) {
+             System.assertNotEquals(null, metrica.nome);
+             System.assertEquals(12, metrica.metricasPorMes.size());
+ 
+             // Verificar que os casos de fila foram ignorados
+             for (String month : result2.meses) {
+                 Double percentage = metrica.metricasPorMes.get(month);
+                 System.assert(percentage >= 0 && percentage <= 100, 'Percentage out of range for month ' + month);
+             }
+         }
+          // Verificar se os casos de fila foram corretamente excluídos com atendimentoMisto = false
+        System.assertEquals(0, result2.metricas[0].metricasPorMes.values().size(), 'Nenhum caso de fila deve ser processado');
     }
 }

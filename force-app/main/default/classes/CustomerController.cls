@@ -58,9 +58,16 @@ public with sharing class CustomerController {
          
             TechnicianName              = serviceApp.TechnicianName__c;
             TechnicianCompany           = serviceApp.TechniciansCompany__c;
-            
             //Integer ContractReferenceNumber = getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato', false, true);
-            Integer ContractReferenceNumber = sa.WorkOrder.Case.Contrato__r.Prospect__c != '' ? getIntegerValue(sa.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato', true) : getIntegerValue(sa.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato', true);
+            
+            Integer ContractReferenceNumber;
+            if(sa.WorkOrder.Case.Contrato__r.Prospect__c == '' || sa.WorkOrder.Case.Contrato__r.Prospect__c == null){
+                ContractReferenceNumber = 1;
+
+            }else{
+                ContractReferenceNumber = getIntegerValue(sa.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato', true);
+
+            }
 
             
             List<String> str = new List<string>();
@@ -72,7 +79,7 @@ public with sharing class CustomerController {
             newCustomerW.contracted_plan                = sa.WorkOrder.Asset.ProductCodeFormula__c; 
             newCustomerW.plan_category                  = PlanCategory;
             newCustomerW.aditional_plans                = aditionalPlansList; //Id da tabela planos adicionais
-            newCustomerW.promotion_id                   = getIntegerValue(String.valueOf(sa.WorkOrder.Asset.IdPromocao__c), 'Promoção em Ativo', false);
+            newCustomerW.promotion_id                   = sa.WorkOrder.Asset.IdPromocao__c != null ? getIntegerValue(String.valueOf(sa.WorkOrder.Asset.IdPromocao__c), 'Promoção em Ativo', false) : null;
             newCustomerW.customer_id                    = ContractReferenceNumber;
             newCustomerW.protocol_number                = getLongValue(sa.WorkOrder.Case.LXD_ProtocolNumber__c, 'Protocolo em Caso');
             newCustomerW.customer_full_name             = sa.WorkOrder.Account.Name;

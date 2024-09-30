@@ -52,7 +52,7 @@ public class Util {
 
     * @return  HttpResponse - Objeto HTTP Response
     */
-    public static HttpResponse executarHttpRequest(String serviceName, String method, String body, Integer timeout, String queryParameters){
+    public static HttpResponse executarHttpRequest(String serviceName, String method, String body, Integer timeout, String queryParameters, String correlationId){
         HttpResponse response;
         HttpRequest request;
         String Endpoint = null;
@@ -89,21 +89,22 @@ public class Util {
                 System.debug('response -> '+ response);
                 return response;
 
-                } catch ( Exception e )   {
-                    System.debug('API Request Error: '+e.getMessage()+' - '+e.getStackTraceString());
-                    try {
-                        IntegrationLog__c log    = new IntegrationLog__c();
-                        log.ExecutionDate__c 	 = System.now();
-                        log.LogDescription__c    = 'endPoint='+method + ' ' + Endpoint+' query='+queryParameters+'\nRequest:'+(request?.getBody().length() < 128000?  request?.getBody():request?.getBody().substring(1,12800));    
-                        log.LogResult__c         = 'response:'+ e.getMessage()+ ' ' + e.getStackTraceString();
-                        log.Integration__c 	     = serviceName.replace('_', ' ');
-                        log.Flow__c		 	     = 'Outbound';
-                        log.LogStatus__c         = 'Erro';
-                        log.Name                 = 'Integração de Aprovisionamento'; 
-                        insert log;
-                    } catch ( Exception ee ) {
-                        System.debug('Erro criando log de integracao 1 '+ee.getMessage() + ' ' + ee.getStackTraceString());
-                    }
+            } catch ( Exception e )   {
+                System.debug('API Request Error: '+e.getMessage()+' - '+e.getStackTraceString());
+                try {
+                    IntegrationLog__c log    = new IntegrationLog__c();
+                    log.ExecutionDate__c 	 = System.now();
+                    log.LogDescription__c    = 'endPoint='+method + ' ' + Endpoint+' query='+queryParameters+'\nRequest:'+(request?.getBody().length() < 128000?  request?.getBody():request?.getBody().substring(1,12800));    
+                    log.LogResult__c         = 'response:'+ e.getMessage()+ ' ' + e.getStackTraceString();
+                    log.Integration__c 	     = serviceName.replace('_', ' ');
+                    log.Flow__c		 	     = 'Outbound';
+                    log.LogStatus__c         = 'Erro';
+                    log.Name                 = 'Integração de Aprovisionamento';
+                    log.CorrelationId__c     = correlationId;
+                    insert log;
+                } catch ( Exception ee ) {
+                    System.debug('Erro criando log de integracao 1 '+ee.getMessage() + ' ' + ee.getStackTraceString());
+                }
                 throw e;     
                     
             } finally {
@@ -117,6 +118,7 @@ public class Util {
                     log.Flow__c		 	    = 'Outbound';
                     log.LogStatus__c        = 'Erro';
                     log.Name                = 'Integração de Aprovisionamento';
+                    log.CorrelationId__c    = correlationId;
                     if ( (response?.getStatusCode() == 200 || response?.getStatusCode() == 202)  ) {
                         log.LogStatus__c    =  'Sucesso';
                     }
@@ -133,6 +135,10 @@ public class Util {
         }
     }
     
+    public static HttpResponse executarHttpRequest(String serviceName, String method, String body, Integer timeout, String queryParameters){
+        return executarHttpRequest(serviceName, method, body, timeout, queryParameters, null);
+    }
+
 
     public static void insertLogValidation(String msg, String integrationName, String logDesc, String logStatus, String flow) {
         try {

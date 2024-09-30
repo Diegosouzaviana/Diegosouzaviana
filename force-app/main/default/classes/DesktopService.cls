@@ -396,74 +396,6 @@ public class DesktopService {
         return response;
     }
 
-    private static void updatePlanUserId(String contractId, String planId) {
-        List<vlocity_cmt__ContractLineItem__c> contractLI = 
-        new List<vlocity_cmt__ContractLineItem__c>();
-        contractLi = [SELECT 
-                IdPlanoUsuario__c
-            FROM vlocity_cmt__ContractLineItem__c 
-            WHERE vlocity_cmt__ContractId__c = :contractId order by CreatedDate desc LIMIT 1
-        ];
-        if(contractLi.size()>0){
-            contractLI[0].IdPlanoUsuario__c = Decimal.valueOf(planId); 
-            update contractLI;
-        }
-    }
-      
-    private static void updateAssets(Id caseAssetId, Id commercialAssetId, String cto, String porta, String plan, String ppoeUser) {
-        //List<String> tipoAtivoList;
-        List<Asset> assetList;
-        List<Asset> upAssets = new List<Asset>();
-        try {
-            //tipoAtivoList = (isNewCustomer) ? new List<String>{'onu', 'R', 'SB', 'S', 'aditional'} : new List<String>{'onu', 'R', 'SB'};
-            List<String> listAssetId = new List<String>();
-            listAssetId.add(String.valueOf(commercialAssetId));
-            if(!listAssetId.contains(String.valueOf(caseAssetId))){
-                listAssetId.add(String.valueOf(caseAssetId));
-            }
-            if(Schema.sObjectType.Asset.isAccessible() && Schema.sObjectType.Asset.isUpdateable()) {
-                assetList = [SELECT id, Status FROM Asset WHERE ParentId IN: listAssetId];
-            }
-            if(caseAssetId != commercialAssetId){
-                Asset oldAsset = new Asset();
-                oldAsset.Id = caseAssetId;
-                oldAsset.vlocity_cmt__DisconnectDate__c = DateTime.now();
-                oldAsset.Status = 'B';
-                oldAsset.vlocity_cmt__Action__c = 'Disconnect';
-                upAssets.add(oldAsset);
-            }
-            Asset a = new Asset();
-            a.Id = commercialAssetId;
-            a.Status = 'A';
-            //a.CTO__c = cto;
-            a.SiglaCTO__c = cto.split('-').size()>0 ? cto.split('-')[0] : '';
-            a.CaixaCTO__c = cto.split('-').size()>0 ? cto.split('-')[1] : '';
-            a.PortaCTO__c = porta;
-            a.IdPlanoUsuario__c = Double.valueOf(plan);
-            a.PlanLogin__c = ppoeUser;
-            a.InstallDate = Date.today();
-            upAssets.add(a);
-            for (Asset ass : assetList) {
-                if((ass.status == 'L' || ass.status == 'A') && !upAssets.contains(ass)){
-                    ass.Status = 'A';
-                    //ass.CTO__c = cto;
-                    ass.PortaCTO__c = porta;
-                    ass.SiglaCTO__c = cto.split('-').size()>0 ? cto.split('-')[0] : '';
-                    ass.CaixaCTO__c = cto.split('-').size()>0 ? cto.split('-')[1] : '';
-                    ass.IdPlanoUsuario__c = Double.valueOf(plan);
-                    ass.ParentId = commercialAssetId;
-                    a.PlanLogin__c = ppoeUser;
-                    upAssets.add(ass);
-                }  
-            }
-            Database.update(upAssets,false);
-                
-        } catch (Exception e) {
-            System.debug('Erro ao alterar status de ativos aprovisionados: '+e.getMessage()+' - '+e.getStackTraceString());
-        }
-        
-    }
-
     public static void updateWorkOrder(String workOrderId, String pu_id, Decimal old_pu_id) {
         try {
             WorkOrder wo = [SELECT PuId__c, OldPuId__c FROM WorkOrder WHERE Id = :workOrderId];
@@ -746,16 +678,7 @@ public class DesktopService {
         Util.insertLogValidation(MessageValidation, 'Desktop Service', 'Erro ao enviar dados', 'Erro', 'Outbound');
     }
 
-    public static void updateServiceAccount(String acId, String city,String state, String country, String street, String postalCode){
-        Account ac = new Account();
-        ac.Id = acId;
-        ac.ShippingCity = city;
-        ac.ShippingCountry = country;
-        ac.ShippingState = state;
-        ac.ShippingStreet = street;
-        ac.ShippingPostalCode = postalCode;
-        Database.update(ac,false);
-    }
+
 
     @AuraEnabled
     public static string getNextStep(Integer executionOrder, String woId, String workplanId){
@@ -785,7 +708,19 @@ public class DesktopService {
     public static ResponseWrapper checkProvisioning(id workStepId) {
         ResponseWrapper response = new ResponseWrapper();
         try {
-            WorkStep workStep = [Select WorkOrderId,Status From WorkStep Where Id = :workStepId Limit 1];
+            WorkStep workStep = [
+                SELECT WorkOrderId, Status, ValidationExecutionOrder__c, ExecutionOrder
+                FROM WorkStep
+                WHERE Id = :workStepId
+                LIMIT 1
+            ];
+
+            WorkStep workStep2 = [
+                SELECT WorkOrderId, Status, ValidationExecutionOrder__c, ExecutionOrder
+                FROM WorkStep
+                WHERE ExecutionOrder = :(workStep.ExecutionOrder + 1)
+                LIMIT 1
+            ];
 
             ServiceAppointment sa = [SELECT AppointmentNumber, WorkOrder__r.CTO__c,WorkOrder__r.Porta__c, WorkOrder__r.Work_Type_WO__c, Old_Pu_Id__c,
                         WorkOrder__r.Work_Subtype_WO__c, message__c, message_update_speed__c, WorkOrder__c,
@@ -813,8 +748,10 @@ public class DesktopService {
                 response.success = true;
                 response.callback = sa;
                 workStep.Status = 'Completed';
+
+                updateRecords(sa, workStep, workStep2);
                 //update workStep;
-                } else if (String.isNotBlank(sa.message_update_speed__c)) {
+            } else if (String.isNotBlank(sa.message_update_speed__c)) {
                 response.success = false;
                 response.message = sa.message_update_speed__c;
             }
@@ -827,13 +764,259 @@ public class DesktopService {
         return response;
     }
 
+    public static void updateRecords(ServiceAppointment sa, WorkStep stepProvisioning, WorkStep stepCertificate){
+        List<SObject> recordsToUpdate = new List<SObject>();
+        
+        if(!isAdmContractUpdated(sa.WorkOrder__r.Case.Contrato__c, sa.sac_login__c)){
+            recordsToUpdate.add(processAdmContract(sa.WorkOrder__r.Case.Contrato__c, sa.sac_login__c));
+        }
+
+        if(!isServiceAccountUpdated(sa.WorkOrder__r.Asset.vlocity_cmt__ServiceAccountId__r.Id, sa.WorkOrder__r.City,sa.WorkOrder__r.State,sa.WorkOrder__r.Country, sa.WorkOrder__r.Street, sa.WorkOrder__r.PostalCode)){
+            recordsToUpdate.add(processServiceAccount(String.valueOf(sa.WorkOrder__r.Asset.vlocity_cmt__ServiceAccountId__r.Id), sa.WorkOrder__r.City,sa.WorkOrder__r.State,sa.WorkOrder__r.Country, sa.WorkOrder__r.Street, sa.WorkOrder__r.PostalCode));
+        }
+
+        if(!isPlanUserIdUpdated(sa.WorkOrder__r.Case.Contrato__c, sa.LongUserPlanId__c)){
+            recordsToUpdate.addAll(processPlanUserId(sa.WorkOrder__r.Case.Contrato__c, sa.LongUserPlanId__c));
+        }
+
+        if(!isAssetsUpdated(sa.WorkOrder__r.case.AssetId, sa.WorkOrder__r.AssetId, sa.WorkOrder__r.CTO__c,String.valueOf(sa.WorkOrder__r.Porta__c), sa.LongUserPlanId__c, sa.StringPPoeUser__c)){
+            recordsToUpdate.addAll(processAssets(sa.WorkOrder__r.case.AssetId, sa.WorkOrder__r.AssetId, sa.WorkOrder__r.CTO__c,String.valueOf(sa.WorkOrder__r.Porta__c), sa.LongUserPlanId__c, sa.StringPPoeUser__c));
+        }
+
+        stepProvisioning.Status = 'Completed';
+        recordsToUpdate.add(stepProvisioning);
+
+        stepCertificate.ValidationExecutionOrder__c = true;
+        recordsToUpdate.add(stepCertificate);
+
+        update recordsToUpdate;
+    }
+
+    public static Boolean isAdmContractUpdated(Id contractId, String adm){
+        Contract contract = [
+            SELECT Id, vlocity_cmt__ContractReferenceNumber__c
+            FROM Contract
+            WHERE Id = :contractId
+            LIMIT 1
+        ];
+
+        return contract.vlocity_cmt__ContractReferenceNumber__c == adm;
+    }
+
     public static void updateAdmContract(String contractId, String adm){
+        update processAdmContract(contractId, adm);
+    }
+
+    public static Contract processAdmContract(String contractId, String adm){
         Contract ct = new Contract();
         ct.Id = contractId;
         ct.vlocity_cmt__ContractReferenceNumber__c = adm;
-        update ct;
+        
+        return ct;
     }
-   
+
+
+
+    public static Boolean isServiceAccountUpdated(Id accId, String city, String state, String country, String street, String postalCode){
+        Account acc = [
+            SELECT Id,
+                ShippingCity,
+                ShippingState,
+                ShippingCountry,
+                ShippingStreet,
+                ShippingPostalCode
+            FROM Account
+            WHERE Id = :accId
+            LIMIT 1
+        ];
+
+        return (
+            acc.ShippingCity == city &&
+            acc.ShippingState == state &&
+            acc.ShippingCountry == country &&
+            acc.ShippingStreet == street &&
+            acc.ShippingPostalCode == postalCode
+        );
+    }
+
+    public static void updateServiceAccount(String acId, String city,String state, String country, String street, String postalCode){
+        Database.update(processServiceAccount(acId, city, state, country, street, postalCode), false);
+    }
+
+    public static Account processServiceAccount(String acId, String city,String state, String country, String street, String postalCode){
+        Account ac = new Account();
+        ac.Id = acId;
+        ac.ShippingCity = city;
+        ac.ShippingCountry = country;
+        ac.ShippingState = state;
+        ac.ShippingStreet = street;
+        ac.ShippingPostalCode = postalCode;
+        
+        return ac;
+    }
+
+
+
+    public static Boolean isAssetsUpdated(Id caseAssetId, Id commercialAssetId, String cto, String porta, String plan, String ppoeUser){
+        Set<Id> assetIdSet = new Set<Id>{caseAssetId, commercialAssetId};
+        Map<Id, Asset> assetMap = new Map<Id, Asset>([
+            SELECT Id, 
+                Status,
+                SiglaCTO__c,
+                CaixaCTO__c,
+                PortaCTO__c,
+                IdPlanoUsuario__c,
+                PlanLogin__c,
+                ParentId
+            FROM Asset
+            WHERE ParentId IN :assetIdSet
+            OR Id IN :assetIdSet
+            WITH SECURITY_ENFORCED
+        ]);
+
+        Boolean isUpdated = true;
+
+        Asset oldAsset = assetMap.get(caseAssetId);
+
+        if(caseAssetId != commercialAssetId){
+            if(oldAsset.Status != 'B' || oldAsset.vlocity_cmt__Action__c != 'Disconnect'){
+                return false;
+            }
+        }
+
+        Asset commercialAsset = assetMap.get(commercialAssetId);
+
+        if(
+            commercialAsset.Status != 'A' ||
+            commercialAsset.SiglaCTO__c != (cto.split('-').size()>0 ? cto.split('-')[0] : '') ||
+            commercialAsset.CaixaCTO__c != (cto.split('-').size()>0 ? cto.split('-')[1] : '') ||
+            commercialAsset.PortaCTO__c != porta ||
+            commercialAsset.IdPlanoUsuario__c != Double.valueOf(plan) ||
+            commercialAsset.PlanLogin__c != ppoeUser
+        ){
+            return false;
+        }
+
+        for(Asset a : assetMap.values()){
+            if(a.Id != caseAssetId && a.Id != commercialAssetId &&
+                (a.Status != 'A' ||
+                a.PortaCTO__c != porta ||
+                a.SiglaCTO__c != (cto.split('-').size()>0 ? cto.split('-')[0] : '') ||
+                a.CaixaCTO__c != (cto.split('-').size()>0 ? cto.split('-')[1] : '') ||
+                a.IdPlanoUsuario__c != Double.valueOf(plan) ||
+                a.ParentId != commercialAssetId ||
+                a.PlanLogin__c != ppoeUser)
+            ){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private static void updateAssets(Id caseAssetId, Id commercialAssetId, String cto, String porta, String plan, String ppoeUser) {
+        List<Asset> assetList = processAssets(caseAssetId, commercialAssetId, cto, porta, plan, ppoeUser);
+
+        Database.update(assetList, false);
+    }
+
+    private static List<Asset> processAssets(Id caseAssetId, Id commercialAssetId, String cto, String porta, String plan, String ppoeUser) {
+        //List<String> tipoAtivoList;
+        List<Asset> assetList;
+        List<Asset> upAssets = new List<Asset>();
+        try {
+            //tipoAtivoList = (isNewCustomer) ? new List<String>{'onu', 'R', 'SB', 'S', 'aditional'} : new List<String>{'onu', 'R', 'SB'};
+            List<String> listAssetId = new List<String>();
+            listAssetId.add(String.valueOf(commercialAssetId));
+            if(!listAssetId.contains(String.valueOf(caseAssetId))){
+                listAssetId.add(String.valueOf(caseAssetId));
+            }
+            if(Schema.sObjectType.Asset.isAccessible() && Schema.sObjectType.Asset.isUpdateable()) {
+                assetList = [SELECT id, Status FROM Asset WHERE ParentId IN: listAssetId];
+            }
+            if(caseAssetId != commercialAssetId){
+                Asset oldAsset = new Asset();
+                oldAsset.Id = caseAssetId;
+                oldAsset.vlocity_cmt__DisconnectDate__c = DateTime.now();
+                oldAsset.Status = 'B';
+                oldAsset.vlocity_cmt__Action__c = 'Disconnect';
+                upAssets.add(oldAsset);
+            }
+            Asset a = new Asset();
+            a.Id = commercialAssetId;
+            a.Status = 'A';
+            //a.CTO__c = cto;
+            a.SiglaCTO__c = cto.split('-').size()>0 ? cto.split('-')[0] : '';
+            a.CaixaCTO__c = cto.split('-').size()>0 ? cto.split('-')[1] : '';
+            a.PortaCTO__c = porta;
+            a.IdPlanoUsuario__c = Double.valueOf(plan);
+            a.PlanLogin__c = ppoeUser;
+            a.InstallDate = Date.today();
+            upAssets.add(a);
+            for (Asset ass : assetList) {
+                if((ass.status == 'L' || ass.status == 'A') && !upAssets.contains(ass)){
+                    ass.Status = 'A';
+                    //ass.CTO__c = cto;
+                    ass.PortaCTO__c = porta;
+                    ass.SiglaCTO__c = cto.split('-').size()>0 ? cto.split('-')[0] : '';
+                    ass.CaixaCTO__c = cto.split('-').size()>0 ? cto.split('-')[1] : '';
+                    ass.IdPlanoUsuario__c = Double.valueOf(plan);
+                    ass.ParentId = commercialAssetId;
+                    a.PlanLogin__c = ppoeUser;
+                    upAssets.add(ass);
+                }  
+            }
+            
+            return upAssets;
+                
+        } catch (Exception e) {
+            System.debug('Erro ao alterar status de ativos aprovisionados: '+e.getMessage()+' - '+e.getStackTraceString());
+            return new List<Asset>();
+        }
+    }
+
+
+
+    public static Boolean isPlanUserIdUpdated(Id contractId, String planId){
+        List<vlocity_cmt__ContractLineItem__c> contractLineItem = [
+            SELECT IdPlanoUsuario__c
+            FROM vlocity_cmt__ContractLineItem__c 
+            WHERE vlocity_cmt__ContractId__c = :contractId
+            ORDER BY CreatedDate DESC
+            LIMIT 1
+        ];
+
+        if(!contractLineItem.isEmpty()){
+            return contractLineItem[0].IdPlanoUsuario__c == Decimal.valueOf(planId);
+        }
+
+        return false;
+    }
+
+    private static void updatePlanUserId(String contractId, String planId) {
+        List<vlocity_cmt__ContractLineItem__c> contractLI = processPlanUserId(contractId, planId);
+
+        if(!contractLI.isEmpty()){
+            update contractLI;
+        }
+    }
+
+    private static List<vlocity_cmt__ContractLineItem__c> processPlanUserId(String contractId, String planId) {
+        List<vlocity_cmt__ContractLineItem__c> contractLi = [
+            SELECT IdPlanoUsuario__c
+            FROM vlocity_cmt__ContractLineItem__c
+            WHERE vlocity_cmt__ContractId__c = :contractId
+            ORDER BY CreatedDate DESC
+            LIMIT 1
+        ];
+
+        if(contractLi.size() > 0){
+            contractLI[0].IdPlanoUsuario__c = Decimal.valueOf(planId); 
+        }
+
+        return contractLi;
+    }
+
     public class ResponseWrapper {
         @AuraEnabled public Boolean success {get;set;}
         @AuraEnabled public String message {get;set;}

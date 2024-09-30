@@ -7,19 +7,8 @@ global with sharing class EveryGraficoEvolutividadeController {
         // Deserialize the metrics JSON
         List<Metricas> metricas = (List<Metricas>) JSON.deserialize(metricasJson, List<EveryGraficoEvolutividadeController.Metricas>.class);
         Date oneYearAgo = Date.today().addMonths(-12);
-        // Date oneYearAgo = Date.today().addDays(-4);
-        List<Case> recentCases = [
-            SELECT Id, CaseNumber, motive__c, submotive__c, CreatedDate, Contrato__c, OwnerId
-            FROM Case
-            WHERE CreatedDate >= :oneYearAgo AND
-            (motive__c = 'Financeiro' OR motive__c = 'Cancelamento' OR 
-            motive__c = 'Solicitacoes' OR motive__c = 'Telefonia Fixa' OR 
-            motive__c = 'Telefonia Movel' OR motive__c = 'Ativo' OR 
-            motive__c = 'Produtos' OR motive__c = 'Suporte Tecnico')
-            AND Contrato__c != null
-            AND ClosedDate != null
-            ORDER BY CreatedDate DESC
-        ];
+
+        List<Case> recentCases = ResolutividadeMetadataUtils.updateCaseMotivoSubmotivoByMetadataValues(CaseSelector.getCasesLastYear());
 
         // Group cases by month, motive, and contract
         Map<String, Map<String, Map<String, List<Case>>>> groupedCases = new Map<String, Map<String, Map<String, List<Case>>>>();
@@ -126,6 +115,15 @@ global with sharing class EveryGraficoEvolutividadeController {
         metricasResolutividade.metricas.addAll(mapMetricas.values());
         System.debug('Metricas Resolutividade: ' + metricasResolutividade);
         return metricasResolutividade;
+    }
+
+    @AuraEnabled
+    global static List<Case> getCases(Date startDate, Date endDate) {
+        try{
+            return ResolutividadeMetadataUtils.updateCaseMotivoSubmotivoByMetadataValues(CaseSelector.getCasesBetweenTwoDates(startDate, endDate));
+        } catch(Exception e){
+            return new List<Case>();
+        }
     }
 
     private static Integer findClosestMetrica(List<Metricas> metricas, Integer diffInDays) {

@@ -164,7 +164,7 @@ global with sharing class DeleteSerializedController {
             
             System.debug('pt => '+pt);
             transferDelete.add(pt);
-            if(pt.ProductTransferStates.size()>0){
+            if(pt.IsReceived == false && pt.ProductTransferStates.size()>0){
                 Integer i = 0;
                 for(ProductTransferState pts : pt.ProductTransferStates){
                     System.debug('pts => '+pts);

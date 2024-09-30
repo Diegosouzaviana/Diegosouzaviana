@@ -31,8 +31,11 @@ export default class LXD_ActionButton extends OmniscriptBaseMixin(NavigationMixi
     showbuttom= true;
     showPreviousButton = false;
     showNextButton = false;
-
+    @track pronttrue = false;
     @track showSpinner = false;
+    @track ctoAvailability = '';
+    @track networkCoverage = '';
+    @track availability = '';
 
     async handleClick(_){
         this.showSpinner = true;
@@ -64,7 +67,11 @@ export default class LXD_ActionButton extends OmniscriptBaseMixin(NavigationMixi
                 if (response.result.IPResult.MudancaEndereco.availability == false ||
                     response.result.IPResult.MudancaEndereco.networkCoverage == false ||
                     response.result.IPResult.MudancaEndereco.ctoAvailability == false) {
-                    this.mostrarToast('Tecnologia não disponível no endereço.', 'Erro');
+                    this.pronttrue = true;
+                    this.availability = response.result.IPResult.MudancaEndereco.availability;
+                    this.networkCoverage = response.result.IPResult.MudancaEndereco.networkCoverage;
+                    this.ctoAvailability = response.result.IPResult.MudancaEndereco.ctoAvailability;
+                    // this.mostrarToast('Tecnologia não disponível no endereço.', 'Erro');
                     this.showPreviousButton = true;
                     this.showSpinner = false;
                 } else{
@@ -79,6 +86,9 @@ export default class LXD_ActionButton extends OmniscriptBaseMixin(NavigationMixi
                 console.log('showSpinner2 '+ this.showSpinner);
             }
         }
+    }
+    fechapront(){
+        this.pronttrue = false;
     }
 
     errorHelper(msg){

@@ -5,5 +5,7 @@
     "**/.sfdx": true
   },
   "vlocity.sfdxUsername": "diego.viana@desktop.com.br.partial",
-  "vlocity.projectPath": "c:\\DESKTOP\\DESK2\\vlocity"
+  "vlocity.projectPath": "c:\\DESKTOP\\DESK2\\vlocity",
+  "vlocity.salesforce.developerLogsVisibility": "all",
+  "vlocity.salesforce.apiVersion": "61.0"
 }

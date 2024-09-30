@@ -10,6 +10,27 @@
       </div>
     </div>
   </template>
+  <template lwc:if={pronttrue}>
+    <div class="demo-only" style="height:15rem">
+      <section role="dialog" tabindex="0" aria-modal="true" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" 
+      class="slds-modal slds-fade-in-open slds-modal_prompt">
+        <div class="slds-modal__container">
+          <div class="slds-modal__header slds-theme_error slds-theme_alert-texture">
+            <h1 class="slds-text-heading_medium" id="prompt-heading-id">Tecnologia não disponível no endereço.</h1>
+          </div>
+          <div class="slds-modal__content slds-p-around_small" id="prompt-message-wrapper">
+            <p if:false={availability}>Sem disponibilidade na cidade</p>
+            <p if:false={networkCoverage}>Sem coberbura na região</p>
+            <p if:false={ctoAvailability}>Sem CTO próxima disponível</p>
+          </div>
+          <div class="slds-modal__footer slds-theme_default">
+            <button class="slds-button slds-button_neutral" onclick={fechapront}>Concluir</button>
+          </div>
+        </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </div>
+  </template>
     <div class="slds-grid slds-gutters">
       <div class="slds-col slds-size_8-of-12">
         <button if:true={showbuttom} title={buttonText} onclick={handleClick} class={cssClass} disabled={showSpinner}>
@@ -21,4 +42,4 @@
         <lightning-button if:true={showNextButton} variant="brand" label="&nbsp;&nbsp; Avançar &nbsp;&nbsp;" onclick={nextButton}></lightning-button>
       </div>
     </div>  
-  </template>
+</template>

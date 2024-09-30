@@ -1,48 +1,64 @@
+// 
+// Classe de testes: CaseSelectorTest
+// 
 public with sharing class CaseSelector {
-
-    public static List<EmailTemplate> listEmailsTemplates(){
-        return [SELECT Id, Name, Description 
-                FROM EmailTemplate 
-                WHERE Name LIKE '%Dicas APP%'
-                OR Name LIKE '%Ativação Globoplay%'
-                OR Name LIKE '%Ativação Watch%'
-                OR Name LIKE '%Kaspersky%'
-                ];
-    }
-
-    public static EmailTemplate getEmailTemplate(Id templateId){
-        return [SELECT Id, 
-                    Name, 
-                    Subject, 
-                    Body, 
-                    HtmlValue 
-                FROM EmailTemplate 
-                WHERE Id = :templateId
+    
+    // Selector para casos com Contrato, ClosedDate, Motivo, Submotivo, Tipo e Tema preenchidos, dentro do
+    // intervalo do último ano.
+    public static List<Case> getCasesLastYear(){
+        Date oneYearAgo = Date.today().addMonths(-12);
+        return [
+            SELECT Id, CaseNumber, motive__c, submotive__c, CreatedDate, Contrato__c, OwnerId, Tipo__c, Tema__c
+            FROM Case
+            WHERE CreatedDate >= :oneYearAgo AND
+            (motive__c != null AND submotive__c != null AND 
+            Tipo__c != null AND Tema__c != null)
+            AND Contrato__c != null
+            AND ClosedDate != null
+            ORDER BY CreatedDate DESC
         ];
     }
 
-    public static List<MapeamentoTemplateEmailService__mdt> getMetadadoMapTemplate(){
-        return [SELECT Id, 
-                    Label, 
-                    Campo__c, 
-                    Objeto__c  
-                FROM MapeamentoTemplateEmailService__mdt];
+    // Selector para casos com Contrato, ClosedDate, Motivo, Submotivo, Tipo e Tema preenchidos, dentro do
+    // intervalo de data início e data fim.
+    public static List<Case> getCasesBetweenTwoDates(Date startDate, Date endDate){
+        return [SELECT  Id, 
+                        CaseNumber, 
+                        motive__c, 
+                        submotive__c, 
+                        CreatedDate, 
+                        Contrato__c, 
+                        OwnerId, 
+                        Tipo__c, 
+                        Tema__c
+                FROM    Case
+                WHERE   CreatedDate >= :startDate AND CreatedDate <= :endDate AND
+                        (motive__c != null AND submotive__c != null AND 
+                        Tipo__c != null AND Tema__c != null)
+                AND     Contrato__c != null
+                AND     ClosedDate != null
+                ORDER BY CreatedDate DESC];
     }
 
-    public static List<Case> getCase(Id recordId){
-        return [SELECT Id,
-                    AccountId,
-                    Account.Name
-                FROM Case
-                WHERE Id = :recordId
-                LIMIT 1];               
+    // Selector para pegar Casos por lista de Ids
+    public static List<Case> getCasesBetweenTwoDates(List<String> caseIds){
+        return [SELECT  Id, 
+                        ADM__c, 
+                        Endereco_de_Atendimento__Street__s, 
+                        Endereco_de_Atendimento__City__s, 
+                        motive__c, 
+                        submotive__c, 
+                        Tipo__c, 
+                        Tema__c, 
+                        solution__c, 
+                        Area_de_atendimento__c,
+                        CreatedDate, 
+                        Account.Name, 
+                        Owner.Name, 
+                        CaseNumber
+                FROM    Case 
+                WHERE   Id IN :caseIds];
     }
 
-    public static List<Account> getAccount(Id accountId){
-        return [SELECT Id,
-                    Name
-                FROM Account
-                WHERE Id = :accountId
-                LIMIT 1];               
-    }
+
 }

@@ -95,4 +95,15 @@ public with sharing class WorkStepTriggerHandler {
             }
         }
     }
+
+    //No app o técnico muitas vezes desfazem atualizações(Com erro ou não) que também são executadas pelo server side, sendo assim vamos garantir a permanência destes status
+    public static void rollbackChange(Map<Id, WorkStep> newMap, Map<Id, WorkStep> oldMap){
+
+        List<WorkStep> listSteps = new List<WorkStep>();
+        for(WorkStep ws : newMap.values()){
+            if(oldMap.containsKey(ws.Id) && ws.status != oldMap.get(ws.Id).status && oldMap.get(ws.Id).status == 'Completed' && ws.status == 'New'){
+               newMap.get(ws.Id).status = 'Completed';
+            }
+        }
+    }
 }

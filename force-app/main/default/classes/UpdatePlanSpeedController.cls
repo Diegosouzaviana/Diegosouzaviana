@@ -31,13 +31,20 @@ public with sharing class UpdatePlanSpeedController {
             }
             
             //Integer ContractReferenceNumber = getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato', false, true);
-            Integer ContractReferenceNumber = ws.WorkOrder.Case.Contrato__r.Prospect__c != '' ? getIntegerValue(ws.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato', true) : getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato', true);
+            //Integer ContractReferenceNumber = ws.WorkOrder.Case.Contrato__r.Prospect__c != '' ? getIntegerValue(ws.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato', true) : getIntegerValue(ws.WorkOrder.Case.Contrato__r.vlocity_cmt__ContractReferenceNumber__c, 'Contract Reference Number em Contrato', true);
+            
+            Integer ContractReferenceNumber;
+            if(ws.WorkOrder.Case.Contrato__r.Prospect__c == '' || ws.WorkOrder.Case.Contrato__r.Prospect__c == null){
+                ContractReferenceNumber = 1;
+            }else{
+                ContractReferenceNumber = getIntegerValue(ws.WorkOrder.Case.Contrato__r.Prospect__c, 'Prospect em Contrato', true);
+            }
 
             UpdatePlanSpeedWrapper uPWrapper    = new UpdatePlanSpeedWrapper();
             uPWrapper.correlation_id            = serviceApp.CorrelationId__c;
             uPWrapper.user_plan_id              = getIntegerValue(String.valueOf(ws.WorkOrder.Asset.IdPlanoUsuario__c), 'IdPlanoUsuario', true);
             uPWrapper.contracted_plan           = contractedPlan;
-            uPWrapper.promotion                 = getIntegerValue(String.valueOf(ws.WorkOrder.Asset.IdPromocao__c), 'Promoção', false);
+            uPWrapper.promotion                 = ws.WorkOrder.Asset.IdPromocao__c == null ? null : getIntegerValue(String.valueOf(ws.WorkOrder.Asset.IdPromocao__c), 'IdPromocao',false);
             uPWrapper.customer_current_plan     = ws.WorkOrder.Asset.ProductCodeFormula__c;
             uPWrapper.customer_id               = ContractReferenceNumber;
             uPWrapper.origem                    = 'SALESFORCE';

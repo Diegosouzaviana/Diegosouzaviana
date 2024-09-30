@@ -151,7 +151,8 @@ public class DesktopServiceFactoryTest {
             case4.assetid = ass[3].Id;
             insert case4;
             caseList.add(case4);
-             Case case5 = new Case();
+
+            Case case5 = new Case();
             case5.accountId = acc.Id;
             case5.Contrato__c = contract5.Id;
             case5.PlanoNovo__c = prod2.Id;
@@ -414,6 +415,7 @@ public class DesktopServiceFactoryTest {
             vlocity_cmt__ContractId__c = cont[3].id,
             vlocity_cmt__ServiceAccountId__c = acc.id
         ));
+        
         //5
         AssetList.add(new Asset(
             Name = 'Fibra Home 200M 2023',
@@ -722,7 +724,7 @@ public class DesktopServiceFactoryTest {
                     AccountId = acc.Id,
                     WorkTypeId = WT_Ativ.Id,
                     ContactId = ContId,
-                    AssetId = ass[5].Id,
+                    AssetId = ass[0].Id,
                     CaseId = caseList[5].Id,
                     Subject = 'Test',
                     Street = 'Kerkstraat 2 Test',
