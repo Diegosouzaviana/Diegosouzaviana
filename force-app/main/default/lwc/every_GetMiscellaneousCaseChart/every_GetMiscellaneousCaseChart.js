@@ -382,9 +382,11 @@ export default class Every_GetMiscellaneousCaseChart extends LightningElement {
         //const metricaInput = this.template.querySelector('lightning-input[data-id="metricaInput"]');
         const errorMessageDiv = this.template.querySelector('.error-message');
         errorMessageDiv.textContent = '';
+        console.log('this.metricaExists(metricaNumber)',this.metricaExists(metricaNumber));
+        
 
-        if(metricaNumber > 31 || metricaNumber < 1 || this.metricaExists(metricaNumber)){
-            if (metricaNumber > 31) {
+        if(metricaNumber > 30 || metricaNumber < 1 || this.metricaExists(metricaNumber)|| isNaN(metricaNumber)){
+            if (metricaNumber > 30) {
                 //metricaInput.setCustomValidity('A métrica não pode ser maior que 30.');
                 errorMessageDiv.textContent = 'A métrica não pode ser maior que 30.';
             } else if(metricaNumber < 1){
@@ -452,6 +454,8 @@ export default class Every_GetMiscellaneousCaseChart extends LightningElement {
 
     metricaExists(metricaNumber) {
         const nomeProcurado = 'D+' + metricaNumber;
+        console.log("nomeProcurado",nomeProcurado);
+        
         return this.colunasMetricas.some(item => item.name === nomeProcurado);
     }
 
