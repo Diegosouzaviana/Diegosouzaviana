@@ -1,0 +1,435 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative ">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <vlocity_cmt-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </vlocity_cmt-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <vlocity_cmt-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></vlocity_cmt-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <vlocity_cmt-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left " style="     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+    border-radius:5px;     display:flex;
+flex-direction: row;">
+          <div data-style-id="state0element0" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"id":"state-new-condition-97","field":"Case.motive__c","operator":"==","value":"Migracao Overlay","type":"custom","hasMergeField":false},{"id":"state-new-condition-106","field":"Case.motive__c","operator":"==","value":"Alteracao de Plano","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-119","field":"User.userRole","operator":"==","value":"Faturamento","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-136","field":"User.userRole","operator":"==","value":"Administrador","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-157","field":"User.userRole","operator":"==","value":"Financeiro","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-188","field":"User.userRole","operator":"==","value":"Vendas","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-224","field":"User.userRole","operator":"==","value":"Supervisor","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-257","field":"User.userRole","operator":"==","value":"SAC","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-48","field":"Case.Area_de_atendimento__c","operator":"!=","value":"Retencao","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element0_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1678892295636-ocic2uxdv","label":"PlanCase","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"l-x-d-o-s_plan-change-english","flyoutParams":{"ContextId":"{recordId}","CreateCase":"false","caseId":"{recordId}","imageLink":"/resource/backgroundProduct"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1697654426789","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"LXD/OS_planChange/English","type":"Flyout","vlocityIcon":"standard-default","property":{"ContextId":"{recordId}","CreateCase":"false","caseId":"{recordId}","imageLink":"/resource/backgroundProduct"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"true"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"id":"state-new-condition-97","field":"Case.motive__c","operator":"==","value":"Migracao Overlay","type":"custom","hasMergeField":false},{"id":"state-new-condition-106","field":"Case.motive__c","operator":"==","value":"Alteracao de Plano","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-119","field":"User.userRole","operator":"==","value":"Faturamento","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-136","field":"User.userRole","operator":"==","value":"Administrador","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-157","field":"User.userRole","operator":"==","value":"Financeiro","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-188","field":"User.userRole","operator":"==","value":"Vendas","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-224","field":"User.userRole","operator":"==","value":"Supervisor","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-257","field":"User.userRole","operator":"==","value":"SAC","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-48","field":"Case.Area_de_atendimento__c","operator":"!=","value":"Retencao","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="blockcompraoutrocaplano" data-action-key="state0element0" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element0block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/1663183427000/icon_sideBar/icon/Shape1.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element0block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         width: calc(100% - 12px);"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' ><vlocity_cmt-output-field data-style-id="state0element0block_element1_child"   record={record}  card={card}  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  merge-field="%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3EAltera&ccedil;&atilde;o%20de%20Plano%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element1" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-3","field":"Case.Status","operator":"!=","value":"Finalizado","type":"custom","hasMergeField":false},{"id":"state-new-condition-24","field":"Case.FiltroBotaoWO__c","operator":"==","value":"true","type":"custom","hasMergeField":false,"logicalOperator":"&&"},{"id":"state-new-condition-37","field":"Case.WOCriada__c","operator":"==","value":"false","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' >
+    <vlocity_cmt-block data-style-id="state0element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  action='\{"label":"Action","iconName":"standard-default","eventType":"onclick","actionList":[{"key":"1720796017875-58ri6vk3d","label":"CreatWO","draggable":false,"isOpen":true,"card":"{card}","stateAction":{"id":"flex-action-1720796065013","type":"Flyout","displayName":"Action","vlocityIcon":"standard-default","openUrlIn":"Current Window","flyoutType":"OmniScripts","openFlyoutIn":"Modal","channelName":"close_modal","layoutType":"lightning","osName":"Every/CreateServiceOrder/English","flyoutLwc":"every-create-service-order-english","hasExtraParams":true,"flyoutParams":{"ContextId":"{recordId}"},"property":{"ContextId":"{recordId}"}},"actionIndex":0}],"showSpinner":"false"}'  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-3","field":"Case.Status","operator":"!=","value":"Finalizado","type":"custom","hasMergeField":false},{"id":"state-new-condition-24","field":"Case.FiltroBotaoWO__c","operator":"==","value":"true","type":"custom","hasMergeField":false,"logicalOperator":"&&"},{"id":"state-new-condition-37","field":"Case.WOCriada__c","operator":"==","value":"false","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}'  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="block3" data-action-key="state0element1" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element1block_element0_child"   card={card}  record={record}  size=""  extraclass="slds-align_absolute-center"  state-img='\{"imgsrc":"/resource/1663183427000/icon_sideBar/icon/touch_action.png","alternativeText":"Image description"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element1block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element1block_element1_child"   card={card}  record={record}  merge-field="%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3ECriar%20ordem%20de%20servi&ccedil;o%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element2" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-7","operator":"==","type":"custom","value":"Suporte"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-14","logicalOperator":"||","operator":"==","type":"custom","value":"SAC"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-27","logicalOperator":"||","operator":"==","type":"custom","value":"Coordenador Pós Venda"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-55","logicalOperator":"||","operator":"==","type":"custom","value":"Administrador"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-112","logicalOperator":"||","operator":"==","type":"custom","value":"Qualidade"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-88","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-0","logicalOperator":"||","operator":"==","type":"custom","value":"Ouvidoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-184","logicalOperator":"||","operator":"==","type":"custom","value":"Faturamento"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-299","logicalOperator":"||","operator":"==","type":"custom","value":"Retenção"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-782","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-25","logicalOperator":"||","operator":"==","type":"custom","value":"Diretoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-80","logicalOperator":"||","operator":"==","type":"custom","value":"Supervisor"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element2_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1678892295636-ocic2uxdv","label":"OS_UpdateInformationCustomer","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"o-s_-update-information-customer-english","flyoutParams":{"CaseId":"{recordId}","caseId":"{Case:Id}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1703620576780","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"OS_Update/InformationCustomer/English","type":"Flyout","vlocityIcon":"standard-default","property":{"CaseId":"{recordId}","caseId":"{Case:Id}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"true"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-7","operator":"==","type":"custom","value":"Suporte"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-14","logicalOperator":"||","operator":"==","type":"custom","value":"SAC"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-27","logicalOperator":"||","operator":"==","type":"custom","value":"Coordenador Pós Venda"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-55","logicalOperator":"||","operator":"==","type":"custom","value":"Administrador"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-112","logicalOperator":"||","operator":"==","type":"custom","value":"Qualidade"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-88","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-0","logicalOperator":"||","operator":"==","type":"custom","value":"Ouvidoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-184","logicalOperator":"||","operator":"==","type":"custom","value":"Faturamento"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-299","logicalOperator":"||","operator":"==","type":"custom","value":"Retenção"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-782","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-25","logicalOperator":"||","operator":"==","type":"custom","value":"Diretoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-80","logicalOperator":"||","operator":"==","type":"custom","value":"Supervisor"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="block0clone0" data-action-key="state0element2" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element2block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element2block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/1663183427000/icon_sideBar/icon/loop.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element2block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         width: calc(100% - 12px);"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' ><vlocity_cmt-output-field data-style-id="state0element2block_element1_child"   record={record}  card={card}  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  merge-field="%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3EAtualizar%20dados%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element3" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"field":"Case.Contrato__r.Status","hasMergeField":false,"id":"state-new-condition-23","operator":"==","type":"custom","value":"Bloqueado"},{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-3","operator":"==","type":"custom","value":"Suporte"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-63","logicalOperator":"||","operator":"==","type":"custom","value":"SAC"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-109","logicalOperator":"||","operator":"==","type":"custom","value":"Retenção"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-138","logicalOperator":"||","operator":"==","type":"custom","value":"Administrador"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-2","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-223","logicalOperator":"||","operator":"==","type":"custom","value":"Faturamento"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-367","logicalOperator":"||","operator":"==","type":"custom","value":"Qualidade"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-446","logicalOperator":"||","operator":"==","type":"custom","value":"Ouvidoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-829","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-76","logicalOperator":"||","operator":"==","type":"custom","value":"Diretoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-147","logicalOperator":"||","operator":"==","type":"custom","value":"Supervisor"}],"id":"state-new-group-4","logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element3_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1674044608603-00lsosqc5","label":"Chamando Desbloqueio","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"l-x-d-get-contract-data-english","flyoutParams":{"AssetId":"{Case.AssetId}","caseId":"{recordId}","contractId":"{Case.Contrato__r.Id}","trustUnlock":"{Case.Contrato__r.LXD_TrustUnlock__c}","trustUnlockDate":"{Case.Contrato__r.LXD_TrustUnlockDate__c}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1695860975533","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"LXD/GetContractData/English","type":"Flyout","vlocityIcon":"standard-default","property":{"AssetId":"{Case.AssetId}","caseId":"{recordId}","contractId":"{Case.Contrato__r.Id}","trustUnlock":"{Case.Contrato__r.LXD_TrustUnlock__c}","trustUnlockDate":"{Case.Contrato__r.LXD_TrustUnlockDate__c}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"true"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"field":"Case.Contrato__r.Status","hasMergeField":false,"id":"state-new-condition-23","operator":"==","type":"custom","value":"Bloqueado"},{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-3","operator":"==","type":"custom","value":"Suporte"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-63","logicalOperator":"||","operator":"==","type":"custom","value":"SAC"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-109","logicalOperator":"||","operator":"==","type":"custom","value":"Retenção"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-138","logicalOperator":"||","operator":"==","type":"custom","value":"Administrador"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-2","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-223","logicalOperator":"||","operator":"==","type":"custom","value":"Faturamento"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-367","logicalOperator":"||","operator":"==","type":"custom","value":"Qualidade"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-446","logicalOperator":"||","operator":"==","type":"custom","value":"Ouvidoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-829","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-76","logicalOperator":"||","operator":"==","type":"custom","value":"Diretoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-147","logicalOperator":"||","operator":"==","type":"custom","value":"Supervisor"}],"id":"state-new-group-4","logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="blockdesbloqueioconfianca" data-action-key="state0element3" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element3block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element3block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/icon_sideBar/icon/Shape@1x.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element3block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element3block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3EDesbloqueio%20de%20Confian&ccedil;a%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element4" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-1111","operator":"!=","type":"custom","value":"Financeiro"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element4_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1674227600418-njlnmn0zo","label":"Call LXD_FLEXwifiPasswordCRM","stateAction":{"cardName":"LXD_FLEXwifiPasswordCRM","cardNode":"{record}","channelName":"close_modal","displayName":"Action","flyoutLwc":"LXD_FLEXwifiPasswordCRM","flyoutParams":{"AssetId":"{Case.AssetId}","caseId":"{Case:Id}"},"flyoutType":"childCard","hasExtraParams":true,"id":"flex-action-1703194219970","openFlyoutIn":"Modal","openUrlIn":"Current Window","type":"Flyout","vlocityIcon":"standard-default","property":{"recordId":"{recordId}","objectApiName":"{objectApiName}","parentAttribute":{"AssetId":"{Case.AssetId}","caseId":"{Case:Id}"},"parentMergefields":"{card}","cardNode":"{record}","parentRecord":"{record}","records":"{_records}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"true"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-1111","operator":"!=","type":"custom","value":"Financeiro"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="blocksenhawifi" data-action-key="state0element4" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element4block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element4block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/1663183427000/icon_sideBar/icon/Wifi@@.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element4block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element4block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3ESenha%20do%20Wi-fi%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element5" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element5_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1687543480277-qt1hhg05o","label":"showDates","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"o-s-list-of-data-english","flyoutParams":{"accountId":"{Case.AccountId}","caseId":"{Case.Id}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1692715777910","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"OS/ListOfData/English","type":"Flyout","vlocityIcon":"standard-default","property":{"accountId":"{Case.AccountId}","caseId":"{Case.Id}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"false"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="blockagendamentovisitatecnica" data-action-key="state0element5" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element5block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element5block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/1663183427000/icon_sideBar/icon/hammer-wrench.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element5block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element5block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3EAgendamento%20Visita%20T&eacute;cnica%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element6" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element6_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1687543480277-qt1hhg05o","label":"ChangeAddressAct","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"l-x-d-o-s_-change-address-portuguese-brazil","flyoutParams":{"AssetId":"{Case.AssetId}","ContextId":"{recordId}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1706044424047","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"LXD/OS_ChangeAddress/Portuguese (Brazil)","type":"Flyout","vlocityIcon":"standard-default","property":{"AssetId":"{Case.AssetId}","ContextId":"{recordId}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"false"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="block5clone0" data-action-key="state0element6" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element6block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element6block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/icon_sideBar/icon/home-edit-outline@3x.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element6block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element6block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3EMudan&ccedil;a%20de&nbsp;endere&ccedil;o%20de%20Instala&ccedil;&atilde;o%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element7" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"id":"state-new-condition-13","field":"User.userRole","operator":"==","value":"Administrador","type":"custom","hasMergeField":false},{"id":"state-new-condition-10","field":"Case.Area_de_atendimento__c","operator":"==","value":"Retencao","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element7_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1687543480277-qt1hhg05o","label":"Changeplano","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"every-voluntary-cancellation-process-english","flyoutParams":{"ContextId":"{recordId}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1721315413744","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"Every/VoluntaryCancellationProcess/English","type":"Flyout","vlocityIcon":"standard-default","property":{"ContextId":"{recordId}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"false"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"id":"state-new-condition-13","field":"User.userRole","operator":"==","value":"Administrador","type":"custom","hasMergeField":false},{"id":"state-new-condition-10","field":"Case.Area_de_atendimento__c","operator":"==","value":"Retencao","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="block6clone0" data-action-key="state0element7" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element7block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element7block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/icon_sideBar/icon/record-circle-outline.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element7block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element7block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3ECancelar%20Plano%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div>
+        </div>
+      </vlocity_cmt-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <vlocity_cmt-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left " style="     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+    border-radius:5px;     display:flex;
+flex-direction: row;">
+          <div data-style-id="state0element0" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"id":"state-new-condition-97","field":"Case.motive__c","operator":"==","value":"Migracao Overlay","type":"custom","hasMergeField":false},{"id":"state-new-condition-106","field":"Case.motive__c","operator":"==","value":"Alteracao de Plano","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-119","field":"User.userRole","operator":"==","value":"Faturamento","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-136","field":"User.userRole","operator":"==","value":"Administrador","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-157","field":"User.userRole","operator":"==","value":"Financeiro","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-188","field":"User.userRole","operator":"==","value":"Vendas","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-224","field":"User.userRole","operator":"==","value":"Supervisor","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-257","field":"User.userRole","operator":"==","value":"SAC","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-48","field":"Case.Area_de_atendimento__c","operator":"!=","value":"Retencao","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element0_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1678892295636-ocic2uxdv","label":"PlanCase","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"l-x-d-o-s_plan-change-english","flyoutParams":{"ContextId":"{recordId}","CreateCase":"false","caseId":"{recordId}","imageLink":"/resource/backgroundProduct"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1697654426789","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"LXD/OS_planChange/English","type":"Flyout","vlocityIcon":"standard-default","property":{"ContextId":"{recordId}","CreateCase":"false","caseId":"{recordId}","imageLink":"/resource/backgroundProduct"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"true"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"id":"state-new-condition-97","field":"Case.motive__c","operator":"==","value":"Migracao Overlay","type":"custom","hasMergeField":false},{"id":"state-new-condition-106","field":"Case.motive__c","operator":"==","value":"Alteracao de Plano","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-119","field":"User.userRole","operator":"==","value":"Faturamento","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-136","field":"User.userRole","operator":"==","value":"Administrador","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-157","field":"User.userRole","operator":"==","value":"Financeiro","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-188","field":"User.userRole","operator":"==","value":"Vendas","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-224","field":"User.userRole","operator":"==","value":"Supervisor","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-257","field":"User.userRole","operator":"==","value":"SAC","type":"custom","hasMergeField":false,"logicalOperator":"||"},{"id":"state-new-condition-48","field":"Case.Area_de_atendimento__c","operator":"!=","value":"Retencao","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="blockcompraoutrocaplano" data-action-key="state0element0" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element0block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/1663183427000/icon_sideBar/icon/Shape1.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element0block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         width: calc(100% - 12px);"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' ><vlocity_cmt-output-field data-style-id="state0element0block_element1_child"   record={record}  card={card}  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  merge-field="%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3EAltera&ccedil;&atilde;o%20de%20Plano%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element1" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-3","field":"Case.Status","operator":"!=","value":"Finalizado","type":"custom","hasMergeField":false},{"id":"state-new-condition-24","field":"Case.FiltroBotaoWO__c","operator":"==","value":"true","type":"custom","hasMergeField":false,"logicalOperator":"&&"},{"id":"state-new-condition-37","field":"Case.WOCriada__c","operator":"==","value":"false","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' >
+    <vlocity_cmt-block data-style-id="state0element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  action='\{"label":"Action","iconName":"standard-default","eventType":"onclick","actionList":[{"key":"1720796017875-58ri6vk3d","label":"CreatWO","draggable":false,"isOpen":true,"card":"{card}","stateAction":{"id":"flex-action-1720796065013","type":"Flyout","displayName":"Action","vlocityIcon":"standard-default","openUrlIn":"Current Window","flyoutType":"OmniScripts","openFlyoutIn":"Modal","channelName":"close_modal","layoutType":"lightning","osName":"Every/CreateServiceOrder/English","flyoutLwc":"every-create-service-order-english","hasExtraParams":true,"flyoutParams":{"ContextId":"{recordId}"},"property":{"ContextId":"{recordId}"}},"actionIndex":0}],"showSpinner":"false"}'  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-3","field":"Case.Status","operator":"!=","value":"Finalizado","type":"custom","hasMergeField":false},{"id":"state-new-condition-24","field":"Case.FiltroBotaoWO__c","operator":"==","value":"true","type":"custom","hasMergeField":false,"logicalOperator":"&&"},{"id":"state-new-condition-37","field":"Case.WOCriada__c","operator":"==","value":"false","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}'  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="block3" data-action-key="state0element1" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element1block_element0_child"   card={card}  record={record}  size=""  extraclass="slds-align_absolute-center"  state-img='\{"imgsrc":"/resource/1663183427000/icon_sideBar/icon/touch_action.png","alternativeText":"Image description"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element1block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element1block_element1_child"   card={card}  record={record}  merge-field="%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3ECriar%20ordem%20de%20servi&ccedil;o%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element2" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-7","operator":"==","type":"custom","value":"Suporte"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-14","logicalOperator":"||","operator":"==","type":"custom","value":"SAC"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-27","logicalOperator":"||","operator":"==","type":"custom","value":"Coordenador Pós Venda"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-55","logicalOperator":"||","operator":"==","type":"custom","value":"Administrador"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-112","logicalOperator":"||","operator":"==","type":"custom","value":"Qualidade"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-88","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-0","logicalOperator":"||","operator":"==","type":"custom","value":"Ouvidoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-184","logicalOperator":"||","operator":"==","type":"custom","value":"Faturamento"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-299","logicalOperator":"||","operator":"==","type":"custom","value":"Retenção"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-782","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-25","logicalOperator":"||","operator":"==","type":"custom","value":"Diretoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-80","logicalOperator":"||","operator":"==","type":"custom","value":"Supervisor"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element2_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1678892295636-ocic2uxdv","label":"OS_UpdateInformationCustomer","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"o-s_-update-information-customer-english","flyoutParams":{"CaseId":"{recordId}","caseId":"{Case:Id}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1703620576780","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"OS_Update/InformationCustomer/English","type":"Flyout","vlocityIcon":"standard-default","property":{"CaseId":"{recordId}","caseId":"{Case:Id}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"true"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-7","operator":"==","type":"custom","value":"Suporte"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-14","logicalOperator":"||","operator":"==","type":"custom","value":"SAC"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-27","logicalOperator":"||","operator":"==","type":"custom","value":"Coordenador Pós Venda"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-55","logicalOperator":"||","operator":"==","type":"custom","value":"Administrador"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-112","logicalOperator":"||","operator":"==","type":"custom","value":"Qualidade"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-88","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-0","logicalOperator":"||","operator":"==","type":"custom","value":"Ouvidoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-184","logicalOperator":"||","operator":"==","type":"custom","value":"Faturamento"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-299","logicalOperator":"||","operator":"==","type":"custom","value":"Retenção"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-782","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-25","logicalOperator":"||","operator":"==","type":"custom","value":"Diretoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-80","logicalOperator":"||","operator":"==","type":"custom","value":"Supervisor"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="block0clone0" data-action-key="state0element2" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element2block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element2block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/1663183427000/icon_sideBar/icon/loop.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element2block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         width: calc(100% - 12px);"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' ><vlocity_cmt-output-field data-style-id="state0element2block_element1_child"   record={record}  card={card}  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  merge-field="%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3EAtualizar%20dados%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element3" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"field":"Case.Contrato__r.Status","hasMergeField":false,"id":"state-new-condition-23","operator":"==","type":"custom","value":"Bloqueado"},{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-3","operator":"==","type":"custom","value":"Suporte"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-63","logicalOperator":"||","operator":"==","type":"custom","value":"SAC"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-109","logicalOperator":"||","operator":"==","type":"custom","value":"Retenção"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-138","logicalOperator":"||","operator":"==","type":"custom","value":"Administrador"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-2","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-223","logicalOperator":"||","operator":"==","type":"custom","value":"Faturamento"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-367","logicalOperator":"||","operator":"==","type":"custom","value":"Qualidade"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-446","logicalOperator":"||","operator":"==","type":"custom","value":"Ouvidoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-829","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-76","logicalOperator":"||","operator":"==","type":"custom","value":"Diretoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-147","logicalOperator":"||","operator":"==","type":"custom","value":"Supervisor"}],"id":"state-new-group-4","logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element3_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1674044608603-00lsosqc5","label":"Chamando Desbloqueio","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"l-x-d-get-contract-data-english","flyoutParams":{"AssetId":"{Case.AssetId}","caseId":"{recordId}","contractId":"{Case.Contrato__r.Id}","trustUnlock":"{Case.Contrato__r.LXD_TrustUnlock__c}","trustUnlockDate":"{Case.Contrato__r.LXD_TrustUnlockDate__c}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1695860975533","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"LXD/GetContractData/English","type":"Flyout","vlocityIcon":"standard-default","property":{"AssetId":"{Case.AssetId}","caseId":"{recordId}","contractId":"{Case.Contrato__r.Id}","trustUnlock":"{Case.Contrato__r.LXD_TrustUnlock__c}","trustUnlockDate":"{Case.Contrato__r.LXD_TrustUnlockDate__c}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"true"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"field":"Case.Contrato__r.Status","hasMergeField":false,"id":"state-new-condition-23","operator":"==","type":"custom","value":"Bloqueado"},{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-3","operator":"==","type":"custom","value":"Suporte"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-63","logicalOperator":"||","operator":"==","type":"custom","value":"SAC"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-109","logicalOperator":"||","operator":"==","type":"custom","value":"Retenção"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-138","logicalOperator":"||","operator":"==","type":"custom","value":"Administrador"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-2","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-223","logicalOperator":"||","operator":"==","type":"custom","value":"Faturamento"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-367","logicalOperator":"||","operator":"==","type":"custom","value":"Qualidade"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-446","logicalOperator":"||","operator":"==","type":"custom","value":"Ouvidoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-829","logicalOperator":"||","operator":"==","type":"custom","value":"Financeiro"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-76","logicalOperator":"||","operator":"==","type":"custom","value":"Diretoria"},{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-147","logicalOperator":"||","operator":"==","type":"custom","value":"Supervisor"}],"id":"state-new-group-4","logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="blockdesbloqueioconfianca" data-action-key="state0element3" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element3block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element3block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/icon_sideBar/icon/Shape@1x.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element3block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element3block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3EDesbloqueio%20de%20Confian&ccedil;a%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element4" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-1111","operator":"!=","type":"custom","value":"Financeiro"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element4_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1674227600418-njlnmn0zo","label":"Call LXD_FLEXwifiPasswordCRM","stateAction":{"cardName":"LXD_FLEXwifiPasswordCRM","cardNode":"{record}","channelName":"close_modal","displayName":"Action","flyoutLwc":"LXD_FLEXwifiPasswordCRM","flyoutParams":{"AssetId":"{Case.AssetId}","caseId":"{Case:Id}"},"flyoutType":"childCard","hasExtraParams":true,"id":"flex-action-1703194219970","openFlyoutIn":"Modal","openUrlIn":"Current Window","type":"Flyout","vlocityIcon":"standard-default","property":{"recordId":"{recordId}","objectApiName":"{objectApiName}","parentAttribute":{"AssetId":"{Case.AssetId}","caseId":"{Case:Id}"},"parentMergefields":"{card}","cardNode":"{record}","parentRecord":"{record}","records":"{_records}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"true"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"field":"User.userRole","hasMergeField":false,"id":"state-new-condition-1111","operator":"!=","type":"custom","value":"Financeiro"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="blocksenhawifi" data-action-key="state0element4" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element4block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element4block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/1663183427000/icon_sideBar/icon/Wifi@@.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element4block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element4block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3ESenha%20do%20Wi-fi%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element5" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element5_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1687543480277-qt1hhg05o","label":"showDates","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"o-s-list-of-data-english","flyoutParams":{"accountId":"{Case.AccountId}","caseId":"{Case.Id}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1692715777910","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"OS/ListOfData/English","type":"Flyout","vlocityIcon":"standard-default","property":{"accountId":"{Case.AccountId}","caseId":"{Case.Id}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"false"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="blockagendamentovisitatecnica" data-action-key="state0element5" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element5block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element5block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/1663183427000/icon_sideBar/icon/hammer-wrench.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element5block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element5block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3EAgendamento%20Visita%20T&eacute;cnica%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element6" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element6_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1687543480277-qt1hhg05o","label":"ChangeAddressAct","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"l-x-d-o-s_-change-address-portuguese-brazil","flyoutParams":{"AssetId":"{Case.AssetId}","ContextId":"{recordId}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1706044424047","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"LXD/OS_ChangeAddress/Portuguese (Brazil)","type":"Flyout","vlocityIcon":"standard-default","property":{"AssetId":"{Case.AssetId}","ContextId":"{recordId}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"false"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="block5clone0" data-action-key="state0element6" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element6block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element6block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/icon_sideBar/icon/home-edit-outline@3x.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element6block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element6block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3EMudan&ccedil;a%20de&nbsp;endere&ccedil;o%20de%20Instala&ccedil;&atilde;o%3C/span%3E%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div><div data-style-id="state0element7" class="slds-col   slds-text-link_reset  slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  condition-element" data-rindex={rindex} style="      
+         display:flex;
+flex-direction: row;
+justify-content:flex-start;
+align-items: center !important;
+width:50%;
+align-self: center;
+cursor:pointer;
+user-select: none;
+height: 45px;
+user-select: none;
+-webkit-user-select: none;
+-khtml-user-select: none; 
+-moz-user-select: none;
+-ms-user-select: none;"  data-conditions='\{"group":[{"id":"state-new-condition-13","field":"User.userRole","operator":"==","value":"Administrador","type":"custom","hasMergeField":false},{"id":"state-new-condition-10","field":"Case.Area_de_atendimento__c","operator":"==","value":"Retencao","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}' >
+    <vlocity_cmt-block data-style-id="state0element7_child"  record={record}  card={card}  action='\{"actionList":[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1687543480277-qt1hhg05o","label":"Changeplano","stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"every-voluntary-cancellation-process-english","flyoutParams":{"ContextId":"{recordId}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1721315413744","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"Every/VoluntaryCancellationProcess/English","type":"Flyout","vlocityIcon":"standard-default","property":{"ContextId":"{recordId}"}}}],"eventType":"onclick","iconName":"standard-default","label":"Action","showSpinner":"false"}'  collapsed-by-default="false"  collapsible="false"  data-conditions='\{"group":[{"id":"state-new-condition-13","field":"User.userRole","operator":"==","value":"Administrador","type":"custom","hasMergeField":false},{"id":"state-new-condition-10","field":"Case.Area_de_atendimento__c","operator":"==","value":"Retencao","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'  label="Block"  extraclass=" slds-text-link_reset"  theme="slds"  onclick={executeAction} data-element-label="block6clone0" data-action-key="state0element7" onkeydown={executeActionWithKeyboard} tabindex="0"><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element7block_element0" class="slds-col   slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width:12px;
+align-self: center;" ><vlocity_cmt-flex-img data-style-id="state0element7block_element0_child"   record={record}  card={card}  extraclass="slds-align_absolute-center"  size=""  state-img='\{"alternativeText":"Image description","imgsrc":"/resource/icon_sideBar/icon/record-circle-outline.png"}'  theme="slds"  ></vlocity_cmt-flex-img>
+      </div><div data-style-id="state0element7block_element1" class="slds-col  slds-p-left_small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         width: calc(100% - 12px);" ><vlocity_cmt-output-field data-style-id="state0element7block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3ECancelar%20Plano%3C/div%3E"  theme="slds"  ></vlocity_cmt-output-field>
+      </div>
+        </div></vlocity_cmt-block>
+    </div>
+        </div>
+      </vlocity_cmt-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <vlocity_cmt-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </vlocity_cmt-action>
+  
+            <vlocity_cmt-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            <div slot="flyout" class="blockcompraoutrocaplanoaction0 " if:true={action.blockcompraoutrocaplanoaction0}><vlocity_cmt-custom-lwc-wrapper element-name="c-l-x-d-o-s_plan-change-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"ContextId\":\"{recordId}\",\"CreateCase\":\"false\",\"caseId\":\"{recordId}\",\"imageLink\":\"/resource/backgroundProduct\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={action.blockcompraoutrocaplanoaction0} >
+     <c-l-x-d-o-s_plan-change-english   layout='lightning'    ></c-l-x-d-o-s_plan-change-english>
+    </vlocity_cmt-custom-lwc-wrapper></div><div slot="flyout" class="block3action0 " if:true={action.block3action0}><vlocity_cmt-custom-lwc-wrapper element-name="c-every-create-service-order-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"ContextId\":\"{recordId}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={action.block3action0} >
+     <c-every-create-service-order-english   layout='lightning'    ></c-every-create-service-order-english>
+    </vlocity_cmt-custom-lwc-wrapper></div><div slot="flyout" class="block0clone0action0 " if:true={action.block0clone0action0}><vlocity_cmt-custom-lwc-wrapper element-name="c-o-s_-update-information-customer-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"CaseId\":\"{recordId}\",\"caseId\":\"{Case:Id}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={action.block0clone0action0} >
+     <c-o-s_-update-information-customer-english   layout='lightning'    ></c-o-s_-update-information-customer-english>
+    </vlocity_cmt-custom-lwc-wrapper></div><div slot="flyout" class="blockdesbloqueioconfiancaaction0 " if:true={action.blockdesbloqueioconfiancaaction0}><vlocity_cmt-custom-lwc-wrapper element-name="c-l-x-d-get-contract-data-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AssetId\":\"{Case.AssetId}\",\"caseId\":\"{recordId}\",\"contractId\":\"{Case.Contrato__r.Id}\",\"trustUnlock\":\"{Case.Contrato__r.LXD_TrustUnlock__c}\",\"trustUnlockDate\":\"{Case.Contrato__r.LXD_TrustUnlockDate__c}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={action.blockdesbloqueioconfiancaaction0} >
+     <c-l-x-d-get-contract-data-english   layout='lightning'    ></c-l-x-d-get-contract-data-english>
+    </vlocity_cmt-custom-lwc-wrapper></div><div slot="flyout" class="blocksenhawifiaction0 " if:true={action.blocksenhawifiaction0}> <c-cf-l-x-d_-f-l-e-xwifi-password-c-r-m data-style-id="state0element4_child"  card-node="\{record}"  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  object-api-name={objectApiName}  parent-attribute='\{"AssetId":"{Case.AssetId}","caseId":"{Case:Id}"}'  ></c-cf-l-x-d_-f-l-e-xwifi-password-c-r-m></div><div slot="flyout" class="blockagendamentovisitatecnicaaction0 " if:true={action.blockagendamentovisitatecnicaaction0}><vlocity_cmt-custom-lwc-wrapper element-name="c-o-s-list-of-data-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"accountId\":\"{Case.AccountId}\",\"caseId\":\"{Case.Id}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={action.blockagendamentovisitatecnicaaction0} >
+     <c-o-s-list-of-data-english   layout='lightning'    ></c-o-s-list-of-data-english>
+    </vlocity_cmt-custom-lwc-wrapper></div><div slot="flyout" class="block5clone0action0 " if:true={action.block5clone0action0}><vlocity_cmt-custom-lwc-wrapper element-name="c-l-x-d-o-s_-change-address-portuguese-brazil" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AssetId\":\"{Case.AssetId}\",\"ContextId\":\"{recordId}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={action.block5clone0action0} >
+     <c-l-x-d-o-s_-change-address-portuguese-brazil   layout='lightning'    ></c-l-x-d-o-s_-change-address-portuguese-brazil>
+    </vlocity_cmt-custom-lwc-wrapper></div><div slot="flyout" class="block6clone0action0 " if:true={action.block6clone0action0}><vlocity_cmt-custom-lwc-wrapper element-name="c-every-voluntary-cancellation-process-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"ContextId\":\"{recordId}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={action.block6clone0action0} >
+     <c-every-voluntary-cancellation-process-english   layout='lightning'    ></c-every-voluntary-cancellation-process-english>
+    </vlocity_cmt-custom-lwc-wrapper></div>
+            </vlocity_cmt-action>
+            </div>
+          </template>

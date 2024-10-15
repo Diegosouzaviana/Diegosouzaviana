@@ -1,0 +1,2915 @@
+{
+    "dataSource": {
+        "contextVariables": [
+        ],
+        "orderBy": {
+        },
+        "type": null,
+        "value": {
+        }
+    },
+    "dynamicCanvasWidth": {
+        "type": "desktop"
+    },
+    "enableLwc": true,
+    "isFlex": true,
+    "lwc": {
+        "DeveloperName": "cfLXD_FlexPlanCase_50_Desktop",
+        "Id": "0RbHa000000GvVNKA0",
+        "ManageableState": "unmanaged",
+        "MasterLabel": "cfLXD_FlexPlanCase_50_Desktop",
+        "NamespacePrefix": "c"
+    },
+    "osSupport": true,
+    "selectableMode": "Multi",
+    "states": [
+        {
+            "actions": [
+            ],
+            "childCards": [
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "children": [
+                                {
+                                    "class": "slds-col ",
+                                    "element": "flexImg",
+                                    "elementLabel": "Block-3-Image-0",
+                                    "key": "element_element_block_0_0_flexImg_0_0",
+                                    "name": "Image",
+                                    "parentElementKey": "element_block_0_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "extraclass": "slds-align_absolute-center",
+                                        "record": "{record}",
+                                        "size": "",
+                                        "stateImg": {
+                                            "alternativeText": "Image description",
+                                            "imgsrc": "/resource/1663183427000/icon_sideBar/icon/touch_action.png"
+                                        }
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "flexImg",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width:12px;\nalign-self: center;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                        ],
+                                        "selectedStyles": "button__icon",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width:12px;\nalign-self: center;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "flexImg",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width:12px;\nalign-self: center;",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                ],
+                                                "selectedStyles": "button__icon",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width:12px;\nalign-self: center;",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "element"
+                                },
+                                {
+                                    "class": "slds-col ",
+                                    "element": "outputField",
+                                    "elementLabel": "Block-3-Text-1",
+                                    "key": "element_element_block_0_0_outputField_1_0",
+                                    "name": "Text",
+                                    "parentElementKey": "element_block_0_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "mergeField": "%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3ECriar%20Ordem%20de%20Servi&ccedil;o%3C/span%3E%3C/div%3E",
+                                        "record": "{record}"
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-left_small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "outputField",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width: calc(100% - 12px);",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "left:small",
+                                                "size": "small",
+                                                "type": "left"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__text",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width: calc(100% - 12px);",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "slds-p-left_small ",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "outputField",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width: calc(100% - 12px);",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                    {
+                                                        "label": "left:small",
+                                                        "size": "small",
+                                                        "type": "left"
+                                                    }
+                                                ],
+                                                "selectedStyles": "button__text",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width: calc(100% - 12px);",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "text"
+                                }
+                            ],
+                            "class": "slds-col ",
+                            "element": "block",
+                            "elementLabel": "Block-3",
+                            "name": "Block",
+                            "property": {
+                                "action": {
+                                    "actionList": [
+                                        {
+                                            "actionIndex": 0,
+                                            "card": "{card}",
+                                            "draggable": false,
+                                            "isOpen": true,
+                                            "key": "1720796017875-58ri6vk3d",
+                                            "label": "CreatWO",
+                                            "stateAction": {
+                                                "channelName": "close_modal",
+                                                "displayName": "Action",
+                                                "flyoutLwc": "every-create-service-order-english",
+                                                "flyoutParams": {
+                                                    "ContextId": "{recordId}"
+                                                },
+                                                "flyoutType": "OmniScripts",
+                                                "hasExtraParams": true,
+                                                "id": "flex-action-1720796065013",
+                                                "layoutType": "lightning",
+                                                "openFlyoutIn": "Modal",
+                                                "openUrlIn": "Current Window",
+                                                "osName": "Every/CreateServiceOrder/English",
+                                                "type": "Flyout",
+                                                "vlocityIcon": "standard-default"
+                                            }
+                                        }
+                                    ],
+                                    "eventType": "onclick",
+                                    "iconName": "standard-default",
+                                    "label": "Action",
+                                    "showSpinner": "false"
+                                },
+                                "card": "{card}",
+                                "collapsedByDefault": false,
+                                "collapsible": false,
+                                "data-conditions": {
+                                    "group": [
+                                        {
+                                            "field": "Case.Status",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-3",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "Finalizado"
+                                        },
+                                        {
+                                            "field": "Case.FiltroBotaoWO__c",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-24",
+                                            "logicalOperator": "&&",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "true"
+                                        },
+                                        {
+                                            "field": "Case.WOCriada__c",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-37",
+                                            "logicalOperator": "&&",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "false"
+                                        }
+                                    ],
+                                    "id": "state-condition-object",
+                                    "isParent": true
+                                },
+                                "label": "Block",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "background": {
+                                    "color": "",
+                                    "image": "",
+                                    "position": "",
+                                    "repeat": "",
+                                    "size": ""
+                                },
+                                "border": {
+                                    "color": "",
+                                    "radius": "",
+                                    "style": "",
+                                    "type": "",
+                                    "width": ""
+                                },
+                                "class": "slds-p-around_x-small ",
+                                "container": {
+                                    "class": ""
+                                },
+                                "elementStyleProperties": {
+                                },
+                                "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "margin": [
+                                ],
+                                "padding": [
+                                    {
+                                        "label": "around:x-small",
+                                        "size": "x-small",
+                                        "type": "around"
+                                    }
+                                ],
+                                "size": {
+                                    "default": "12",
+                                    "isResponsive": false
+                                },
+                                "sizeClass": "slds-size_12-of-12 ",
+                                "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "text": {
+                                    "align": "",
+                                    "color": ""
+                                }
+                            },
+                            "styleObjects": [
+                                {
+                                    "conditionString": "",
+                                    "conditions": "default",
+                                    "draggable": false,
+                                    "key": 0,
+                                    "label": "Default",
+                                    "name": "Default",
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-around_x-small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "around:x-small",
+                                                "size": "x-small",
+                                                "type": "around"
+                                            }
+                                        ],
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": false
+                                        },
+                                        "sizeClass": "slds-size_12-of-12 ",
+                                        "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "block"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "class": "slds-col ",
+                                    "element": "flexImg",
+                                    "elementLabel": "image-Compra ou troca de plano",
+                                    "key": "element_element_block_1_0_flexImg_0_0",
+                                    "name": "Image",
+                                    "parentElementKey": "element_block_1_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "extraclass": "slds-align_absolute-center",
+                                        "record": "{record}",
+                                        "size": "",
+                                        "stateImg": {
+                                            "alternativeText": "Image description",
+                                            "imgsrc": "/resource/1663183427000/icon_sideBar/icon/loop.png"
+                                        }
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "flexImg",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width:12px;\nalign-self: center;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                        ],
+                                        "selectedStyles": "button__icon",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width:12px;\nalign-self: center;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "flexImg",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width:12px;\nalign-self: center;",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                ],
+                                                "selectedStyles": "button__icon",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width:12px;\nalign-self: center;",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "element",
+                                    "userUpdatedElementLabel": true
+                                },
+                                {
+                                    "class": "slds-col ",
+                                    "element": "outputField",
+                                    "elementLabel": "Block-Cancelar-Text-1-clone-0",
+                                    "key": "element_element_block_1_0_outputField_1_0",
+                                    "name": "Text",
+                                    "parentElementKey": "element_block_1_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "data-conditions": {
+                                            "group": [
+                                            ],
+                                            "id": "state-condition-object",
+                                            "isParent": true
+                                        },
+                                        "mergeField": "%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3EAtualizar%20Dados%3C/span%3E%3C/div%3E",
+                                        "record": "{record}"
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-left_small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "outputField",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width: calc(100% - 12px);",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "left:small",
+                                                "size": "small",
+                                                "type": "left"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__text",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width: calc(100% - 12px);",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "slds-p-left_small ",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "outputField",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width: calc(100% - 12px);",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                    {
+                                                        "label": "left:small",
+                                                        "size": "small",
+                                                        "type": "left"
+                                                    }
+                                                ],
+                                                "selectedStyles": "button__text",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width: calc(100% - 12px);",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "text",
+                                    "userUpdatedElementLabel": true
+                                }
+                            ],
+                            "class": "slds-col ",
+                            "element": "block",
+                            "elementLabel": "Block-0-clone-0",
+                            "name": "Block",
+                            "property": {
+                                "action": {
+                                    "actionList": [
+                                        {
+                                            "actionIndex": 0,
+                                            "card": "{card}",
+                                            "draggable": false,
+                                            "isOpen": true,
+                                            "key": "1678892295636-ocic2uxdv",
+                                            "label": "OS_UpdateInformationCustomer",
+                                            "stateAction": {
+                                                "channelName": "close_modal",
+                                                "displayName": "Action",
+                                                "flyoutLwc": "o-s_-update-information-customer-english",
+                                                "flyoutParams": {
+                                                    "CaseId": "{recordId}",
+                                                    "caseId": "{Case:Id}"
+                                                },
+                                                "flyoutType": "OmniScripts",
+                                                "hasExtraParams": true,
+                                                "id": "flex-action-1703620576780",
+                                                "layoutType": "lightning",
+                                                "openFlyoutIn": "Modal",
+                                                "openUrlIn": "Current Window",
+                                                "osName": "OS_Update/InformationCustomer/English",
+                                                "type": "Flyout",
+                                                "vlocityIcon": "standard-default"
+                                            }
+                                        }
+                                    ],
+                                    "eventType": "onclick",
+                                    "iconName": "standard-default",
+                                    "label": "Action",
+                                    "showSpinner": "true"
+                                },
+                                "card": "{card}",
+                                "collapsedByDefault": false,
+                                "collapsible": false,
+                                "data-conditions": {
+                                    "group": [
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-7",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Suporte"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-14",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "SAC"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-27",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Coordenador Pós Venda"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-55",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Administrador"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-112",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Qualidade"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-88",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Financeiro"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-0",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Ouvidoria"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-184",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Faturamento"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-299",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Retenção"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-782",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Financeiro"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-25",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Diretoria"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-80",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Supervisor"
+                                        }
+                                    ],
+                                    "id": "state-condition-object",
+                                    "isParent": true
+                                },
+                                "label": "Block",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": true,
+                                "large": "12",
+                                "medium": "12",
+                                "small": "12"
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "background": {
+                                    "color": "",
+                                    "image": "",
+                                    "position": "",
+                                    "repeat": "",
+                                    "size": ""
+                                },
+                                "border": {
+                                    "color": "",
+                                    "radius": "",
+                                    "style": "",
+                                    "type": "",
+                                    "width": ""
+                                },
+                                "class": "slds-p-around_x-small ",
+                                "container": {
+                                    "class": ""
+                                },
+                                "element": "block",
+                                "elementStyleProperties": {
+                                },
+                                "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "margin": [
+                                ],
+                                "padding": [
+                                    {
+                                        "label": "around:x-small",
+                                        "size": "x-small",
+                                        "type": "around"
+                                    }
+                                ],
+                                "selectedStyles": "button__container",
+                                "size": {
+                                    "default": "12",
+                                    "isResponsive": true,
+                                    "large": "12",
+                                    "medium": "12",
+                                    "small": "12"
+                                },
+                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "text": {
+                                    "align": "",
+                                    "color": ""
+                                }
+                            },
+                            "styleObjects": [
+                                {
+                                    "conditionString": "",
+                                    "conditions": "default",
+                                    "draggable": false,
+                                    "key": 0,
+                                    "label": "Default",
+                                    "name": "Default",
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-around_x-small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "block",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "around:x-small",
+                                                "size": "x-small",
+                                                "type": "around"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__container",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "block",
+                            "userUpdatedElementLabel": true
+                        },
+                        {
+                            "children": [
+                                {
+                                    "class": "slds-col ",
+                                    "element": "flexImg",
+                                    "elementLabel": "Block-1-Image-0",
+                                    "key": "element_element_block_1_0_flexImg_0_0",
+                                    "name": "Image",
+                                    "parentElementKey": "element_block_1_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "extraclass": "slds-align_absolute-center",
+                                        "record": "{record}",
+                                        "size": "",
+                                        "stateImg": {
+                                            "alternativeText": "Image description",
+                                            "imgsrc": "/resource/icon_sideBar/icon/Shape@1x.png"
+                                        }
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "flexImg",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width:12px;\nalign-self: center;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                        ],
+                                        "selectedStyles": "button__icon",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width:12px;\nalign-self: center;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "flexImg",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width:12px;\nalign-self: center;",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                ],
+                                                "selectedStyles": "button__icon",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width:12px;\nalign-self: center;",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "element"
+                                },
+                                {
+                                    "class": "slds-col ",
+                                    "element": "outputField",
+                                    "elementLabel": "Block-1-Text-1",
+                                    "key": "element_element_block_1_0_outputField_1_0",
+                                    "name": "Text",
+                                    "parentElementKey": "element_block_1_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "mergeField": "%3Cdiv%20class=%22slds-text-align_left%22%3E%3Cspan%20style=%22font-size:%208pt;%22%3EDesbloqueio%20de%20Confian&ccedil;a%3C/span%3E%3C/div%3E",
+                                        "record": "{record}"
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-left_small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "outputField",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width: calc(100% - 12px);",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "left:small",
+                                                "size": "small",
+                                                "type": "left"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__text",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width: calc(100% - 12px);",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "slds-p-left_small ",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "outputField",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width: calc(100% - 12px);",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                    {
+                                                        "label": "left:small",
+                                                        "size": "small",
+                                                        "type": "left"
+                                                    }
+                                                ],
+                                                "selectedStyles": "button__text",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width: calc(100% - 12px);",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "text"
+                                }
+                            ],
+                            "class": "slds-col ",
+                            "element": "block",
+                            "elementLabel": "Block-Desbloqueio-Confianca",
+                            "name": "Block",
+                            "property": {
+                                "action": {
+                                    "actionList": [
+                                        {
+                                            "actionIndex": 0,
+                                            "card": "{card}",
+                                            "draggable": false,
+                                            "isOpen": true,
+                                            "key": "1674044608603-00lsosqc5",
+                                            "label": "Chamando Desbloqueio",
+                                            "stateAction": {
+                                                "channelName": "close_modal",
+                                                "displayName": "Action",
+                                                "flyoutLwc": "l-x-d-get-contract-data-english",
+                                                "flyoutParams": {
+                                                    "AssetId": "{Case.AssetId}",
+                                                    "caseId": "{recordId}",
+                                                    "contractId": "{Case.Contrato__r.Id}",
+                                                    "trustUnlock": "{Case.Contrato__r.LXD_TrustUnlock__c}",
+                                                    "trustUnlockDate": "{Case.Contrato__r.LXD_TrustUnlockDate__c}"
+                                                },
+                                                "flyoutType": "OmniScripts",
+                                                "hasExtraParams": true,
+                                                "id": "flex-action-1695860975533",
+                                                "layoutType": "lightning",
+                                                "openFlyoutIn": "Modal",
+                                                "openUrlIn": "Current Window",
+                                                "osName": "LXD/GetContractData/English",
+                                                "type": "Flyout",
+                                                "vlocityIcon": "standard-default"
+                                            }
+                                        }
+                                    ],
+                                    "eventType": "onclick",
+                                    "iconName": "standard-default",
+                                    "label": "Action",
+                                    "showSpinner": "true"
+                                },
+                                "card": "{card}",
+                                "collapsedByDefault": false,
+                                "collapsible": false,
+                                "data-conditions": {
+                                    "group": [
+                                        {
+                                            "field": "Case.Contrato__r.Status",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-23",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Bloqueado"
+                                        },
+                                        {
+                                            "group": [
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-3",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Suporte"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-63",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "SAC"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-109",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Retenção"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-138",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Administrador"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-2",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Financeiro"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-223",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Faturamento"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-367",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Qualidade"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-446",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Ouvidoria"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-829",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Financeiro"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-76",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Diretoria"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-147",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Supervisor"
+                                                }
+                                            ],
+                                            "id": "state-new-group-4",
+                                            "logicalOperator": "&&"
+                                        }
+                                    ],
+                                    "id": "state-condition-object",
+                                    "isParent": true
+                                },
+                                "label": "Block",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": true,
+                                "large": "12",
+                                "medium": "12",
+                                "small": "12"
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "background": {
+                                    "color": "",
+                                    "image": "",
+                                    "position": "",
+                                    "repeat": "",
+                                    "size": ""
+                                },
+                                "border": {
+                                    "color": "",
+                                    "radius": "",
+                                    "style": "",
+                                    "type": "",
+                                    "width": ""
+                                },
+                                "class": "slds-p-around_x-small ",
+                                "container": {
+                                    "class": ""
+                                },
+                                "element": "block",
+                                "elementStyleProperties": {
+                                },
+                                "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "margin": [
+                                ],
+                                "padding": [
+                                    {
+                                        "label": "around:x-small",
+                                        "size": "x-small",
+                                        "type": "around"
+                                    }
+                                ],
+                                "selectedStyles": "button__container",
+                                "size": {
+                                    "default": "12",
+                                    "isResponsive": true,
+                                    "large": "12",
+                                    "medium": "12",
+                                    "small": "12"
+                                },
+                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "text": {
+                                    "align": "",
+                                    "color": ""
+                                }
+                            },
+                            "styleObjects": [
+                                {
+                                    "conditionString": "",
+                                    "conditions": "default",
+                                    "draggable": false,
+                                    "key": 0,
+                                    "label": "Default",
+                                    "name": "Default",
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-around_x-small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "block",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "around:x-small",
+                                                "size": "x-small",
+                                                "type": "around"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__container",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "block",
+                            "userUpdatedElementLabel": true
+                        },
+                        {
+                            "children": [
+                                {
+                                    "class": "slds-col ",
+                                    "element": "flexImg",
+                                    "elementLabel": "IMG_SenhadoWi-fi",
+                                    "key": "element_element_block_6_0_flexImg_0_0",
+                                    "name": "Image",
+                                    "parentElementKey": "element_block_6_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "extraclass": "slds-align_absolute-center",
+                                        "record": "{record}",
+                                        "size": "",
+                                        "stateImg": {
+                                            "alternativeText": "Image description",
+                                            "imgsrc": "/resource/1663183427000/icon_sideBar/icon/Wifi@@.png"
+                                        }
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "flexImg",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width:12px;\nalign-self: center;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                        ],
+                                        "selectedStyles": "button__icon",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width:12px;\nalign-self: center;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "flexImg",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width:12px;\nalign-self: center;",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                ],
+                                                "selectedStyles": "button__icon",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width:12px;\nalign-self: center;",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "element",
+                                    "userUpdatedElementLabel": true
+                                },
+                                {
+                                    "class": "slds-col ",
+                                    "element": "outputField",
+                                    "elementLabel": "Block-SenhadoWi-fi",
+                                    "key": "element_element_block_6_0_outputField_1_0",
+                                    "name": "Text",
+                                    "parentElementKey": "element_block_6_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "mergeField": "%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3ESenha%20do%20Wi-fi%3C/span%3E%3C/div%3E",
+                                        "record": "{record}"
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-left_small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "outputField",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width: calc(100% - 12px);",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "left:small",
+                                                "size": "small",
+                                                "type": "left"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__text",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width: calc(100% - 12px);",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "slds-p-left_small ",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "outputField",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width: calc(100% - 12px);",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                    {
+                                                        "label": "left:small",
+                                                        "size": "small",
+                                                        "type": "left"
+                                                    }
+                                                ],
+                                                "selectedStyles": "button__text",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width: calc(100% - 12px);",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "text",
+                                    "userUpdatedElementLabel": true
+                                }
+                            ],
+                            "class": "slds-col ",
+                            "element": "block",
+                            "elementLabel": "Block-Senha-Wi-fi",
+                            "name": "Block",
+                            "property": {
+                                "action": {
+                                    "actionList": [
+                                        {
+                                            "actionIndex": 0,
+                                            "card": "{card}",
+                                            "draggable": false,
+                                            "isOpen": true,
+                                            "key": "1674227600418-njlnmn0zo",
+                                            "label": "Call LXD_FLEXwifiPasswordCRM",
+                                            "stateAction": {
+                                                "cardName": "LXD_FLEXwifiPasswordCRM",
+                                                "cardNode": "{record}",
+                                                "channelName": "close_modal",
+                                                "displayName": "Action",
+                                                "flyoutLwc": "LXD_FLEXwifiPasswordCRM",
+                                                "flyoutParams": {
+                                                    "AssetId": "{Case.AssetId}",
+                                                    "caseId": "{Case:Id}"
+                                                },
+                                                "flyoutType": "childCard",
+                                                "hasExtraParams": true,
+                                                "id": "flex-action-1703194219970",
+                                                "openFlyoutIn": "Modal",
+                                                "openUrlIn": "Current Window",
+                                                "type": "Flyout",
+                                                "vlocityIcon": "standard-default"
+                                            }
+                                        }
+                                    ],
+                                    "eventType": "onclick",
+                                    "iconName": "standard-default",
+                                    "label": "Action",
+                                    "showSpinner": "true"
+                                },
+                                "card": "{card}",
+                                "collapsedByDefault": false,
+                                "collapsible": false,
+                                "data-conditions": {
+                                    "group": [
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-1111",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "Financeiro"
+                                        }
+                                    ],
+                                    "id": "state-condition-object",
+                                    "isParent": true
+                                },
+                                "label": "Block",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": true,
+                                "large": "12",
+                                "medium": "12",
+                                "small": "12"
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "background": {
+                                    "color": "",
+                                    "image": "",
+                                    "position": "",
+                                    "repeat": "",
+                                    "size": ""
+                                },
+                                "border": {
+                                    "color": "",
+                                    "radius": "",
+                                    "style": "",
+                                    "type": "",
+                                    "width": ""
+                                },
+                                "class": "slds-p-around_x-small ",
+                                "container": {
+                                    "class": ""
+                                },
+                                "element": "block",
+                                "elementStyleProperties": {
+                                },
+                                "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "margin": [
+                                ],
+                                "padding": [
+                                    {
+                                        "label": "around:x-small",
+                                        "size": "x-small",
+                                        "type": "around"
+                                    }
+                                ],
+                                "selectedStyles": "button__container",
+                                "size": {
+                                    "default": "12",
+                                    "isResponsive": true,
+                                    "large": "12",
+                                    "medium": "12",
+                                    "small": "12"
+                                },
+                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "text": {
+                                    "align": "",
+                                    "color": ""
+                                }
+                            },
+                            "styleObjects": [
+                                {
+                                    "conditionString": "",
+                                    "conditions": "default",
+                                    "draggable": false,
+                                    "key": 0,
+                                    "label": "Default",
+                                    "name": "Default",
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-around_x-small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "block",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "around:x-small",
+                                                "size": "x-small",
+                                                "type": "around"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__container",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "block",
+                            "userUpdatedElementLabel": true
+                        },
+                        {
+                            "children": [
+                                {
+                                    "class": "slds-col ",
+                                    "element": "flexImg",
+                                    "elementLabel": "image-Compra ou troca de plano",
+                                    "key": "element_element_block_4_0_flexImg_0_0",
+                                    "name": "Image",
+                                    "parentElementKey": "element_block_4_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "extraclass": "slds-align_absolute-center",
+                                        "record": "{record}",
+                                        "size": "",
+                                        "stateImg": {
+                                            "alternativeText": "Image description",
+                                            "imgsrc": "/resource/1663183427000/icon_sideBar/icon/hammer-wrench.png"
+                                        }
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "flexImg",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width:12px;\nalign-self: center;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                        ],
+                                        "selectedStyles": "button__icon",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width:12px;\nalign-self: center;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "flexImg",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width:12px;\nalign-self: center;",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                ],
+                                                "selectedStyles": "button__icon",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width:12px;\nalign-self: center;",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "element",
+                                    "userUpdatedElementLabel": true
+                                },
+                                {
+                                    "class": "slds-col ",
+                                    "element": "outputField",
+                                    "elementLabel": "Block-Compra ou troca de plano",
+                                    "key": "element_element_block_4_0_outputField_1_0",
+                                    "name": "Text",
+                                    "parentElementKey": "element_block_4_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "mergeField": "%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3EAgendamento%20Visita%20T&eacute;cnica%3C/span%3E%3C/div%3E",
+                                        "record": "{record}"
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-left_small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "outputField",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width: calc(100% - 12px);",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "left:small",
+                                                "size": "small",
+                                                "type": "left"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__text",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width: calc(100% - 12px);",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "slds-p-left_small ",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "outputField",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width: calc(100% - 12px);",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                    {
+                                                        "label": "left:small",
+                                                        "size": "small",
+                                                        "type": "left"
+                                                    }
+                                                ],
+                                                "selectedStyles": "button__text",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width: calc(100% - 12px);",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "text",
+                                    "userUpdatedElementLabel": true
+                                }
+                            ],
+                            "class": "slds-col ",
+                            "element": "block",
+                            "elementLabel": "Block-Agendamento-Visita-Tecnica",
+                            "name": "Block",
+                            "property": {
+                                "action": {
+                                    "actionList": [
+                                        {
+                                            "actionIndex": 0,
+                                            "card": "{card}",
+                                            "draggable": false,
+                                            "isOpen": true,
+                                            "key": "1687543480277-qt1hhg05o",
+                                            "label": "showDates",
+                                            "stateAction": {
+                                                "channelName": "close_modal",
+                                                "displayName": "Action",
+                                                "flyoutLwc": "o-s-list-of-data-english",
+                                                "flyoutParams": {
+                                                    "accountId": "{Case.AccountId}",
+                                                    "caseId": "{Case.Id}"
+                                                },
+                                                "flyoutType": "OmniScripts",
+                                                "hasExtraParams": true,
+                                                "id": "flex-action-1692715777910",
+                                                "layoutType": "lightning",
+                                                "openFlyoutIn": "Modal",
+                                                "openUrlIn": "Current Window",
+                                                "osName": "OS/ListOfData/English",
+                                                "type": "Flyout",
+                                                "vlocityIcon": "standard-default"
+                                            }
+                                        }
+                                    ],
+                                    "eventType": "onclick",
+                                    "iconName": "standard-default",
+                                    "label": "Action",
+                                    "showSpinner": "false"
+                                },
+                                "card": "{card}",
+                                "collapsedByDefault": false,
+                                "collapsible": false,
+                                "data-conditions": {
+                                    "group": [
+                                    ],
+                                    "id": "state-condition-object",
+                                    "isParent": true
+                                },
+                                "label": "Block",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": true,
+                                "large": "12",
+                                "medium": "12",
+                                "small": "12"
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "background": {
+                                    "color": "",
+                                    "image": "",
+                                    "position": "",
+                                    "repeat": "",
+                                    "size": ""
+                                },
+                                "border": {
+                                    "color": "",
+                                    "radius": "",
+                                    "style": "",
+                                    "type": "",
+                                    "width": ""
+                                },
+                                "class": "slds-p-around_x-small ",
+                                "container": {
+                                    "class": ""
+                                },
+                                "element": "block",
+                                "elementStyleProperties": {
+                                },
+                                "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "margin": [
+                                ],
+                                "padding": [
+                                    {
+                                        "label": "around:x-small",
+                                        "size": "x-small",
+                                        "type": "around"
+                                    }
+                                ],
+                                "selectedStyles": "button__container",
+                                "size": {
+                                    "default": "12",
+                                    "isResponsive": true,
+                                    "large": "12",
+                                    "medium": "12",
+                                    "small": "12"
+                                },
+                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "text": {
+                                    "align": "",
+                                    "color": ""
+                                }
+                            },
+                            "styleObjects": [
+                                {
+                                    "conditionString": "",
+                                    "conditions": "default",
+                                    "draggable": false,
+                                    "key": 0,
+                                    "label": "Default",
+                                    "name": "Default",
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-around_x-small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "block",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "around:x-small",
+                                                "size": "x-small",
+                                                "type": "around"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__container",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "block",
+                            "userUpdatedElementLabel": true
+                        },
+                        {
+                            "children": [
+                                {
+                                    "class": "slds-col ",
+                                    "element": "flexImg",
+                                    "elementLabel": "image-Compra ou troca de plano",
+                                    "key": "element_element_block_5_0_flexImg_0_0",
+                                    "name": "Image",
+                                    "parentElementKey": "element_block_5_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "extraclass": "slds-align_absolute-center",
+                                        "record": "{record}",
+                                        "size": "",
+                                        "stateImg": {
+                                            "alternativeText": "Image description",
+                                            "imgsrc": "/resource/icon_sideBar/icon/record-circle-outline.png"
+                                        }
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "flexImg",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width:12px;\nalign-self: center;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                        ],
+                                        "selectedStyles": "button__icon",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width:12px;\nalign-self: center;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "flexImg",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width:12px;\nalign-self: center;",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                ],
+                                                "selectedStyles": "button__icon",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width:12px;\nalign-self: center;",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "element",
+                                    "userUpdatedElementLabel": true
+                                },
+                                {
+                                    "class": "slds-col ",
+                                    "element": "outputField",
+                                    "elementLabel": "Block-Compra ou troca de plano",
+                                    "key": "element_element_block_5_0_outputField_1_0",
+                                    "name": "Text",
+                                    "parentElementKey": "element_block_5_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "mergeField": "%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3ECancelar%20Plano%3C/span%3E%3C/div%3E",
+                                        "record": "{record}"
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-left_small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "outputField",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width: calc(100% - 12px);",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "left:small",
+                                                "size": "small",
+                                                "type": "left"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__text",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width: calc(100% - 12px);",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "slds-p-left_small ",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "outputField",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width: calc(100% - 12px);",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                    {
+                                                        "label": "left:small",
+                                                        "size": "small",
+                                                        "type": "left"
+                                                    }
+                                                ],
+                                                "selectedStyles": "button__text",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width: calc(100% - 12px);",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "text",
+                                    "userUpdatedElementLabel": true
+                                }
+                            ],
+                            "class": "slds-col ",
+                            "element": "block",
+                            "elementLabel": "Block-6-clone-0",
+                            "name": "Block",
+                            "property": {
+                                "action": {
+                                    "actionList": [
+                                        {
+                                            "actionIndex": 0,
+                                            "card": "{card}",
+                                            "contextId": "\\{recordId}",
+                                            "draggable": false,
+                                            "isOpen": true,
+                                            "key": "1687543480277-qt1hhg05o",
+                                            "label": "Changeplano",
+                                            "stateAction": {
+                                                "channelName": "",
+                                                "displayName": "Action",
+                                                "flyoutLwc": "every-voluntary-cancellation-process-english",
+                                                "flyoutParams": {
+                                                    "ContextId": "{recordId}"
+                                                },
+                                                "flyoutType": "OmniScripts",
+                                                "hasExtraParams": true,
+                                                "id": "flex-action-1721829686753",
+                                                "layoutType": "lightning",
+                                                "openFlyoutIn": "Modal",
+                                                "openUrlIn": "New Tab/Window",
+                                                "osName": "Every/VoluntaryCancellationProcess/English",
+                                                "type": "Flyout",
+                                                "vlocityIcon": "standard-default"
+                                            }
+                                        }
+                                    ],
+                                    "eventType": "onclick",
+                                    "iconName": "standard-default",
+                                    "label": "Action",
+                                    "showSpinner": "false"
+                                },
+                                "card": "{card}",
+                                "collapsedByDefault": false,
+                                "collapsible": false,
+                                "data-conditions": {
+                                    "group": [
+                                        {
+                                            "field": "Case.Area_de_atendimento__c",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-10",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Retencao"
+                                        }
+                                    ],
+                                    "id": "state-condition-object",
+                                    "isParent": true
+                                },
+                                "label": "Block",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": true,
+                                "large": "12",
+                                "medium": "12",
+                                "small": "12"
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "background": {
+                                    "color": "",
+                                    "image": "",
+                                    "position": "",
+                                    "repeat": "",
+                                    "size": ""
+                                },
+                                "border": {
+                                    "color": "",
+                                    "radius": "",
+                                    "style": "",
+                                    "type": "",
+                                    "width": ""
+                                },
+                                "class": "slds-p-around_x-small ",
+                                "container": {
+                                    "class": ""
+                                },
+                                "element": "block",
+                                "elementStyleProperties": {
+                                },
+                                "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "margin": [
+                                ],
+                                "padding": [
+                                    {
+                                        "label": "around:x-small",
+                                        "size": "x-small",
+                                        "type": "around"
+                                    }
+                                ],
+                                "selectedStyles": "button__container",
+                                "size": {
+                                    "default": "12",
+                                    "isResponsive": true,
+                                    "large": "12",
+                                    "medium": "12",
+                                    "small": "12"
+                                },
+                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "text": {
+                                    "align": "",
+                                    "color": ""
+                                }
+                            },
+                            "styleObjects": [
+                                {
+                                    "conditionString": "",
+                                    "conditions": "default",
+                                    "draggable": false,
+                                    "key": 0,
+                                    "label": "Default",
+                                    "name": "Default",
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-around_x-small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "block",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "around:x-small",
+                                                "size": "x-small",
+                                                "type": "around"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__container",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "block",
+                            "userUpdatedElementLabel": true
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Active",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "background": {
+                    "color": "",
+                    "image": "",
+                    "position": "",
+                    "repeat": "",
+                    "size": ""
+                },
+                "border": {
+                    "color": "#cccccc",
+                    "radius": "5px",
+                    "style": "",
+                    "type": [
+                        "border_top",
+                        "border_right",
+                        "border_bottom",
+                        "border_left"
+                    ],
+                    "width": ""
+                },
+                "class": "slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left ",
+                "container": {
+                    "class": "slds-card"
+                },
+                "elementStyleProperties": {
+                },
+                "inlineStyle": "display:flex;\nflex-direction: row;",
+                "margin": [
+                ],
+                "padding": [
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": true,
+                    "large": "12",
+                    "medium": "12",
+                    "small": "12"
+                },
+                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                "style": "     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; \n    border-radius:5px;     display:flex;\nflex-direction: row;",
+                "text": {
+                    "align": "",
+                    "color": ""
+                }
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "LXD_FlexPlanCase",
+    "xmlJson": [
+        {
+            "@attributes": {
+                "targets": "lightning__AppPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "name": "recordId",
+                        "type": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "@attributes": {
+                "targets": "lightning__RecordPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                }
+            ]
+        }
+    ],
+    "xmlObject": {
+        "apiVersion": 51,
+        "description": "DES-1038",
+        "id": "0Rb8J000000Com8SAC",
+        "isExplicitImport": false,
+        "isExposed": true,
+        "masterLabel": "LXD_FlexPlanCase",
+        "targetConfigs": "PHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX0FwcFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIj48L3Byb3BlcnR5PgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9InJlY29yZElkIiB0eXBlPSJTdHJpbmciPjwvcHJvcGVydHk+CiAgICAgICAgICAgICAgICAgIDwvdGFyZ2V0Q29uZmlnPgogICAgICAgICAgICAgICAgICA8dGFyZ2V0Q29uZmlnIHRhcmdldHM9ImxpZ2h0bmluZ19fUmVjb3JkUGFnZSI+CiAgICAgICAgICAgICAgICAgICAgICA8cHJvcGVydHkgbmFtZT0iZGVidWciIHR5cGU9IkJvb2xlYW4iPjwvcHJvcGVydHk+CiAgICAgICAgICAgICAgICAgIDwvdGFyZ2V0Q29uZmlnPg==",
+        "targets": {
+            "target": [
+                "lightning__AppPage",
+                "lightning__HomePage",
+                "lightning__RecordPage"
+            ]
+        }
+    }
+}

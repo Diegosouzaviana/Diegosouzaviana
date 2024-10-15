@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-box slds-theme--default">
+        <lightning-input-address
+            show-address-lookup="true"
+            address-lookup-label="Endereço" 
+            street-label="Rua" 
+            city-label="Cidade"
+            country-label="País" 
+            province-label="Estado/Província" 
+            postal-code-label="CEP"
+            number-label="Número"
+            type-label="Tipo"
+            onchange={addressInputChange} 
+        >
+        </lightning-input-address>
+    </div>
+</template>
