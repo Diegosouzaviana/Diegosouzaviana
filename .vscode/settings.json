@@ -4,7 +4,7 @@
     "**/bower_components": true,
     "**/.sfdx": true
   },
-  "vlocity.sfdxUsername": "diego.viana@desktop.com.br.partial",
+  "vlocity.sfdxUsername": "diego.viana@desktop.com.br",
   "vlocity.projectPath": "c:\\DESKTOP\\DESK2\\vlocity",
   "vlocity.salesforce.developerLogsVisibility": "all",
   "vlocity.salesforce.apiVersion": "61.0"

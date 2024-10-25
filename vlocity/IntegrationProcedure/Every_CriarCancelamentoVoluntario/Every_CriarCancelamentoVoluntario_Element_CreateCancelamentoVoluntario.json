@@ -19,12 +19,14 @@
         "failOnStepError": true,
         "failureConditionalFormula": "",
         "failureResponse": {
+            "errorsAsJson": "%CreateCancelamentoVoluntario:errorsAsJson:DRError%",
+            "statusCode": 400
         },
         "label": "DataMapperPostAction1",
         "responseJSONNode": "",
         "responseJSONPath": "",
         "returnOnlyAdditionalOutput": false,
-        "returnOnlyFailureResponse": false,
+        "returnOnlyFailureResponse": true,
         "sendJSONNode": "",
         "sendJSONPath": "SVCampo",
         "sendOnlyAdditionalInput": false,
