@@ -137,6 +137,11 @@ export default class Every_recordPopupChurn extends OmniscriptBaseMixin(Lightnin
             console.error(error, "ERROR");
         });
     }
+    formatdata(CreatedDate){
+        const data = new Date(CreatedDate);
+        const dataFormatada = data.toLocaleDateString('pt-BR');
+        return dataFormatada;
+    }
     processResponse(response) {
         if (response) {
             this.chancedeChurn = response.ChancedeChurn || '';
@@ -146,10 +151,11 @@ export default class Every_recordPopupChurn extends OmniscriptBaseMixin(Lightnin
             this.motivo =  response.Status || '';
             this.CaseIdantigo =  response.CaseIdantigo || '';
             this.CaseNumber =  response.CaseNumber || '';
+            this.CreatedDate =  this.formatdata(response.CreatedDate) || '';
             
             const Motivo = response.Motivo || '';
             if (Motivo.startsWith('Cancelamento')) {
-                this.Motivo = Motivo.replace('Cancelamento ', '').trim();
+                this.Motivo = Motivo.replace('Cancelamento', '').trim();
                 // console.log("this.Motivo", this.Motivo);
                 
             }

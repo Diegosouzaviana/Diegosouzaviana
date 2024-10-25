@@ -1,0 +1,40 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Every_CreateCancelamentoVoluntario",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Every/CriarCancelamentoVoluntario/Procedure",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "Account": "%AccountId%",
+            "Case": "%CaseId%",
+            "Codigo_ADM": "%ADM%",
+            "ContactId": "%ContactId%",
+            "Contract": "%ContratoId%",
+            "Data_hora_do_Cancelamento": "=NOW()",
+            "Motivo_do_Cancelamento": "%MotivoCancelamento%",
+            "Name": "%Name%",
+            "Plano": "%AssetiId%",
+            "Prazo_para_Cancelamento": "=%GetConfiguracoesCancelamentoVoluntario:ccv:Prazo_para_cancelamento__c%",
+            "Status": "Em Cancelamento"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "SVCampo",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CriarCancelamentoVoluntario/Procedure/SVCampo"
+}

@@ -1,0 +1,21 @@
+{
+    "AccountId": "0016t00000ljlm2AAA",
+    "Address": {
+        "Input_CEP": "13183-091",
+        "Input_City": "Sumaré",
+        "Input_Country": "Brazil",
+        "Input_Neighborhood": "Residencial Real Park Sumaré",
+        "Input_Number": "738",
+        "Input_State": "SP",
+        "Input_Street": "Avenida José Hoffmann",
+        "Input_TypeAddress": "casa"
+    },
+    "AddressChange": "Mudança de endereço",
+    "AssetId": "02i6t000001ZIHyAAO",
+    "Latitude": -22.8338782,
+    "Longitude": -47.2158953,
+    "Olt": "",
+    "RecordTypeId": "0126t000000pSAsAAM",
+    "Work_Subtype_WO": "Internet",
+    "caseId": "5006t000006GPTPAA4"
+}

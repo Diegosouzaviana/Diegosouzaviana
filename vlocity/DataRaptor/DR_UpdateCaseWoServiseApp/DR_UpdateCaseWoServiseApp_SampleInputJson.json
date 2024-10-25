@@ -1,0 +1,14 @@
+{
+    "CaseId": "500Ha00000B7YZiIAN",
+    "CaseStatus": "Finalizado",
+    "ClosedUserWO": "0058b00000IQmjNAAT",
+    "OrderId": "0WOHa000002p6wfOAA",
+    "OrderStatus": "Canceled",
+    "ServeceStatus": "Cancelado",
+    "ServiceAppId": "08pHa00000099QfIAI",
+    "SevirceMotivocancelamneto": "Cancelamento Automático - Prazo de Abertura Expirado",
+    "ValidationBypassDateTime": "2024-09-06T16:25:11.462Z",
+    "WOCriada": "False",
+    "dataAgendamentoFim": null,
+    "dataAgendamentoInicio": null
+}
