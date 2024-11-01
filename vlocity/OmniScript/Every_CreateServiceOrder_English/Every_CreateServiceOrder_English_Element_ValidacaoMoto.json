@@ -53,7 +53,7 @@
                 "rules": [
                     {
                         "condition": "=",
-                        "data": "true",
+                        "data": "trueparado",
                         "field": "Aptomoto"
                     }
                 ]

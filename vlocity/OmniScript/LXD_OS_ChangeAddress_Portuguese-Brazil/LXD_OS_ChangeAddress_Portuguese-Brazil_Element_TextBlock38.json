@@ -13,32 +13,27 @@
             "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)",
             "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
         },
-        "Name": "Step_NewAddress2",
+        "Name": "erroCidadeAtendimento",
         "VlocityDataPackType": "VlocityMatchingKeyObject",
-        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)/Step_NewAddress2",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)/erroCidadeAtendimento",
         "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
     },
-    "%vlocity_namespace%__ParentElementName__c": "Step_NewAddress2",
+    "%vlocity_namespace%__ParentElementName__c": "erroCidadeAtendimento",
     "%vlocity_namespace%__ParentElementType__c": "Step",
     "%vlocity_namespace%__PropertySet__c": {
         "HTMLTemplateId": "",
         "controlWidth": 12,
-        "dataType": "Text",
-        "dateFormat": "MM-dd-yyyy",
-        "disOnTplt": false,
-        "expression": "IF(%isValidCep% = true , %Input_CEP1% , %Input_CEP2%)",
-        "hide": true,
-        "hideGroupSep": false,
-        "inputWidth": 12,
-        "label": "Input_CEP",
-        "mask": null,
+        "dataJSON": false,
+        "label": "TextBlock1",
+        "sanitize": false,
         "show": null,
-        "showInputWidth": false
+        "text": "<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/resource/icon_sideBar2/Icon_New_ContractCard/COR/Layout-Site-TV-35.png\" alt=\"\" width=\"150\" height=\"150\" /></p>",
+        "textKey": ""
     },
     "%vlocity_namespace%__ReusableOmniScript__c": true,
-    "%vlocity_namespace%__Type__c": "Formula",
-    "Name": "Input_CEP",
+    "%vlocity_namespace%__Type__c": "Text Block",
+    "Name": "TextBlock38",
     "VlocityDataPackType": "SObject",
     "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
-    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)/Input_CEP"
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_ChangeAddress/Portuguese (Brazil)/TextBlock38"
 }

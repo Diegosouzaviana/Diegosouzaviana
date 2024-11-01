@@ -27,7 +27,7 @@
         "label": "TextBlock7",
         "sanitize": false,
         "show": null,
-        "text": "<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/resource/1663183427000/icon_sideBar/Datos_360/IconError.png\" alt=\"\" width=\"115\" height=\"115\" /></p>\n<p style=\"text-align: center;\"><strong>Error na cria&ccedil;&atilde;o da OS</strong></p>",
+        "text": "<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/resource/1663183427000/icon_sideBar/Datos_360/IconError.png\" alt=\"\" width=\"115\" height=\"115\" /></p>\n<p style=\"text-align: center;\"></p>",
         "textKey": ""
     },
     "%vlocity_namespace%__ReusableOmniScript__c": true,

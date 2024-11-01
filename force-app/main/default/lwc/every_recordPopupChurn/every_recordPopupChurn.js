@@ -124,24 +124,26 @@ export default class Every_recordPopupChurn extends OmniscriptBaseMixin(Lightnin
         this._actionUtil
         .executeAction(params, null, this, null, null)
         .then((response) => {
-            // console.log('response' + JSON.stringify(response));
+            console.log('response' + JSON.stringify(response));
             const ipResult = response.result.IPResult;
-             if (ipResult && typeof ipResult === 'object' && Object.keys(ipResult).length > 0 && ipResult.ChurnId != null) {
-                if(ipResult.UserName == "Retenção" || ipResult.UserName == "Administrador"){
+            if (ipResult && typeof ipResult === 'object' && Object.keys(ipResult).length > 0 && ipResult.ChurnId != null) {
+                if(ipResult.UserRole == "Retenção" || ipResult.ProfileName == "System Administrator" || ipResult.ProfileName == "Administrador do sistema"){
                     this.processResponse(ipResult); 
                     this.open();
                 }
-            }             
+            }          
          })
         .catch((error) => {
             console.error(error, "ERROR");
         });
     }
+
     formatdata(CreatedDate){
         const data = new Date(CreatedDate);
         const dataFormatada = data.toLocaleDateString('pt-BR');
         return dataFormatada;
     }
+
     processResponse(response) {
         if (response) {
             this.chancedeChurn = response.ChancedeChurn || '';
@@ -151,12 +153,14 @@ export default class Every_recordPopupChurn extends OmniscriptBaseMixin(Lightnin
             this.motivo =  response.Status || '';
             this.CaseIdantigo =  response.CaseIdantigo || '';
             this.CaseNumber =  response.CaseNumber || '';
-            this.CreatedDate =  this.formatdata(response.CreatedDate) || '';
+            this.LastModifiedDate =  this.formatdata(response.LastModifiedDate) || '';
             
             const Motivo = response.Motivo || '';
             if (Motivo.startsWith('Cancelamento')) {
-                this.Motivo = Motivo.replace('Cancelamento', '').trim();
-                // console.log("this.Motivo", this.Motivo);
+                // this.Motivo = Motivo.replace('Cancelamento ', '').trim();
+                const motivoFormatado = Motivo.replace('Cancelamento', 'Cancelamento - ')  .replace(/([a-z])([A-Z])/g, '$1 $2');
+                this.Motivo = motivoFormatado.trim();
+                console.log("this.Motivo", this.Motivo);
                 
             }
         }

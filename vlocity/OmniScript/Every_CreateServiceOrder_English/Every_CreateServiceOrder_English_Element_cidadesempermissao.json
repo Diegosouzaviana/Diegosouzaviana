@@ -55,6 +55,11 @@
                         "condition": "=",
                         "data": "false",
                         "field": "cidadeAprovado"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": "Mudança de endereço",
+                        "field": "TipoServico"
                     }
                 ]
             }
