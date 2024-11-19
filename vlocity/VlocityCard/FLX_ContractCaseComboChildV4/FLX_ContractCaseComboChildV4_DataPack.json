@@ -1,0 +1,90 @@
+{
+    "%vlocity_namespace%__Author__c": "LabsXD",
+    "%vlocity_namespace%__CardType__c": "flex",
+    "%vlocity_namespace%__Datasource__c": {
+        "dataSource": {
+            "contextVariables": [
+                {
+                    "id": 0,
+                    "name": "recordId",
+                    "val": "500Ha00000Br71vIAB"
+                }
+            ],
+            "orderBy": {
+                "isReverse": "",
+                "name": ""
+            },
+            "type": "ApexRemote",
+            "value": {
+                "dsDelay": "",
+                "inputMap": {
+                    "caseId": "{recordId}"
+                },
+                "jsonMap": "{\"recordId\":\"{recordId}\"}",
+                "remoteClass": "LXD_ContractCaseDataSource",
+                "remoteMethod": "getData",
+                "resultVar": "[\"result\"]",
+                "vlocityAsync": false
+            }
+        },
+        "event-0_1": {
+            "contextVariables": [
+                {
+                    "id": 0,
+                    "name": "recordId",
+                    "val": "50053000003wUxaAAE"
+                }
+            ],
+            "orderBy": {
+                "isReverse": "",
+                "name": ""
+            },
+            "type": "ApexRemote",
+            "value": {
+                "dsDelay": "",
+                "inputMap": {
+                    "caseId": "{recordId}"
+                },
+                "jsonMap": "{\"recordId\":\"{recordId}\"}",
+                "remoteClass": "LXD_ContractCaseDataSource",
+                "remoteMethod": "getData",
+                "resultVar": "[\"result\"]",
+                "vlocityAsync": false
+            }
+        },
+        "state0element1block_element1block_element5_0": {
+            "contextVariables": [
+                {
+                    "id": 0,
+                    "name": "recordId",
+                    "val": "50053000003wUxaAAE"
+                }
+            ],
+            "orderBy": {
+                "isReverse": "",
+                "name": ""
+            },
+            "type": "IntegrationProcedures",
+            "value": {
+                "dsDelay": "",
+                "ipMethod": "LXD_RebootModem",
+                "jsonMap": "{\"recordId\":\"{recordId}\"}",
+                "resultVar": "",
+                "vlocityAsync": false
+            }
+        }
+    },
+    "%vlocity_namespace%__Definition__c": "FLX_ContractCaseComboChildV4.json",
+    "%vlocity_namespace%__Description__c": "[SJ] DI-9 - Integração Onda 1 | Consulta de Massivas",
+    "%vlocity_namespace%__GlobalKey__c": "FLX_ContractCaseComboChildV4/LabsXD/16/1731088913433",
+    "%vlocity_namespace%__IsChildCard__c": false,
+    "%vlocity_namespace%__ParentID__c": "FLX_ContractCaseComboChildV3/LabsXD/43/1683747417593",
+    "%vlocity_namespace%__SampleData__c": "{\"result\":{\"WorkOrders\":false,\"PermissionSets\":{\"ApiMassive\":false,\"Supervisor\":false,\"LXD_Suporte\":false,\"LXD_SAC\":true,\"LXD_Retencao\":false,\"LXD_Financeiro\":false,\"LXD_CoordenadorGerente\":false,\"LXD_COP\":false},\"Case\":{\"attributes\":{\"type\":\"Case\",\"url\":\"/services/data/v62.0/sobjects/Case/500Ha00000Br71vIAB\"},\"Id\":\"500Ha00000Br71vIAB\",\"AccountId\":\"001Ha00000GVLQQIA5\",\"FiltroBotaoWO__c\":true,\"Area_de_atendimento__c\":\"Retencao\",\"WOCriada__c\":false,\"Status\":\"Em Atendimento\",\"AssetId\":\"02iHa000000MVurIAG\",\"Contrato__c\":\"800Ha00000BOe4TIAT\",\"motive__c\":\"CancelamentoFinanceiro\",\"submotive__c\":\"Cancelamento Compulsório\",\"Asset\":{\"attributes\":{\"type\":\"Asset\",\"url\":\"/services/data/v62.0/sobjects/Asset/02iHa000000MVurIAG\"},\"Name\":\"Fibra Home Combo 100M Livre\",\"%vlocity_namespace%__RecurringCalculatedPrice__c\":95.24,\"%vlocity_namespace%__BillingAccountId__c\":\"001Ha00000GVLQSIA5\",\"PlanLogin__c\":\"79141.1@desktop.com.br\",\"Id\":\"02iHa000000MVurIAG\",\"%vlocity_namespace%__BillingAccountId__r\":{\"attributes\":{\"type\":\"Account\",\"url\":\"/services/data/v62.0/sobjects/Account/001Ha00000GVLQSIA5\"},\"LegacyId__c\":\"79141\",\"Id\":\"001Ha00000GVLQSIA5\"}},\"Contrato__r\":{\"attributes\":{\"type\":\"Contract\",\"url\":\"/services/data/v62.0/sobjects/Contract/800Ha00000BOe4TIAT\"},\"ContractNumber\":\"00082919\",\"Status\":\"Ativo\",\"LXD_TrustUnlock__c\":false,\"RecordTypeId\":\"0128b000001HTVyAAO\",\"Id\":\"800Ha00000BOe4TIAT\",\"RecordType\":{\"attributes\":{\"type\":\"RecordType\",\"url\":\"/services/data/v62.0/sobjects/RecordType/0128b000001HTVyAAO\"},\"Name\":\"Contract\",\"Id\":\"0128b000001HTVyAAO\"}}}},\"statusCode\":200,\"errorCode\":\"INVOKE-200\",\"error\":\"OK\"}",
+    "%vlocity_namespace%__Styles__c": "{\"styleObjects\":{\"topButtom\":{\"background\":{\"color\":\"\",\"image\":\"\",\"position\":\"\",\"repeat\":\"\",\"size\":\"\"},\"border\":{\"color\":\"\",\"radius\":\"\",\"style\":\"\",\"type\":\"\",\"width\":\"\"},\"class\":\"\",\"container\":{\"class\":\"\"},\"elementStyleProperties\":{},\"inlineStyle\":\"font-weight: 600;\\nfont-size: 8px;\\nmargin-top:8px;\\nmargin-left: 8px;\",\"margin\":[],\"padding\":[],\"size\":{\"default\":\"9\",\"isResponsive\":true,\"large\":\"9\",\"medium\":\"9\",\"small\":\"9\"},\"sizeClass\":\"slds-large-size_9-of-12 slds-medium-size_9-of-12 slds-small-size_9-of-12 slds-size_9-of-12 \",\"style\":\"      \\n         font-weight: 600;\\nfont-size: 8px;\\nmargin-top:8px;\\nmargin-left: 8px;\",\"text\":{\"align\":\"\",\"color\":\"\"},\"selectedStyles\":\"topButtom\",\"element\":\"outputField\"}},\"styleDefaults\":{}}",
+    "%vlocity_namespace%__Type__c": "",
+    "%vlocity_namespace%__Version__c": 16,
+    "Name": "FLX_ContractCaseComboChildV4",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__VlocityCard__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__VlocityCard__c/FLX_ContractCaseComboChildV4"
+}

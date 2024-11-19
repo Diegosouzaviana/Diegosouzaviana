@@ -13,12 +13,12 @@
             "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Every/CreateServiceOrder/English",
             "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
         },
-        "Name": "Step3",
+        "Name": "Step4",
         "VlocityDataPackType": "VlocityMatchingKeyObject",
-        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CreateServiceOrder/English/Step3",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CreateServiceOrder/English/Step4",
         "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
     },
-    "%vlocity_namespace%__ParentElementName__c": "Step3",
+    "%vlocity_namespace%__ParentElementName__c": "Step4",
     "%vlocity_namespace%__ParentElementType__c": "Step",
     "%vlocity_namespace%__PropertySet__c": {
         "HTMLTemplateId": "",
@@ -27,13 +27,13 @@
         "label": "TextBlock16",
         "sanitize": false,
         "show": null,
-        "text": "<h2 style=\"text-align: center;\">O equipamento</h2>\n<h2 style=\"text-align: center;\"><strong>%Ativo:Name%</strong></h2>\n<h2 style=\"text-align: center;\">que est&aacute; na resid&ecirc;ncia do cliente &eacute; um equipamento de baixa velocidade e foi descontinuado pela Desktop.</h2>\n<h2 style=\"text-align: center;\">Informe o cliente que n&atilde;o vamos retir&aacute;-lo e que ele pode descart&aacute;-lo</h2>\n<div>\n<div>&nbsp;</div>\n</div>",
+        "text": "<h2 style=\"text-align: center;\">Cliente com plano desativado.</h2>\n<h2 style=\"text-align: center;\">Necess&aacute;rio ativar no ADM ou trocar contrato do caso para seguir com a abertura da ordem de servi&ccedil;o.</h2>\n<div>\n<div>&nbsp;</div>\n</div>",
         "textKey": ""
     },
     "%vlocity_namespace%__ReusableOmniScript__c": false,
     "%vlocity_namespace%__Type__c": "Text Block",
-    "Name": "TextBlock20",
+    "Name": "TextBlock22",
     "VlocityDataPackType": "SObject",
     "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
-    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CreateServiceOrder/English/TextBlock20"
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CreateServiceOrder/English/TextBlock22"
 }

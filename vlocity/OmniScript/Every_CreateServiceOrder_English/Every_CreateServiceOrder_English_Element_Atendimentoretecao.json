@@ -84,6 +84,21 @@
                                     "condition": "=",
                                     "data": "CancelamentoMudancaDeEndereco",
                                     "field": "Motivo"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "BlackFridayPropaganda",
+                                    "field": "Motivo"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "BlackFridayFinanceiro",
+                                    "field": "Motivo"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "BlackFridayConcorrencia",
+                                    "field": "Motivo"
                                 }
                             ]
                         }

@@ -14,10 +14,10 @@
     "enableLwc": true,
     "isFlex": true,
     "lwc": {
-        "DeveloperName": "cfLXD_FlexPlanCase_50_Desktop",
-        "Id": "0RbHa000000GvVNKA0",
+        "DeveloperName": "cfLXD_FlexPlanCase_52_Desktop",
+        "Id": "0RbHa000000Ix1dKAC",
         "ManageableState": "unmanaged",
-        "MasterLabel": "cfLXD_FlexPlanCase_50_Desktop",
+        "MasterLabel": "cfLXD_FlexPlanCase_52_Desktop",
         "NamespacePrefix": "c"
     },
     "osSupport": true,
@@ -2249,6 +2249,15 @@
                                             "operator": "==",
                                             "type": "custom",
                                             "value": "Retencao"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-2",
+                                            "logicalOperator": "&&",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Retenção"
                                         }
                                     ],
                                     "id": "state-condition-object",
@@ -2378,9 +2387,9 @@
                                     "class": "slds-col ",
                                     "element": "flexImg",
                                     "elementLabel": "image-Compra ou troca de plano",
-                                    "key": "element_element_block_6_0_flexImg_0_0",
+                                    "key": "element_element_block_5_0_flexImg_0_0",
                                     "name": "Image",
-                                    "parentElementKey": "element_block_6_0",
+                                    "parentElementKey": "element_block_5_0",
                                     "property": {
                                         "card": "{card}",
                                         "extraclass": "slds-align_absolute-center",
@@ -2500,12 +2509,12 @@
                                     "class": "slds-col ",
                                     "element": "outputField",
                                     "elementLabel": "Block-Compra ou troca de plano",
-                                    "key": "element_element_block_6_0_outputField_1_0",
+                                    "key": "element_element_block_5_0_outputField_1_0",
                                     "name": "Text",
-                                    "parentElementKey": "element_block_6_0",
+                                    "parentElementKey": "element_block_5_0",
                                     "property": {
                                         "card": "{card}",
-                                        "mergeField": "%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3ECancelamento%20Voluntario%3C/span%3E%3C/div%3E",
+                                        "mergeField": "%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3ETratar%20Revers&atilde;o%3C/span%3E%3C/div%3E",
                                         "record": "{record}"
                                     },
                                     "size": {
@@ -2675,6 +2684,24 @@
                                             "operator": "==",
                                             "type": "custom",
                                             "value": "Retencao"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-3",
+                                            "logicalOperator": "&&",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Retenção"
+                                        },
+                                        {
+                                            "field": "Parent.CancelamentoVoluntario",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-0",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": ""
                                         }
                                     ],
                                     "id": "state-condition-object",
