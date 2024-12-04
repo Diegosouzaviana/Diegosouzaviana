@@ -1,0 +1,39 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "LXD_planChange",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "LXD_planChange",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "VisitaTecnica",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English/VisitaTecnica",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "VisitaTecnica",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock23",
+        "sanitize": false,
+        "show": null,
+        "text": "<p style=\"text-align: center;\"><img src=\"https://cdn-icons-png.flaticon.com/512/4564/4564886.png\" alt=\"Calend&aacute;rio - &iacute;cones de viagem gr&aacute;tis\" width=\"147\" height=\"147\" /></p>\n<h2 style=\"text-align: center;\">%messageUupdateSpeed%</h2>\n<h2 style=\"text-align: center;\">%messageRecreatePlan%</h2>\n<h2 style=\"text-align: center;\">Sua solicita&ccedil;&atilde;o de troca de plano exige uma visita t&eacute;cnica.</h2>\n<h2 style=\"text-align: center;\">Favor realizar um agendamento da visita t&eacute;cnica.</h2>\n<p></p>\n<p></p>",
+        "textKey": ""
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Text Block",
+    "Name": "TextBlock23",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English/TextBlock23"
+}

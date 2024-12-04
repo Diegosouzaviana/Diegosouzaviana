@@ -70,6 +70,11 @@
                         "condition": "=",
                         "data": null,
                         "field": "Submotivo"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "false",
+                        "field": "AtivoCompativel"
                     }
                 ]
             }

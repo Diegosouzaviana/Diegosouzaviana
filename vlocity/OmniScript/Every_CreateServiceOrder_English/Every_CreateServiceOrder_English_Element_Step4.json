@@ -32,7 +32,7 @@
             "remoteTimeout": 30000,
             "typeFilter": ""
         },
-        "label": "Retirada Desnecessária",
+        "label": "Plano desativado",
         "message": {
         },
         "nextLabel": "Next",

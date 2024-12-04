@@ -16,17 +16,17 @@
                 "rules": [
                     {
                         "condition": "<>",
-                        "data": "Alteração de Plano",
-                        "field": "TipoServico"
-                    },
-                    {
-                        "condition": "<>",
                         "data": "Mudança de endereço",
                         "field": "TipoServico"
                     },
                     {
                         "condition": "<>",
                         "data": null,
+                        "field": "TipoServico"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": "Alteração de Plano",
                         "field": "TipoServico"
                     }
                 ]

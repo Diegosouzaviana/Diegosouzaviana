@@ -20,7 +20,7 @@
         },
         "extraPayload": {
             "CaseId": "%caseId%",
-            "WorkOrderId": "%WorkOrder_1|1:Id%"
+            "WorkOrderId": "%WorkOrderId%"
         },
         "failureAbortLabel": "Abort",
         "failureAbortMessage": "Are you sure?",

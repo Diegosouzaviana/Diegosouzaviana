@@ -1,0 +1,129 @@
+{
+    "%vlocity_namespace%__Active__c": false,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "LXD_planChange",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "CRMmock": true,
+            "productListMock": [
+                {
+                    "commercialDescription": "Oferta 600Mb + Watch 2022",
+                    "description": "Fibra Home Combo 600M + Watch 2022",
+                    "download": 600000,
+                    "isUpgrade": true,
+                    "limit": 4000,
+                    "planCommercialName": "600 Mega + Watch",
+                    "planName": "T-G-22.600M.4000G.Watch",
+                    "price": 139.9,
+                    "promoid": 116,
+                    "promomonthsOfValidity": 6,
+                    "promotionalValue": 109.9,
+                    "promovalue": 30,
+                    "upload": 300000
+                },
+                {
+                    "description": "Fibra Home Combo 600M Local 2022",
+                    "download": 600000,
+                    "limit": 4000,
+                    "planCommercialName": "Fibra Home Combo 300M Local 2022",
+                    "planName": "T-G-22.600M.4000G.Local",
+                    "price": 159.9,
+                    "upload": 300000
+                },
+                {
+                    "commercialDescription": "Oferta 600Mb + GloboPlay",
+                    "description": "Fibra Home Combo 600M + GloboPlay 2022",
+                    "download": 600000,
+                    "limit": 4000,
+                    "planCommercialName": "Combo 600Mb + GloboPlay",
+                    "planName": "T-G-22.600M.4000G.GloboPlay",
+                    "price": 152.9,
+                    "promoid": 121,
+                    "promomonthsOfValidity": 6,
+                    "promotionalValue": 122.9,
+                    "promovalue": 30,
+                    "upload": 300000
+                },
+                {
+                    "commercialDescription": "Oferta Padrão 600Mb 2022 (R$ 99,90 06 Meses)",
+                    "description": "Fibra Home Combo 600M 2023",
+                    "download": 600000,
+                    "limit": 4000,
+                    "planCommercialName": "600 Mega + Fone",
+                    "planName": "T-G-23.600M.4000G",
+                    "price": 129.99,
+                    "promoid": 95,
+                    "promomonthsOfValidity": 6,
+                    "promotionalValue": 99.99,
+                    "promovalue": 30,
+                    "upload": 300000
+                },
+                {
+                    "commercialDescription": "Oferta 300Mb + Watch 2022",
+                    "description": "Fibra Home Combo 300M + Watch 2022",
+                    "download": 300000,
+                    "limit": 4000,
+                    "planCommercialName": "300 Mega + Watch",
+                    "planName": "T-G-22.300M.4000G.Watch",
+                    "price": 109.9,
+                    "promoid": 115,
+                    "promomonthsOfValidity": 3,
+                    "promotionalValue": 89.9,
+                    "promovalue": 20,
+                    "upload": 150000
+                },
+                {
+                    "commercialDescription": "Oferta 300Mb + GloboPlay",
+                    "description": "Fibra Home Combo 300M + GloboPlay 2022",
+                    "download": 300000,
+                    "limit": 4000,
+                    "planCommercialName": "Combo 300Mb + GloboPlay",
+                    "planName": "T-G-22.300M.4000G.GloboPlay",
+                    "price": 122.9,
+                    "promoid": 120,
+                    "promomonthsOfValidity": 3,
+                    "promotionalValue": 102.9,
+                    "promovalue": 20,
+                    "upload": 150000
+                },
+                {
+                    "commercialDescription": "Oferta Padrão 300Mb 2022 (R$ 79,90 03 Meses)",
+                    "description": "Fibra Home Combo 300M 2023",
+                    "download": 300000,
+                    "limit": 4000,
+                    "planCommercialName": "300 Mega + Fone",
+                    "planName": "T-G-23.300M.4000G",
+                    "price": 99.99,
+                    "promoid": 94,
+                    "promomonthsOfValidity": 3,
+                    "promotionalValue": 79.99,
+                    "promovalue": 20,
+                    "upload": 150000
+                }
+            ]
+        },
+        "label": "SetValues3",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "SetValues3",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English/SetValues3"
+}

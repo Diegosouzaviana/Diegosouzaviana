@@ -10,6 +10,7 @@
         "HTMLTemplateId": "",
         "controlWidth": 12,
         "elementValueMap": {
+            "WorkOrderId": "%WorkOrder_1|1:Id%",
             "caseId": "%caseId%"
         },
         "label": "SV_teste",

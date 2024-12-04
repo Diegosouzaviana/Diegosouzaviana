@@ -1,0 +1,39 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "LXD_planChange",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "LXD_planChange",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "Plano Atual",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English/Plano Atual",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "Plano Atual",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock16",
+        "sanitize": false,
+        "show": null,
+        "text": "<h2 style=\"text-align: center;\"><strong>Identificamos que j&aacute; existe uma OS em andamento para esse Contrato.</strong></h2>\n<div>\n<div><strong>Case:</strong><a href=\"/lightning/r/Case/%WcaseId%/view\" target=\"_blank\" rel=\"noopener\"> %WcaseNumber%</a></div>\n<div><strong>Motivo do Caso:</strong> %WCaseReason%</div>\n<div><strong>Submotivo do Caso:</strong> %WCaseSubreason%</div>\n<div><strong>Protocolo:&nbsp;</strong>%WProtocolNumber%</div>\n<div>&nbsp;</div>\n<div><strong>Ordem de Servi&ccedil;o:</strong> <a href=\"/lightning/r/WorkOrder/%WorkOrderId%/view\" target=\"_blank\" rel=\"noopener\">%WorkOrderNumber%</a></div>\n<div><strong>Tipo de trabalho:</strong> %WorkTypeWO%</div>\n<div><strong>SubTipo de Trabalho:</strong> %WorkSubtypeWO%</div>\n<div><strong>Data de Agendamento:</strong> %WDataAgendamento%</div>\n<div>&nbsp;</div>\n</div>",
+        "textKey": ""
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Text Block",
+    "Name": "TextBlock5",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English/TextBlock5"
+}
