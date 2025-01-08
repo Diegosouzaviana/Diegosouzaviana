@@ -4,7 +4,6 @@
     "%vlocity_namespace%__ElementTypeToHTMLTemplateList__c": "{\"ElementTypeToHTMLTemplateList\":[]}",
     "%vlocity_namespace%__Element__c": [
         "Every_UpdateCaseWoServiseApp_Element_GetWoServiseApp.json",
-        "Every_UpdateCaseWoServiseApp_Element_ResponseAction2.json",
         "Every_UpdateCaseWoServiseApp_Element_SVCompos.json",
         "Every_UpdateCaseWoServiseApp_Element_UpdateCaseWoServiseApp.json",
         "Every_UpdateCaseWoServiseApp_Element_ResponseAction1.json"

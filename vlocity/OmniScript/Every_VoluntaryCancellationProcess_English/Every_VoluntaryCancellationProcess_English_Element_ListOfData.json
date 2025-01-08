@@ -10,7 +10,18 @@
         "Language": "English",
         "Sub Type": "ListOfData",
         "Type": "OS",
-        "show": null
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Sim",
+                        "field": "Confirmar"
+                    }
+                ]
+            }
+        }
     },
     "%vlocity_namespace%__ReusableOmniScript__c": false,
     "%vlocity_namespace%__SearchKey__c": "OS|ListOfData|English",

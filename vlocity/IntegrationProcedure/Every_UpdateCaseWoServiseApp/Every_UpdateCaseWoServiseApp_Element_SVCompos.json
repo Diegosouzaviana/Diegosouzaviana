@@ -12,7 +12,6 @@
         "disOnTplt": false,
         "elementValueMap": {
             "CaseId": "%CaseId%",
-            "CaseStatus": "Finalizado",
             "ClosedUserWO": "=$Vlocity.UserId",
             "FirstSchedulingDateWO": "=$Vlocity.NULL",
             "OrderId": "%GetWoServiseApp:OrderId%",

@@ -55,7 +55,18 @@
         "sendJSONNode": "",
         "sendJSONPath": "",
         "sendOnlyExtraPayload": true,
-        "show": null,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Sim",
+                        "field": "Confirmar"
+                    }
+                ]
+            }
+        },
         "showPersistentComponent": [
             true,
             false

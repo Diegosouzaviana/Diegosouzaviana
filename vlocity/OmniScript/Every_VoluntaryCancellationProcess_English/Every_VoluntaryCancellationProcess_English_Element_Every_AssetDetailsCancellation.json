@@ -19,22 +19,15 @@
             "default": null
         },
         "extraPayload": {
-            "ADM": "%ADM%",
-            "AccountId": "%AccountId%",
-            "AssetiId": "%caseAssetId%",
-            "CaseId": "%caseId%",
-            "ContactId": "%ContactId%",
-            "ContratoId": "%ContratoId%",
-            "MotivoCancelamento": "%motivoCancel%",
-            "Name": "%numerocaso%"
+            "caseId": "%caseId%"
         },
         "failureAbortLabel": "Abort",
         "failureAbortMessage": "Are you sure?",
         "failureGoBackLabel": "Go Back",
         "failureNextLabel": "Continue",
         "inProgressMessage": "In Progress",
-        "integrationProcedureKey": "Every_CriarCancelamentoVoluntario",
-        "label": "CriarCancelamentoVoluntario",
+        "integrationProcedureKey": "Every_AssetDetailsCancellation",
+        "label": "Every_AssetDetailsCancellation",
         "message": {
         },
         "postMessage": "Done",
@@ -59,18 +52,7 @@
         "sendJSONNode": "",
         "sendJSONPath": "",
         "sendOnlyExtraPayload": true,
-        "show": {
-            "group": {
-                "operator": "AND",
-                "rules": [
-                    {
-                        "condition": "=",
-                        "data": "Sim",
-                        "field": "Confirmar"
-                    }
-                ]
-            }
-        },
+        "show": null,
         "showPersistentComponent": [
             true,
             false
@@ -84,8 +66,8 @@
     },
     "%vlocity_namespace%__ReusableOmniScript__c": false,
     "%vlocity_namespace%__Type__c": "Integration Procedure Action",
-    "Name": "CriarCancelamentoVoluntario",
+    "Name": "Every_AssetDetailsCancellation",
     "VlocityDataPackType": "SObject",
     "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
-    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/VoluntaryCancellationProcess/English/CriarCancelamentoVoluntario"
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/VoluntaryCancellationProcess/English/Every_AssetDetailsCancellation"
 }

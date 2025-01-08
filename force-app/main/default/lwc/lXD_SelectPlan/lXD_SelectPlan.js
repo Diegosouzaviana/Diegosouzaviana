@@ -254,4 +254,21 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
     render() {
         return tmpl;
     }
+    nextButton() { 
+        this.omniNextStep(); 
+    }  
+    // scrollToBottom() {
+    //     // Seleciona o elemento com ID 'scrollContainer'
+    //     // const container = this.template.querySelector('.bottom');
+    //     // if (container) {
+    //     //     // Rola para o final do conteúdo
+    //     //     console.log('scrolling to bottom...');
+    //     //     container.scrollTo({
+    //     //         top: container.scrollHeight,
+    //     //         behavior: 'smooth'
+    //     //     });
+    //     // } else {
+    //     //     console.error('Elemento com ID #scrollContainer não encontrado.');
+    //     // }
+    // }
 }

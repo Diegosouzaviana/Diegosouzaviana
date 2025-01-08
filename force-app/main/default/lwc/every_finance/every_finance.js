@@ -13,6 +13,7 @@ export default class EveryFinance extends OmniscriptBaseMixin(FlexCardMixin(Ligh
   @track assetId;
   @track ContextId;
   @track jsoncase;
+  @track caseId;
   @api ppoeUser;
   @track erroAtivoContrato = false;
   erroContrato = false;
@@ -27,9 +28,10 @@ export default class EveryFinance extends OmniscriptBaseMixin(FlexCardMixin(Ligh
       return;
     }
     this.jsoncase = this.records.Case;
-    // console.log("records ", JSON.stringify(this.records));
+    console.log("records ", JSON.stringify(this.records));
     this.assetId = JSON.stringify(this.records.Case.AssetId);
     this.ContextId = this.records.Case.AssetId;
     this.ppoeUser = this.records.Case.Asset.PlanLogin__c;
+    this.caseId = this.records.Case.Id;
   }
 }

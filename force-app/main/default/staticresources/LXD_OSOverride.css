@@ -29,8 +29,8 @@
     background-color: #BA1212 !important;
   }
 }
-.slds-modal__content.slds-p-around_medium{
-  min-height: 340px !important;
+.slds-p-around_medium{
+    min-height: 340px !important;
 }
 /* Additional styles for buttons */
 .slds-button_brand, .slds-button_stretch {
