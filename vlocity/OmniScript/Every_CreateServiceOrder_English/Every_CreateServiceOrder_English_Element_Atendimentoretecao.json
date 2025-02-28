@@ -63,42 +63,52 @@
                                 {
                                     "condition": "=",
                                     "data": "CancelamentoConcorrencia",
-                                    "field": "Motivo"
+                                    "field": "Tema"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "CancelamentoAdministrativo",
+                                    "field": "Tema"
                                 },
                                 {
                                     "condition": "=",
                                     "data": "CancelamentoInsatisfacao",
-                                    "field": "Motivo"
+                                    "field": "Tema"
                                 },
                                 {
                                     "condition": "=",
                                     "data": "CancelamentoFinanceiro",
-                                    "field": "Motivo"
+                                    "field": "Tema"
                                 },
                                 {
                                     "condition": "=",
-                                    "data": "CancelamentoProblemasTecnicos",
-                                    "field": "Motivo"
+                                    "data": "CancelamentoProblemaTecnico",
+                                    "field": "Tema"
                                 },
                                 {
                                     "condition": "=",
-                                    "data": "CancelamentoMudancaDeEndereco",
-                                    "field": "Motivo"
+                                    "data": "CancelamentoMudancaEndereco",
+                                    "field": "Tema"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "CancelamentoServicoCampo",
+                                    "field": "Tema"
                                 },
                                 {
                                     "condition": "=",
                                     "data": "BlackFridayPropaganda",
-                                    "field": "Motivo"
+                                    "field": "Tema"
                                 },
                                 {
                                     "condition": "=",
                                     "data": "BlackFridayFinanceiro",
-                                    "field": "Motivo"
+                                    "field": "Tema"
                                 },
                                 {
                                     "condition": "=",
                                     "data": "BlackFridayConcorrencia",
-                                    "field": "Motivo"
+                                    "field": "Tema"
                                 }
                             ]
                         }

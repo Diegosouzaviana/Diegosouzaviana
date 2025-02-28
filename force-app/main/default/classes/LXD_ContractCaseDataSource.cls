@@ -32,6 +32,11 @@ global with sharing class LXD_ContractCaseDataSource implements vlocity_cmt.Vloc
                 LXD_VlocityUtils.badRequest(outMap, 'Case not found.');
                 return;
             }
+             // Consultar WorkOrder relacionada
+        	 Boolean hasOnHoldWorkOrder = [SELECT COUNT() 
+                                      FROM WorkOrder 
+                                      WHERE CaseId = :caseDetail.Id 
+                                      AND Status = 'On Hold'] > 0;
             
             LXD_CallIntegrationProcedureFromSFAPI.InputDTO inputDTO = new LXD_CallIntegrationProcedureFromSFAPI.InputDTO();
             inputDTO.CaseId = (String) inputMap.get(AVAILABLE_NODES.caseId.name());
@@ -47,7 +52,8 @@ global with sharing class LXD_ContractCaseDataSource implements vlocity_cmt.Vloc
     
             Map<String, Object> response = new Map<String, Object>{
                 'Case' => caseDetail,
-                'PermissionSets' => permsetNames
+                'PermissionSets' => permsetNames,
+                'WorkOrders' => hasOnHoldWorkOrder
             };
                 System.debug('response '+ response);
 
@@ -79,7 +85,7 @@ global with sharing class LXD_ContractCaseDataSource implements vlocity_cmt.Vloc
     }
     private static Case getCaseDetail(String caseId){
         Case caseDetail = null;
-        List<Case> caseList = [SELECT Id, AccountId, FiltroBotaoWO__c, Area_de_atendimento__c, WOCriada__c, Status, AssetId, Case.Asset.Name, Case.Asset.vlocity_cmt__RecurringCalculatedPrice__c, Case.Asset.vlocity_cmt__BillingAccountId__r.LegacyId__c, Case.Asset.PlanLogin__c, Contrato__r.ContractNumber, Contrato__r.status, Contrato__r.LXD_TrustUnlock__c, Contrato__r.LXD_TrustUnlockDate__c, Contrato__r.RecordType.Name, Contrato__r.Id, motive__c, submotive__c FROM Case WHERE Id = :caseId];
+        List<Case> caseList = [SELECT Id, AccountId, CancelamentoVoluntario__c, FiltroBotaoWO__c, Area_de_atendimento__c, WOCriada__c, Status, AssetId, Case.Asset.Name, Case.Asset.vlocity_cmt__RecurringCalculatedPrice__c, Case.Asset.vlocity_cmt__BillingAccountId__r.LegacyId__c, Case.Asset.PlanLogin__c, Contrato__r.ContractNumber, Contrato__r.status, Contrato__r.LXD_TrustUnlock__c, Contrato__r.LXD_TrustUnlockDate__c, Contrato__r.RecordType.Name, Contrato__r.Id, motive__c, submotive__c FROM Case WHERE Id = :caseId];
 
         if(!caseList.isEmpty()) caseDetail = caseList[0];
 
