@@ -1,0 +1,58 @@
+{
+    "cpf": 33906324842,
+    "data": [
+        {
+            "bank": "22",
+            "base_64_qrcode": null,
+            "billet_code": "",
+            "billet_number": "231200992705",
+            "due_date": "10/12/2023",
+            "id": 33134262,
+            "paid": "Bloqueado",
+            "pay_day": null,
+            "pix_env_id": "",
+            "statusCode": 200,
+            "value_charged": 99.99
+        },
+        {
+            "bank": "22",
+            "base_64_qrcode": null,
+            "billet_code": "",
+            "billet_number": "231100992705",
+            "due_date": "10/11/2023",
+            "id": 32607397,
+            "paid": "Bloqueado",
+            "pay_day": null,
+            "pix_env_id": "",
+            "statusCode": 200,
+            "value_charged": 99.99
+        },
+        {
+            "bank": "22",
+            "base_64_qrcode": null,
+            "billet_code": "",
+            "billet_number": "231000992705",
+            "due_date": "10/10/2023",
+            "id": 32098887,
+            "paid": "Pago",
+            "pay_day": "24/10/2023",
+            "pix_env_id": null,
+            "statusCode": 200,
+            "value_charged": 99.99
+        },
+        {
+            "bank": "22",
+            "base_64_qrcode": null,
+            "billet_code": "",
+            "billet_number": "230900992705",
+            "due_date": "10/09/2023",
+            "id": 31613723,
+            "paid": "Pago",
+            "pay_day": "20/09/2023",
+            "pix_env_id": null,
+            "statusCode": 200,
+            "value_charged": 67.74
+        }
+    ],
+    "email": null
+}

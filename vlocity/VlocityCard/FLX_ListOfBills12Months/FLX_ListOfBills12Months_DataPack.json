@@ -1,0 +1,43 @@
+{
+    "%vlocity_namespace%__Author__c": "AlexandreLaurindo",
+    "%vlocity_namespace%__CardType__c": "flex",
+    "%vlocity_namespace%__Datasource__c": {
+        "dataSource": {
+            "contextVariables": [
+                {
+                    "id": 75,
+                    "name": "Parent.AssetId",
+                    "val": "02iV2000000dAVtIAM"
+                }
+            ],
+            "orderBy": {
+                "isReverse": "",
+                "name": ""
+            },
+            "type": "IntegrationProcedures",
+            "value": {
+                "dsDelay": "",
+                "inputMap": {
+                    "AssetId": "{Parent.AssetId}"
+                },
+                "ipMethod": "LXD_PaymentSlipIntegration",
+                "jsonMap": "{\"Parent.AssetId\":\"{Parent.AssetId}\"}",
+                "resultVar": "",
+                "vlocityAsync": false
+            }
+        }
+    },
+    "%vlocity_namespace%__Definition__c": "FLX_ListOfBills12Months.json",
+    "%vlocity_namespace%__Description__c": "EVE-627\nBotão separado para descontar próxima fatura do cliente",
+    "%vlocity_namespace%__GlobalKey__c": "FLX_ListOfBills12Months/AlexandreLaurindo/17/1744132939112",
+    "%vlocity_namespace%__IsChildCard__c": true,
+    "%vlocity_namespace%__ParentID__c": "FLX_ListOfBillsV2/AlexandreLaurindo/1/1669056561473",
+    "%vlocity_namespace%__SampleData__c": "{\"CaseId\":null,\"LegacyId\":\"1017311\",\"response\":[{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"diaDePago\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":104.99,\"status\":\"Em aberto\",\"id\":44857463,\"dataVencimento\":\"15/04/2025\",\"boleto\":\"250401017311\",\"banco\":\"43\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":104.99,\"status\":\"Pago\",\"id\":43977069,\"diaDePago\":\"17/03/2025\",\"dataVencimento\":\"15/03/2025\",\"boleto\":\"250301017311\",\"banco\":\"43\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":104.99,\"status\":\"Pago\",\"id\":43094283,\"diaDePago\":\"18/02/2025\",\"dataVencimento\":\"15/02/2025\",\"boleto\":\"250201017311\",\"banco\":\"48\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":99.99,\"status\":\"Pago\",\"id\":42238002,\"diaDePago\":\"16/01/2025\",\"dataVencimento\":\"15/01/2025\",\"boleto\":\"250101017311\",\"banco\":\"48\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":99.99,\"status\":\"Pago\",\"id\":41326637,\"diaDePago\":\"17/12/2024\",\"dataVencimento\":\"15/12/2024\",\"boleto\":\"241201017311\",\"banco\":\"48\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":99.99,\"status\":\"Pago\",\"id\":40523280,\"diaDePago\":\"18/11/2024\",\"dataVencimento\":\"15/11/2024\",\"boleto\":\"241101017311\",\"banco\":\"42\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":99.99,\"status\":\"Pago\",\"id\":39722005,\"diaDePago\":\"15/10/2024\",\"dataVencimento\":\"15/10/2024\",\"boleto\":\"241001017311\",\"banco\":\"42\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":99.99,\"status\":\"Pago\",\"id\":39008733,\"diaDePago\":\"16/09/2024\",\"dataVencimento\":\"15/09/2024\",\"boleto\":\"240901017311\",\"banco\":\"42\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":99.99,\"status\":\"Pago\",\"id\":38246923,\"diaDePago\":\"15/08/2024\",\"dataVencimento\":\"15/08/2024\",\"boleto\":\"240801017311\",\"banco\":\"42\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":99.99,\"status\":\"Pago\",\"id\":37525895,\"diaDePago\":\"15/07/2024\",\"dataVencimento\":\"15/07/2024\",\"boleto\":\"240701017311\",\"banco\":\"42\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":99.99,\"status\":\"Pago\",\"id\":36825199,\"diaDePago\":\"17/06/2024\",\"dataVencimento\":\"15/06/2024\",\"boleto\":\"240601017311\",\"banco\":\"42\"},{\"linhaDigitavel\":\"\",\"diasEmAtraso\":\"\",\"cidadeAprovado\":\"\",\"pixId\":\"\",\"Email\":\"\",\"CPF\":\"051775339000109\",\"valorCobrado\":99.99,\"status\":\"Pago\",\"id\":36141346,\"diaDePago\":\"15/05/2024\",\"dataVencimento\":\"15/05/2024\",\"boleto\":\"240501017311\",\"banco\":\"42\"}],\"statusCode\":200,\"AccountName\":\"2cfc Comercio de Roupas E Acessorios Ltda\"}",
+    "%vlocity_namespace%__Styles__c": "{\"customStyles\":\".texto {\\r\\n    text-align: left;\\r\\n    max-width: 150px; /* Largura máxima das células de texto */\\r\\n    overflow: hidden;\\r\\n    white-space: nowrap;\\r\\n    text-overflow: ellipsis;\\r\\n}\\r\\n.valor{\\r\\n    width: 6%; /* Largura desejada em pixels ou outra unidade de medida */\\r\\n    padding: 3px; /* Adiciona algum espaço interno para melhor aparência */\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n.vencimento{\\r\\n    width: 8.2%; /* Largura desejada em pixels ou outra unidade de medida */\\r\\n    padding: 3px; /* Adiciona algum espaço interno para melhor aparência */\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n.pagamento{\\r\\n    width: 8.0%; /* Largura desejada em pixels ou outra unidade de medida */\\r\\n    padding: 3px; /* Adiciona algum espaço interno para melhor aparência */\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n.boleto{\\r\\n    width: 10%; /* Largura desejada em pixels ou outra unidade de medida */\\r\\n    padding: 3px; /* Adiciona algum espaço interno para melhor aparência */\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n.exemplo-de-classe {\\r\\n    width: 10%; /* Largura desejada em pixels ou outra unidade de medida */\\r\\n    padding: 3px; /* Adiciona algum espaço interno para melhor aparência */\\r\\n    box-sizing: border-box; \\r\\n}\\r\\n@media (max-width: 600px) {\\r\\n    .exemplo-de-classe {\\r\\n        font-size: 1em;\\r\\n    }\\r\\n}\"}",
+    "%vlocity_namespace%__Type__c": "",
+    "%vlocity_namespace%__Version__c": 17,
+    "Name": "FLX_ListOfBills12Months",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__VlocityCard__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__VlocityCard__c/FLX_ListOfBills12Months"
+}

@@ -1,0 +1,28 @@
+{
+    "%vlocity_namespace%__Author__c": "Desktop",
+    "%vlocity_namespace%__CardType__c": "flex",
+    "%vlocity_namespace%__Datasource__c": {
+        "dataSource": {
+            "contextVariables": [
+            ],
+            "orderBy": {
+            },
+            "type": null,
+            "value": {
+            }
+        }
+    },
+    "%vlocity_namespace%__Definition__c": "Every_TabsGPONAPIchild.json",
+    "%vlocity_namespace%__Description__c": "",
+    "%vlocity_namespace%__GlobalKey__c": "Every_TabsGPONAPIchild/Desktop/6/1742392199922",
+    "%vlocity_namespace%__IsChildCard__c": true,
+    "%vlocity_namespace%__ParentID__c": "",
+    "%vlocity_namespace%__SampleData__c": "",
+    "%vlocity_namespace%__Styles__c": "{\"customStyles\":\".container {\\r\\n    display: flex;\\r\\n    flex-wrap: wrap; \\r\\n    justify-content: center;\\r\\n    \\r\\n\\r\\n}\\r\\n.layout {\\r\\n  width: 100%;\\r\\n  display: flex;\\r\\n  gap: 16px;\\r\\n  flex-wrap: wrap;\\r\\n}\\r\\n.card1 {\\r\\n    margin: 5px;\\r\\n    user-select: text !important;\\r\\n}\\r\\n\\r\\n.card {\\r\\n    margin-left: 15px;\\r\\n    user-select: text !important;\\r\\n}\\r\\n.block{\\r\\n    margin: 0px 30px!important;\\r\\n    user-select: text !important;\\r\\n}\"}",
+    "%vlocity_namespace%__Type__c": "",
+    "%vlocity_namespace%__Version__c": 6,
+    "Name": "Every_TabsGPONAPIchild",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__VlocityCard__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__VlocityCard__c/Every_TabsGPONAPIchild"
+}
