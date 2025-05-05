@@ -25,6 +25,7 @@
         "additionalInput": {
         },
         "additionalOutput": {
+            "FasterNet": "%BuscarDados:FasterNet%",
             "URL": "%infraRouter:response%",
             "login": "%BuscarDados:login%",
             "onu": "%SV:onu%",

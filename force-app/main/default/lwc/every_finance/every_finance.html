@@ -22,7 +22,34 @@
     </template>
     <template lwc:else>
       <lightning-tabset class="custom-tabset">
+
+        <template if:true={showPosicaoFinanceira}>
           <lightning-tab label="Posição Financeira" icon-name="utility:money">
+            <c-cf-f-l-x_-list-of-bills-1-2-months parent-attribute={jsoncase}></c-cf-f-l-x_-list-of-bills-1-2-months>
+          </lightning-tab>
+        </template>
+
+        <template if:true={showPendenciasFinanceiras}>
+          <lightning-tab label="Pendências Financeiras" icon-name="utility:moneybag">
+            <c-every_-financial-issues-service asset-id={assetId}
+              ppoe-user={ppoeUser}></c-every_-financial-issues-service>
+          </lightning-tab>
+        </template>
+
+        <template if:true={showAlteracaoVencimento}>
+          <lightning-tab label="Alteração de Vencimento" icon-name="utility:monthlyview">
+            <c-o-s-due-date-portuguese-brazil record-id={ContextId}
+              layout="lightning"></c-o-s-due-date-portuguese-brazil>
+          </lightning-tab>
+        </template>
+
+        <template if:true={showDescontos}>
+          <lightning-tab label="Descontos" icon-name="utility:discounts">
+            <c-cf-every_-f-lex-desconto-fatura record-id={caseId}
+              layout="lightning"></c-cf-every_-f-lex-desconto-fatura>
+          </lightning-tab>
+        </template>
+        <!-- <lightning-tab label="Posição Financeira" icon-name="utility:money">
             <c-cf-f-l-x_-list-of-bills-1-2-months parent-attribute={jsoncase}></c-cf-f-l-x_-list-of-bills-1-2-months>
           </lightning-tab>
           <lightning-tab label="Pendências Financeiras" icon-name="utility:moneybag">
@@ -33,7 +60,7 @@
           </lightning-tab>
           <lightning-tab label="Descontos" icon-name="utility:discounts">
             <c-cf-every_-f-lex-desconto-fatura record-id={caseId} layout="lightning"></c-cf-every_-f-lex-desconto-fatura>
-          </lightning-tab>
+          </lightning-tab> -->
       </lightning-tabset>
     </template>
   </lightning-card>

@@ -10,7 +10,10 @@
         "actionMessage": "",
         "additionalInput": {
             "CaseId": "%CaseId%",
+            "QuantidadePontoTV": "%QuantidadePontoTV%",
+            "QuantidadePontoTVMesh": "%QuantidadePontoTVMesh%",
             "RecordTypeId": "%WorkOrderRecordType:RecordTypeId%",
+            "pontoMesh": "%pontoMesh%",
             "spMotivoTrabalho": "%spMotivoTrabalho%",
             "spSubtipoTrabalho": "%spSubtipoTrabalho%"
         },

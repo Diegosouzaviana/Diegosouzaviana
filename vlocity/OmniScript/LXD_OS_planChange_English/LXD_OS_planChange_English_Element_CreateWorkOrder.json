@@ -23,7 +23,8 @@
             "OrderId": "%SVOrder:OrderId%",
             "Subtipo": "%SelecioneTrabalhor:Subtipo%",
             "aptoparamoto": "%aptoparamoto%",
-            "caseId": "%caseId%"
+            "caseId": "%caseId%",
+            "pontos": "%pontosSelecionadomesh%"
         },
         "failureAbortLabel": "Abort",
         "failureAbortMessage": "Are you sure?",

@@ -61,6 +61,11 @@
                         "condition": "<>",
                         "data": "Não encontrado slots disponíveis",
                         "field": "data"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Sim",
+                        "field": "Confirmacao:Selecione"
                     }
                 ]
             }

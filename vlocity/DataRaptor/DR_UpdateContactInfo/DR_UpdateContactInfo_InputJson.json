@@ -1,0 +1,7 @@
+{
+    "ContactId": "%DRGetContactByCase:ContactId%",
+    "Email": "%objFormatado:old_email1%",
+    "Email2": "%objFormatado:old_email2%",
+    "Email3": "%objFormatado:old_email3%",
+    "Email4": "%objFormatado:old_email4%"
+}

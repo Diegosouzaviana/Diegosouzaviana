@@ -8,6 +8,7 @@
         "Every_CreateWoServiceOrder_Element_GetCaseAccountAsset.json",
         "Every_CreateWoServiceOrder_Element_ResponseAction2.json",
         "Every_CreateWoServiceOrder_Element_CreateWorkOrder.json",
+        "Every_CreateWoServiceOrder_Element_UPDATEASSET.json",
         "Every_CreateWoServiceOrder_Element_DR_UpdateCase.json",
         "Every_CreateWoServiceOrder_Element_ResponseAction1.json"
     ],

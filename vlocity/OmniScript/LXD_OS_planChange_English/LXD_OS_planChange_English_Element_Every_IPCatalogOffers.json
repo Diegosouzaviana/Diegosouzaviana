@@ -23,9 +23,9 @@
             "category": "%SVCategoriaSelected%",
             "city": "%ShippingCity%",
             "loyalty_contract": false,
-            "maxDownloadSpeed": "%maxSpeed%",
+            "maxDownloadSpeed": "1000000",
             "migrated_provider": false,
-            "minDownloadSpeed": "%minSpeed%",
+            "minDownloadSpeed": 1,
             "seller_id": "7540"
         },
         "failureAbortLabel": "Abort",

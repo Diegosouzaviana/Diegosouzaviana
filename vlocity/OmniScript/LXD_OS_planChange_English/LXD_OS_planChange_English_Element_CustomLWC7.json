@@ -21,7 +21,7 @@
     "%vlocity_namespace%__ParentElementName__c": "ResumoPlan",
     "%vlocity_namespace%__ParentElementType__c": "Step",
     "%vlocity_namespace%__PropertySet__c": {
-        "bStandalone": false,
+        "bStandalone": true,
         "conditionType": "Hide if False",
         "controlWidth": 12,
         "customAttributes": [

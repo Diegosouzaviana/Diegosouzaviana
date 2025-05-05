@@ -1,0 +1,23 @@
+{
+    "AccountId": "001V2000002LL1vIAG",
+    "AssetId": "02iV2000000cxwnIAA",
+    "CTO": "LFI-1022",
+    "CaseId": "500Ha00000AUhGHIA1",
+    "CaseMotivo": "Cancelamento Concorrencia",
+    "CaseSubMotivo": "Cliente Retido  Isencao de taxa",
+    "ContactId": "003V2000002N3k8IAC",
+    "OLT": "a7Y8b000000033AEAQ",
+    "PortaCTO": "2",
+    "Priority": "Medium",
+    "RecordTypeId": "0128b000001RSIuAAO",
+    "ShippingCity": "Limeira",
+    "ShippingCountry": "BRASIL",
+    "ShippingGeocodeAccuracy": "Street",
+    "ShippingLatitude": -22.58072,
+    "ShippingLongitude": -47.408860000000004,
+    "ShippingPostalCode": "13.480-645",
+    "ShippingState": "SP",
+    "ShippingStreet": "Irma M Angela",
+    "Work_Subtype_WO__c": "Cancelamento Compulsório",
+    "Work_Type_WO": "Retirada de Equipamento"
+}

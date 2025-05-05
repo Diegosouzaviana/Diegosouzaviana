@@ -31,10 +31,10 @@
     "isFlex": true,
     "isRepeatable": true,
     "lwc": {
-        "DeveloperName": "cfEvery_ErroChamadoGLPI_1_Desktop",
-        "Id": "0RbHa000000FxPZKA0",
+        "DeveloperName": "cfEvery_ConnectionInfHome_16_Desktop",
+        "Id": "0RbHa000000PytpKAC",
         "ManageableState": "unmanaged",
-        "MasterLabel": "cfEvery_ErroChamadoGLPI_1_Desktop",
+        "MasterLabel": "cfEvery_ConnectionInfHome_16_Desktop",
         "NamespacePrefix": "c"
     },
     "osSupport": true,
@@ -753,6 +753,15 @@
                                                             "operator": "!=",
                                                             "type": "custom",
                                                             "value": ""
+                                                        },
+                                                        {
+                                                            "field": "FasterNet",
+                                                            "hasMergeField": false,
+                                                            "id": "state-new-condition-0",
+                                                            "logicalOperator": "&&",
+                                                            "operator": "==",
+                                                            "type": "custom",
+                                                            "value": "false"
                                                         }
                                                     ],
                                                     "id": "state-condition-object",

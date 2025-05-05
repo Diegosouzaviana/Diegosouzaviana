@@ -1,0 +1,30 @@
+{
+    "plans": [
+        {
+            "commercialDescription": null,
+            "description": "Fibra Home Combo 600M + Watch 2022",
+            "download": 600000,
+            "limit": 4000,
+            "planCommercialName": "600 Mega + Watch",
+            "planName": "T-G-22.600M.4000G.Watch",
+            "price": 139.9,
+            "promocommercialDescription": null,
+            "promodescription": "Oferta 600Mb + Watch 2022",
+            "promoid": 116,
+            "promomonthsOfValidity": 6,
+            "promotionalValue": 109.9,
+            "promovalue": 30,
+            "upload": 300000
+        },
+        {
+            "commercialDescription": null,
+            "description": "Fibra Home Combo 600M Local 2022",
+            "download": 600000,
+            "limit": 4000,
+            "planCommercialName": "Fibra Home Combo 300M Local 2022",
+            "planName": "T-G-22.600M.4000G.Local",
+            "price": 159.9,
+            "upload": 300000
+        }
+    ]
+}

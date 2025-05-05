@@ -21,8 +21,11 @@
                 "newPlanPrice": "=%selectedItem:price%",
                 "oldPlanName": "=%NomePlanoAtual%",
                 "oldPlanPrice": "=%PrecoPlanoAtual%",
-                "planCommercialName": "=%selectedItem:planCommercialName%"
-            }
+                "planCommercialName": "=%selectedItem:planCommercialName%",
+                "pontos": "=%PontosAdicionas:pontos%",
+                "pontosadicionais": "=%PontosAdicionas:pontosadicionais%"
+            },
+            "pontosSelecionadomesh": "=%FMSomaMesh%"
         },
         "label": "SetProductValues",
         "message": {

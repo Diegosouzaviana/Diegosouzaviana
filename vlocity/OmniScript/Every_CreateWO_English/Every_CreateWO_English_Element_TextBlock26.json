@@ -1,0 +1,39 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Every_CreateWO",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Every/CreateWO/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "Every_CreateWO",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Every/CreateWO/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "PontosadicionaisAlteracaoplano",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CreateWO/English/PontosadicionaisAlteracaoplano",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "PontosadicionaisAlteracaoplano",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock26",
+        "sanitize": false,
+        "show": null,
+        "text": "<div class=\"c-scrollbar__hider\" role=\"presentation\" data-qa=\"slack_kit_scrollbar\">\n<div class=\"c-scrollbar__child\" role=\"presentation\">\n<div class=\"c-virtual_list__scroll_container\" tabindex=\"-1\" role=\"list\" data-qa=\"slack_kit_list\" aria-label=\"Mayara B. Silva (mensagem direta, ativo)\">\n<div id=\"message-list_1743083734.184909\" class=\"c-virtual_list__item\" tabindex=\"0\" role=\"listitem\" aria-setsize=\"-1\" data-qa=\"virtual-list-item\" data-item-key=\"1743083734.184909\">\n<div class=\"c-message_kit__background c-message_kit__background--hovered p-message_pane_message__message c-message_kit__message p-message_pane_message__message--last\" role=\"presentation\" data-qa=\"message_container\" data-qa-unprocessed=\"false\" data-qa-placeholder=\"false\">\n<div class=\"c-message_kit__hover c-message_kit__hover--hovered\" role=\"document\" aria-roledescription=\"mensagem\" data-qa-hover=\"true\">\n<div class=\"c-message_kit__actions c-message_kit__actions--default\">\n<div class=\"c-message_kit__gutter\">\n<div class=\"c-message_kit__gutter__right\" role=\"presentation\" data-qa=\"message_content\">\n<div class=\"c-message_kit__blocks c-message_kit__blocks--rich_text\">\n<div class=\"c-message__message_blocks c-message__message_blocks--rich_text\" data-qa=\"message-text\">\n<div class=\"p-block_kit_renderer\" data-qa=\"block-kit-renderer\">\n<div class=\"p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first\">\n<div class=\"p-rich_text_block\" dir=\"auto\" style=\"font-size: 14px; text-align: left;\">O plano atual do cliente n&atilde;o &eacute; compat&iacute;vel com pontos <strong>Mesh</strong>.</div>\n<div class=\"p-rich_text_block\" dir=\"auto\" style=\"font-size: 14px; text-align: left;\">Por favor, realize uma altera&ccedil;&atilde;o de plano para prosseguir.</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+        "textKey": ""
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Text Block",
+    "Name": "TextBlock26",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CreateWO/English/TextBlock26"
+}

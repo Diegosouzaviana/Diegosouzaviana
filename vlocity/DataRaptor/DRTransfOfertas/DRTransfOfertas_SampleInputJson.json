@@ -1,0 +1,87 @@
+{
+    "VelocidadeDownload": "300000",
+    "adherence_info": {
+        "inCash": 0,
+        "maxInstallment": 1,
+        "value": 0
+    },
+    "installation_info": {
+        "inCash": 350,
+        "maxInstallment": 1,
+        "value": 350
+    },
+    "plans": [
+        {
+            "additionalPlans": [
+            ],
+            "commercialDescription": null,
+            "description": "Fibra Home 200M 2024",
+            "download": 400000,
+            "limit": 4000,
+            "planCommercialName": "200 Mega - 2024",
+            "planName": "T-F-24.200M.4000G",
+            "price": 84.99,
+            "promotions": [
+            ],
+            "upload": 100000,
+            "videoApps": [
+                {
+                    "id": 13,
+                    "summary": "WatchTV",
+                    "value": 9.9
+                },
+                {
+                    "id": 14,
+                    "summary": "SexyHot",
+                    "value": 14.9
+                },
+                {
+                    "id": 15,
+                    "summary": "Globo Play",
+                    "value": 22.9
+                },
+                {
+                    "id": 16,
+                    "summary": "GP Mais Canais",
+                    "value": 47.9
+                }
+            ]
+        },
+        {
+            "additionalPlans": [
+            ],
+            "commercialDescription": null,
+            "description": "Fibra Home 100M 2024",
+            "download": 100000,
+            "limit": 2000,
+            "planCommercialName": "100 Mega (Exclusivo PAP) - 2024",
+            "planName": "T-F-24.100M.2000G",
+            "price": 69.99,
+            "promotions": [
+            ],
+            "upload": 50000,
+            "videoApps": [
+                {
+                    "id": 13,
+                    "summary": "WatchTV",
+                    "value": 9.9
+                },
+                {
+                    "id": 14,
+                    "summary": "SexyHot",
+                    "value": 14.9
+                },
+                {
+                    "id": 15,
+                    "summary": "Globo Play",
+                    "value": 22.9
+                },
+                {
+                    "id": 16,
+                    "summary": "GP Mais Canais",
+                    "value": 47.9
+                }
+            ]
+        }
+    ]
+}

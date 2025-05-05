@@ -1,0 +1,11 @@
+{
+    "jobName": "ExportarPackVlocity",
+    "projectPath": "./vlocity",
+    "sourceOrg": {
+        "sfdxUsername": "Desktop_Partial"
+    },
+    "export": {
+        "type": "VlocityDataPack",
+        "queriesFile": "dataPacksJobs/Example.yaml"
+    }
+}

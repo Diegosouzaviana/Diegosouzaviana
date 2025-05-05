@@ -1,0 +1,53 @@
+{
+    "%vlocity_namespace%__Author__c": "LabsXD",
+    "%vlocity_namespace%__CardType__c": "flex",
+    "%vlocity_namespace%__Datasource__c": {
+        "dataSource": {
+            "contextVariables": [
+                {
+                    "id": 273,
+                    "name": "recordId",
+                    "val": "50053000004BBNPAA4"
+                },
+                {
+                    "id": 40,
+                    "name": "oldPlanName",
+                    "val": "F-H.50M.250G.Max"
+                },
+                {
+                    "id": 43,
+                    "name": "newPlanName",
+                    "val": "F-H.50M.750G_IP.Max"
+                },
+                {
+                    "id": 44,
+                    "name": "oldPlanPrice",
+                    "val": "160,80"
+                },
+                {
+                    "id": 45,
+                    "name": "newPlanPrice",
+                    "val": "12,00"
+                }
+            ],
+            "orderBy": {
+            },
+            "type": null,
+            "value": {
+            }
+        }
+    },
+    "%vlocity_namespace%__Definition__c": "LXD_FlexPlanSummaryV2.json",
+    "%vlocity_namespace%__Description__c": "[SJ] Sprint-13 - DES-792 Responsividade da flex",
+    "%vlocity_namespace%__GlobalKey__c": "LXD_FlexPlanSummaryV2/LabsXD/10/1738084588790",
+    "%vlocity_namespace%__IsChildCard__c": true,
+    "%vlocity_namespace%__ParentID__c": "LXD_FlexPlanSummary/LabsXD/3/1673463222543",
+    "%vlocity_namespace%__SampleData__c": "",
+    "%vlocity_namespace%__Styles__c": "{\"styleObjects\":{\"account__value\":{\"sizeClass\":\"slds-size_12-of-12 \",\"size\":{\"isResponsive\":false,\"default\":\"12\"},\"padding\":[],\"margin\":[],\"background\":{\"color\":\"\",\"image\":\"\",\"size\":\"\",\"repeat\":\"\",\"position\":\"\"},\"container\":{\"class\":\"\"},\"border\":{\"type\":\"\",\"width\":\"\",\"color\":\"\",\"radius\":\"\",\"style\":\"\"},\"elementStyleProperties\":{},\"text\":{\"align\":\"\",\"color\":\"\"},\"inlineStyle\":\"color: #0F0F0F;\\nfont-size: 15px;\\nfont-weight: bold;\\nletter-spacing: 0;\\nline-height: 17px;\",\"class\":\"\",\"style\":\"      \\n         color: #0F0F0F;\\nfont-size: 15px;\\nfont-weight: bold;\\nletter-spacing: 0;\\nline-height: 17px;\",\"selectedStyles\":\"account__value\",\"element\":\"outputField\"},\"Title\":{\"sizeClass\":\"slds-size_12-of-12 \",\"size\":{\"isResponsive\":false,\"default\":\"12\"},\"padding\":[],\"margin\":[],\"background\":{\"color\":\"\",\"image\":\"\",\"size\":\"\",\"repeat\":\"\",\"position\":\"\"},\"container\":{\"class\":\"\"},\"border\":{\"type\":\"\",\"width\":\"\",\"color\":\"\",\"radius\":\"\",\"style\":\"\"},\"elementStyleProperties\":{},\"text\":{\"align\":\"\",\"color\":\"\"},\"inlineStyle\":\"color: #272626;\\nfont-size: 18px;\\nfont-weight: bold;\\nletter-spacing: 0;\\nline-height: 20px;\\nmargin-top: 10px;\\nmargin-bottom: 16px;\",\"class\":\"\",\"style\":\"      \\n         color: #272626;\\nfont-size: 18px;\\nfont-weight: bold;\\nletter-spacing: 0;\\nline-height: 20px;\\nmargin-top: 10px;\\nmargin-bottom: 16px;\",\"selectedStyles\":\"Title\",\"element\":\"outputField\"},\"highlighted_value\":{\"sizeClass\":\"slds-size_12-of-12 \",\"size\":{\"isResponsive\":false,\"default\":\"12\"},\"padding\":[],\"margin\":[],\"background\":{\"color\":\"\",\"image\":\"\",\"size\":\"\",\"repeat\":\"\",\"position\":\"\"},\"container\":{\"class\":\"\"},\"border\":{\"type\":\"\",\"width\":\"\",\"color\":\"\",\"radius\":\"\",\"style\":\"\"},\"elementStyleProperties\":{},\"text\":{\"align\":\"\",\"color\":\"\"},\"inlineStyle\":\"color: #0F0F0F;\\nfont-size: 15px;\\nfont-weight: bold;\\nletter-spacing: 0;\\nline-height: 17px;\",\"class\":\"\",\"style\":\"      \\n         color: #0F0F0F;\\nfont-size: 15px;\\nfont-weight: bold;\\nletter-spacing: 0;\\nline-height: 17px;\",\"selectedStyles\":\"highlighted_value\",\"element\":\"outputField\"},\"product\":{\"padding\":[{\"type\":\"around\",\"size\":\"x-small\",\"label\":\"around:x-small\"}],\"class\":\"slds-p-around_x-small \",\"sizeClass\":\"slds-size_3-of-12 \",\"size\":{\"isResponsive\":false,\"default\":\"3\"},\"margin\":[],\"background\":{\"color\":\"\",\"image\":\"\",\"size\":\"\",\"repeat\":\"\",\"position\":\"\"},\"container\":{\"class\":\"\"},\"border\":{\"type\":\"\",\"width\":\"\",\"color\":\"\",\"radius\":\"\",\"style\":\"\"},\"elementStyleProperties\":{},\"text\":{\"align\":\"\",\"color\":\"\"},\"inlineStyle\":\"padding-right: 0;\\npadding-left: 0;\",\"style\":\"      \\n         padding-right: 0;\\npadding-left: 0;\",\"selectedStyles\":\"product\",\"element\":\"block\"},\"product__container\":{\"padding\":[{\"type\":\"around\",\"size\":\"x-small\",\"label\":\"around:x-small\"}],\"class\":\"slds-p-around_x-small \",\"sizeClass\":\"slds-size_12-of-12 \",\"size\":{\"isResponsive\":false,\"default\":\"12\"},\"margin\":[],\"background\":{\"color\":\"\",\"image\":\"\",\"size\":\"\",\"repeat\":\"\",\"position\":\"\"},\"container\":{\"class\":\"\"},\"border\":{\"type\":\"\",\"width\":\"\",\"color\":\"\",\"radius\":\"\",\"style\":\"\"},\"elementStyleProperties\":{},\"text\":{\"align\":\"\",\"color\":\"\"},\"inlineStyle\":\"padding:0;\",\"style\":\"      \\n         padding:0;\",\"selectedStyles\":\"product__container\",\"element\":\"block\"},\"client__container\":{\"padding\":[{\"type\":\"around\",\"size\":\"x-small\",\"label\":\"around:x-small\"}],\"class\":\"slds-p-around_x-small \",\"sizeClass\":\"slds-size_4-of-12 \",\"size\":{\"isResponsive\":false,\"default\":\"4\"},\"margin\":[],\"background\":{\"color\":\"\",\"image\":\"\",\"size\":\"\",\"repeat\":\"\",\"position\":\"\"},\"container\":{\"class\":\"\"},\"border\":{\"type\":\"\",\"width\":\"\",\"color\":\"\",\"radius\":\"\",\"style\":\"\"},\"elementStyleProperties\":{},\"text\":{\"align\":\"\",\"color\":\"\"},\"inlineStyle\":\"padding-left: 0;\\npadding-right:0;\",\"style\":\"      \\n         padding-left: 0;\\npadding-right:0;\",\"selectedStyles\":\"client__container\",\"element\":\"block\"},\"title__main\":{\"theme\":\"\",\"background\":{\"color\":\"\",\"image\":\"\",\"size\":\"\",\"repeat\":\"\",\"position\":\"\"},\"border\":{\"type\":\"\",\"width\":\"\",\"color\":\"\",\"radius\":\"\",\"style\":\"\"},\"padding\":[],\"margin\":[],\"text\":{\"align\":\"\",\"color\":\"#0F0F0F\"},\"height\":\"\",\"minHeight\":\"\",\"maxHeight\":\"\",\"class\":\"\",\"sizeClass\":\"slds-size_12-of-12 \",\"container\":{\"class\":\"\"},\"size\":{\"isResponsive\":false,\"default\":\"12\"},\"selectedStyles\":\"title__main\",\"customClass\":\"\",\"elementStyleProperties\":{},\"inlineStyle\":\"\",\"element\":\"outputField\",\"style\":\"      \\n        color:#0F0F0F; \"}},\"styleDefaults\":{},\"customStyles\":\"@media screen and (max-width: 480px) {\\r\\n .text-block{\\r\\n    font-size: 11px; \\r\\n  }\\r\\n  .text-output-block{\\r\\n       font-size: 13px !important; \\r\\n  }\\r\\n}\\r\\n.myclass [type=\\\"currency\\\"] {\\r\\n    color: #0F0F0F !important;\\r\\n    font-size: 15px !important;\\r\\n    font-weight: bold !important;\\r\\n    letter-spacing: 0 !important;\\r\\n    line-height: 17px !important;\\r\\n}\\r\\n.myclassValue[type=\\\"currency\\\"]{\\r\\n  color: #0F0F0F;\\r\\n}\\r\\n\"}",
+    "%vlocity_namespace%__Type__c": "",
+    "%vlocity_namespace%__Version__c": 10,
+    "Name": "LXD_FlexPlanSummaryV2",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__VlocityCard__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__VlocityCard__c/LXD_FlexPlanSummaryV2"
+}

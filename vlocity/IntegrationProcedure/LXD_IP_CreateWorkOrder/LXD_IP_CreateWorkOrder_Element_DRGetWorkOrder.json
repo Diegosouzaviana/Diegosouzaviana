@@ -13,7 +13,8 @@
             "Motivo": "%Motivo%",
             "RecordTypeId": "%GetWorkOrderRecordType:RecordTypeId%",
             "Subtipo": "%Subtipo%",
-            "caseId": "%SetValues:caseIdentify%"
+            "caseId": "%SetValues:caseIdentify%",
+            "pontos": "%pontos%"
         },
         "additionalOutput": {
         },

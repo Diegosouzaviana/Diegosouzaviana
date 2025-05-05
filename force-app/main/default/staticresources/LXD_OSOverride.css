@@ -29,9 +29,9 @@
     background-color: #BA1212 !important;
   }
 }
-.slds-p-around_medium{
+/* .slds-p-around_medium{
     min-height: 340px !important;
-}
+} */
 /* Additional styles for buttons */
 .slds-button_brand, .slds-button_stretch {
   /* Duplicate styles for buttons (might consider removing) */
@@ -140,3 +140,7 @@ vlocity_cmt-omniscript-step-chart .slds-progress {
 .omniscript-body[data-stepborder='right'][c-oSDueDatePortugueseBrazil_oSDueDatePortugueseBrazil] {
   border-right: 0px solid rgb(255, 255, 255) !important;
 }
+
+/* .slds-p-around_medium, .slds-p-around--medium{
+  overflow: visible !important;
+} */

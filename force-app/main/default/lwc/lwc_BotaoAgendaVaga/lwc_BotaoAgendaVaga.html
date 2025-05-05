@@ -1,0 +1,29 @@
+<template>
+    <template if:true={showProximo}>
+        <lightning-radio-group name="SolicitaAntecipacao"
+            label="Deseja adiantar o atendimento caso surja uma vaga antecipada?" options={options} value={value}
+            required type="radio" onchange={handleRadioChange1}></lightning-radio-group>
+        <div class="button-container">
+            <template if:true={isOptionSelected1}>
+                <lightning-button variant="brand" label="Próximo" title="Próximo" onclick={avancButton}
+                    class="slds-m-left_x-small"></lightning-button>
+            </template>
+        </div>
+    </template>
+
+    <template if:true={showOtherButtons}>
+        <p class="slds-p-around_small">
+            A data agendada é maior que 24 horas, porém há disponibilidade para atender dentro das próximas 24
+            horas.
+        </p>
+        <div class="slds-grid slds-grid_align-end button-agenda">
+            <lightning-button variant="brand" label="Manter a agenda" title="Manter a agenda" onclick={nextButton}
+                class="slds-m-left_x-small">
+            </lightning-button>
+
+            <lightning-button variant="brand" label="Vou reagendar para 24hrs" title="Vou reagendar para 24hrs"
+                onclick={goToStep} class="slds-m-left_x-small">
+            </lightning-button>
+        </div>
+    </template>
+</template>

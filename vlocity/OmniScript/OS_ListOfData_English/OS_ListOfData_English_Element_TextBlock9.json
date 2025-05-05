@@ -38,7 +38,7 @@
                 ]
             }
         },
-        "text": "<p style=\"text-align: center;\"><strong><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/resource/1663183427000/icon_sideBar2/Status_Icon/IconError.png\" alt=\"\" width=\"250\" height=\"250\" /></strong></p>\n<p style=\"text-align: center;\"><strong>%data%</strong></p>\n<p style=\"text-align: center;\"><strong>N&atilde;o foi poss&iacute;vel realizar o agendamento, favor tentar novamente.</strong></p>",
+        "text": "<p style=\"text-align: center;\"><strong><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/resource/1663183427000/icon_sideBar2/Status_Icon/IconError.png\" alt=\"\" width=\"205\" height=\"190\" /></strong></p>\n<p style=\"text-align: center;\"><strong>%data%</strong></p>\n<p style=\"text-align: center;\"><strong>N&atilde;o foi poss&iacute;vel realizar o agendamento, favor tentar novamente.</strong></p>",
         "textKey": ""
     },
     "%vlocity_namespace%__ReusableOmniScript__c": true,

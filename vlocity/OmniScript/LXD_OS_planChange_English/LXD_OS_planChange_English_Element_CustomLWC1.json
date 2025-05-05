@@ -33,7 +33,18 @@
         "hide": false,
         "label": "CustomLWC1",
         "lwcName": "every_NextPageSchedule",
-        "show": null
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "CriarOS",
+                        "field": "FluxoOrigem"
+                    }
+                ]
+            }
+        }
     },
     "%vlocity_namespace%__ReusableOmniScript__c": true,
     "%vlocity_namespace%__Type__c": "Custom Lightning Web Component",

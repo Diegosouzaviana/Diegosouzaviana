@@ -1,0 +1,22 @@
+{
+    "AccountId": "001Ha00000CBCTdIAP",
+    "AssetId": "02iHa0000007jjZIAQ",
+    "CTO": "GTT-135",
+    "CaseId": "500Ha0000086kd3IAA",
+    "CaseMotivo": "Cancelamento  Mudanca Endereco",
+    "CaseSubMotivo": "Cliente Retido  Argumentacao",
+    "Complemento": "teste",
+    "ContactId": "003Ha00000902g9IAA",
+    "OLT": "a7YHa00000000VDMAY",
+    "PortaCTO": "2",
+    "Priority": "Medium",
+    "ShippingCity": "Sumare",
+    "ShippingCountry": "BRASIL",
+    "ShippingGeocodeAccuracy": "Block",
+    "ShippingLatitude": -22.824771973523323,
+    "ShippingLongitude": -47.269572117519495,
+    "ShippingPostalCode": "13.171-480",
+    "ShippingState": "SP",
+    "Work_Subtype_WO__c": "Cancelamento Compulsório",
+    "Work_Type_WO": "Retirada de Equipamento"
+}

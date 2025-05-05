@@ -22,7 +22,7 @@
     "%vlocity_namespace%__ParentElementType__c": "Block",
     "%vlocity_namespace%__PropertySet__c": {
         "HTMLTemplateId": "",
-        "controlWidth": 4,
+        "controlWidth": 12,
         "dataJSON": false,
         "label": "TextBlock11",
         "sanitize": false,

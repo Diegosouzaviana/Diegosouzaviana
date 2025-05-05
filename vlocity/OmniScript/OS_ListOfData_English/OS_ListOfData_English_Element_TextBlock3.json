@@ -27,7 +27,7 @@
         "label": "TextBlock3",
         "sanitize": false,
         "show": null,
-        "text": "<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/resource/1663183427000/icon_sideBar/Datos_360/Group_9.png\" alt=\"\" width=\"250\" height=\"248\" /></p>\n<p style=\"text-align: center;\"><strong data-renderer-mark=\"true\">%data%</strong></p>\n<p style=\"text-align: center;\"><strong data-renderer-mark=\"true\">Agendamento realizado com sucesso.</strong></p>",
+        "text": "<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/resource/1663183427000/icon_sideBar/Datos_360/Group_9.png\" alt=\"\" width=\"205\" height=\"190\" /></p>\n<p style=\"text-align: center;\"><strong data-renderer-mark=\"true\">%data%</strong></p>\n<p style=\"text-align: center;\"><strong data-renderer-mark=\"true\">Agendamento realizado com sucesso.</strong></p>",
         "textKey": ""
     },
     "%vlocity_namespace%__ReusableOmniScript__c": true,

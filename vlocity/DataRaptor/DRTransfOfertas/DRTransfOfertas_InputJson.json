@@ -1,0 +1,209 @@
+{
+    "adherence_info": {
+        "inCash": 0,
+        "maxInstallment": 1,
+        "value": 0
+    },
+    "installation_info": {
+        "inCash": 0,
+        "maxInstallment": 1,
+        "value": 0
+    },
+    "plans": [
+        {
+            "additionalPlans": [
+            ],
+            "commercialDescription": null,
+            "description": "Fibra Home Combo 600M + Watch 2022",
+            "download": 600000,
+            "limit": 4000,
+            "planCommercialName": "600 Mega + Watch",
+            "planName": "T-G-22.600M.4000G.Watch",
+            "price": 139.9,
+            "promotions": [
+                {
+                    "commercialDescription": null,
+                    "description": "Oferta 600Mb + Watch 2022",
+                    "id": 116,
+                    "monthsOfValidity": 6,
+                    "promotionalValue": 109.9,
+                    "value": 30
+                }
+            ],
+            "upload": 300000,
+            "videoApps": [
+                {
+                    "id": 13,
+                    "summary": "WatchTV",
+                    "value": 14.9
+                }
+            ]
+        },
+        {
+            "additionalPlans": [
+            ],
+            "commercialDescription": null,
+            "description": "Fibra Home Combo 600M Local 2022",
+            "download": 600000,
+            "limit": 4000,
+            "planCommercialName": "Fibra Home Combo 300M Local 2022",
+            "planName": "T-G-22.600M.4000G.Local",
+            "price": 159.9,
+            "promotions": [
+            ],
+            "upload": 300000,
+            "videoApps": [
+                {
+                    "id": 13,
+                    "summary": "WatchTV",
+                    "value": 14.9
+                }
+            ]
+        },
+        {
+            "additionalPlans": [
+            ],
+            "commercialDescription": null,
+            "description": "Fibra Home Combo 600M + GloboPlay 2022",
+            "download": 600000,
+            "limit": 4000,
+            "planCommercialName": "Combo 600Mb + GloboPlay",
+            "planName": "T-G-22.600M.4000G.GloboPlay",
+            "price": 152.9,
+            "promotions": [
+                {
+                    "commercialDescription": null,
+                    "description": "Oferta 600Mb + GloboPlay",
+                    "id": 121,
+                    "monthsOfValidity": 6,
+                    "promotionalValue": 122.9,
+                    "value": 30
+                }
+            ],
+            "upload": 300000,
+            "videoApps": [
+                {
+                    "id": 13,
+                    "summary": "WatchTV",
+                    "value": 14.9
+                }
+            ]
+        },
+        {
+            "additionalPlans": [
+            ],
+            "commercialDescription": null,
+            "description": "Fibra Home Combo 600M 2023",
+            "download": 600000,
+            "limit": 4000,
+            "planCommercialName": "600 Mega + Fone",
+            "planName": "T-G-23.600M.4000G",
+            "price": 129.99,
+            "promotions": [
+                {
+                    "commercialDescription": null,
+                    "description": "Oferta Padrão 600Mb 2022 (R$ 99,90 06 Meses)",
+                    "id": 95,
+                    "monthsOfValidity": 6,
+                    "promotionalValue": 99.99,
+                    "value": 30
+                }
+            ],
+            "upload": 300000,
+            "videoApps": [
+                {
+                    "id": 13,
+                    "summary": "WatchTV",
+                    "value": 14.9
+                }
+            ]
+        },
+        {
+            "additionalPlans": [
+            ],
+            "commercialDescription": null,
+            "description": "Fibra Home Combo 300M + Watch 2022",
+            "download": 300000,
+            "limit": 4000,
+            "planCommercialName": "300 Mega + Watch",
+            "planName": "T-G-22.300M.4000G.Watch",
+            "price": 109.9,
+            "promotions": [
+                {
+                    "commercialDescription": null,
+                    "description": "Oferta 300Mb + Watch 2022",
+                    "id": 115,
+                    "monthsOfValidity": 3,
+                    "promotionalValue": 89.9,
+                    "value": 20
+                }
+            ],
+            "upload": 150000,
+            "videoApps": [
+                {
+                    "id": 13,
+                    "summary": "WatchTV",
+                    "value": 14.9
+                }
+            ]
+        },
+        {
+            "additionalPlans": [
+            ],
+            "commercialDescription": null,
+            "description": "Fibra Home Combo 300M + GloboPlay 2022",
+            "download": 300000,
+            "limit": 4000,
+            "planCommercialName": "Combo 300Mb + GloboPlay",
+            "planName": "T-G-22.300M.4000G.GloboPlay",
+            "price": 122.9,
+            "promotions": [
+                {
+                    "commercialDescription": null,
+                    "description": "Oferta 300Mb + GloboPlay",
+                    "id": 120,
+                    "monthsOfValidity": 3,
+                    "promotionalValue": 102.9,
+                    "value": 20
+                }
+            ],
+            "upload": 150000,
+            "videoApps": [
+                {
+                    "id": 13,
+                    "summary": "WatchTV",
+                    "value": 14.9
+                }
+            ]
+        },
+        {
+            "additionalPlans": [
+            ],
+            "commercialDescription": null,
+            "description": "Fibra Home Combo 300M 2023",
+            "download": 300000,
+            "limit": 4000,
+            "planCommercialName": "300 Mega + Fone",
+            "planName": "T-G-23.300M.4000G",
+            "price": 99.99,
+            "promotions": [
+                {
+                    "commercialDescription": null,
+                    "description": "Oferta Padrão 300Mb 2022 (R$ 79,90 03 Meses)",
+                    "id": 94,
+                    "monthsOfValidity": 3,
+                    "promotionalValue": 79.99,
+                    "value": 20
+                }
+            ],
+            "upload": 150000,
+            "videoApps": [
+                {
+                    "id": 13,
+                    "summary": "WatchTV",
+                    "value": 14.9
+                }
+            ]
+        }
+    ]
+}

@@ -26,10 +26,10 @@
     "enableLwc": true,
     "isFlex": true,
     "lwc": {
-        "DeveloperName": "cfEvery_GetPlanAssetLpnetFasternet_1_Desktop",
-        "Id": "0RbHa000000Jrv3KAC",
+        "DeveloperName": "cfEvery_GetPlanAssetLpnetFasternet_3_Desktop",
+        "Id": "0RbHa000000Prp7KAC",
         "ManageableState": "unmanaged",
-        "MasterLabel": "cfEvery_GetPlanAssetLpnetFasternet_1_Desktop",
+        "MasterLabel": "cfEvery_GetPlanAssetLpnetFasternet_3_Desktop",
         "NamespacePrefix": "c"
     },
     "selectableMode": "Multi",
@@ -50,9 +50,9 @@
                                             "class": "slds-col ",
                                             "element": "flexImg",
                                             "elementLabel": "Block-1-Image-1",
-                                            "key": "element_element_block_0_0_flexImg_1_0",
+                                            "key": "element_element_element_block_0_0_block_0_0_flexImg_0_0",
                                             "name": "Image",
-                                            "parentElementKey": "element_block_0_0",
+                                            "parentElementKey": "element_element_block_0_0_block_0_0",
                                             "property": {
                                                 "card": "{card}",
                                                 "extraclass": "slds-align_absolute-center",
@@ -614,6 +614,15 @@
                         "field": "FasternetLPNET",
                         "hasMergeField": false,
                         "id": "state-new-condition-0",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "true"
+                    },
+                    {
+                        "field": "TVClig",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-9",
+                        "logicalOperator": "||",
                         "operator": "==",
                         "type": "custom",
                         "value": "true"

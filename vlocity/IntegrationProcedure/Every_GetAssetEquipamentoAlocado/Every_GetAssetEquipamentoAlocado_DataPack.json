@@ -1,0 +1,27 @@
+{
+    "%vlocity_namespace%__CustomJavaScript__c": "Every_GetAssetEquipamentoAlocado_SampleInput.json",
+    "%vlocity_namespace%__DisableMetadataCache__c": false,
+    "%vlocity_namespace%__ElementTypeToHTMLTemplateList__c": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "%vlocity_namespace%__Element__c": [
+        "Every_GetAssetEquipamentoAlocado_Element_GetVelocidadePlano.json",
+        "Every_GetAssetEquipamentoAlocado_Element_GetVelocidadeTodosEquipamento.json",
+        "Every_GetAssetEquipamentoAlocado_Element_LoopBlock.json",
+        "Every_GetAssetEquipamentoAlocado_Element_SetValues1.json",
+        "Every_GetAssetEquipamentoAlocado_Element_VelocidaCompativel.json",
+        "Every_GetAssetEquipamentoAlocado_Element_ResponseAction.json"
+    ],
+    "%vlocity_namespace%__IsLwcEnabled__c": false,
+    "%vlocity_namespace%__IsProcedure__c": true,
+    "%vlocity_namespace%__IsReusable__c": false,
+    "%vlocity_namespace%__IsTest__c": false,
+    "%vlocity_namespace%__Language__c": "Procedure",
+    "%vlocity_namespace%__OmniProcessType__c": "Integration Procedure",
+    "%vlocity_namespace%__ProcedureKey__c": "Every_GetAssetEquipamentoAlocado",
+    "%vlocity_namespace%__PropertySet__c": "Every_GetAssetEquipamentoAlocado_PropertySet.json",
+    "%vlocity_namespace%__SubType__c": "GetAssetEquipamentoAlocado",
+    "%vlocity_namespace%__Type__c": "Every",
+    "Name": "Every_GetAssetEquipamentoAlocado",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Every/GetAssetEquipamentoAlocado/Procedure"
+}

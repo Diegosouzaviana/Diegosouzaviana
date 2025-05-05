@@ -1,0 +1,45 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "OS_UpdateInformationCustomer",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/OS_Update/InformationCustomer/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "Obj": {
+                "caseId": "%CaseId%",
+                "old_email1": "%Email1%",
+                "old_email2": "%Email2%",
+                "old_email3": "%Email3%",
+                "old_email4": "%Email4%",
+                "old_email5": "%Email5%",
+                "old_telefone1": "%NumTelefone1%",
+                "old_telefone2": "%NumTelefone2%",
+                "old_telefone3": "%NumTelefone3%",
+                "old_telefone4": "%NumTelefone4%",
+                "old_telefone5": "%NumTelefone5%"
+            }
+        },
+        "label": "SetOldValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "SetValues2",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/OS_Update/InformationCustomer/English/SetValues2"
+}

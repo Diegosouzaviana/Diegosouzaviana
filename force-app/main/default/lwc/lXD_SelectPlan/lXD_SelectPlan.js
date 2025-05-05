@@ -32,28 +32,28 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
     @api selectmultiple = false;
     @api crm;
     @track _products = [];
-   
 
-    get selectMultipleEnabled(){
+
+    get selectMultipleEnabled() {
         return this.selectmultiple.toString().toLocaleLowerCase() === 'false'
     }
 
     @api
-    get productList(){
+    get productList() {
         return Array.isArray(this._products) ? this._products : [];
     }
-    set productList(value){
+    set productList(value) {
         this._products = this.productNormalizer(value);
-    }    
+    }
     showValidation;
-    
+
     showSpinner = false;
     showError = false;
     cart = null;
-    
+
     @api
-        checkValidity() {
-            console.log(this.crm);
+    checkValidity() {
+        console.log(this.crm);
         if (this.requiredplan.toString().toLowerCase() === 'true') {
             for (let i = 0; i < this.productList.length; i++) {
                 if (this.productList[i].selected && this.productList[i].orderItem != null) {
@@ -62,7 +62,7 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
                 }
             }
             return false;
-        } 
+        }
 
         return true;
     }
@@ -74,21 +74,21 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
         this.indexClick = event.currentTarget.dataset.name;
 
         const product = this.productList[this.indexClick];
-        
+
         const hasOrderItem = product.orderItem !== null;
         const isSelected = product.selected
 
         if (!hasOrderItem || !isSelected) {
             if (this.selectMultipleEnabled) this.deleteProductsFromOrder();
 
-            if (this.validatestock && !this.isTest){
-                if(this.validateStockAction(product.ProductCode)) this.addProduct();
+            if (this.validatestock && !this.isTest) {
+                if (this.validateStockAction(product.ProductCode)) this.addProduct();
             }
             else this.addProduct();
 
             this.showValidation = false;
 
-        } else  this.deleteProduct(this.indexClick, true)
+        } else this.deleteProduct(this.indexClick, true)
 
         this.disableLoading()
     }
@@ -102,9 +102,9 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
         const responseOS = {
             "selectedItem": this.productList[this.indexClick]
         };
-        console.log('selectedItem ' , JSON.stringify(this.productList));
+        // console.log('selectedItem ' , JSON.stringify(this.productList));
 
-        if(this.isTest){
+        if (this.isTest) {
             console.log('%c addProduct -> isTest', 'background-color: #111; color: #bada55')
             selectProduct(this.productList[this.indexClick], `any_id_${Date.now()}`)
             this.omniApplyCallResp(responseOS);
@@ -122,14 +122,14 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
                 }
             ]
         };
-        console.log('input itemId ' , stringify(this.productList[this.indexClick].PricebookEntryId));
+        console.log('input itemId ', stringify(this.productList[this.indexClick].PricebookEntryId));
         const params = {
             input: JSON.stringify(input),
             sClassName: `${this._ns}IntegrationProcedureService`,
             sMethodName: 'DeskDigital_PostCartsItems',
             options: '{}',
         };
-        
+
 
         this.omniRemoteCall(params, false).then(response => {
             if (response?.result?.IPResult?.totalSize > 0) {
@@ -144,7 +144,7 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
                 this.dispatchEvent(resultsToast);
             }
 
-            
+
         }).catch(error => {
             console.error(error)
         });
@@ -157,15 +157,15 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
     deleteProduct(index, desactivarSpinner) {
         this.enableLoading();
 
-        const deselectProduct = (product) =>{
+        const deselectProduct = (product) => {
             product.selected = false;
             product.orderItem = null;
         }
 
-        if(this.isTest){
+        if (this.isTest) {
             deselectProduct(this.productList[index])
             this.omniApplyCallResp({
-                selectedItem: null   
+                selectedItem: null
             });
             if (desactivarSpinner) this.disableLoading();
 
@@ -204,37 +204,37 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
 
 
     /* addProduct */
-    deleteProductsFromOrder(){
-        this.productList.forEach((product, index)=>{
-            if(product.selected) this.deleteProduct(index, false);
+    deleteProductsFromOrder() {
+        this.productList.forEach((product, index) => {
+            if (product.selected) this.deleteProduct(index, false);
         })
     }
 
     /* HELPERS */
-    enableLoading(){
+    enableLoading() {
         this.showSpinner = true;
     }
-    disableLoading(){
+    disableLoading() {
         this.showSpinner = false;
     }
-    
-    formatCurrencyToBRL(number = ''){
+
+    formatCurrencyToBRL(number = '') {
         return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(number);
     }
-    
-    getFloatFromText(text = ''){
+
+    getFloatFromText(text = '') {
         const regex = new RegExp('([0-9.,]+)')
-        if(regex.test(text)) return text.match(regex)[0];
-        
+        if (regex.test(text)) return text.match(regex)[0];
+
         return null;
     }
 
-    productNormalizer(value){
+    productNormalizer(value) {
         const normalizedList = [];
-        
-        if(Array.isArray(value)){
+
+        if (Array.isArray(value)) {
             value.forEach(product => {
-                if(typeof product === 'object'){
+                if (typeof product === 'object') {
                     const recurringPrice = this.formatCurrencyToBRL(this.getFloatFromText(product.RecurringPrice))
                     const listPrice = this.formatCurrencyToBRL(this.getFloatFromText(product.RecurringPrice))
 
@@ -254,9 +254,9 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
     render() {
         return tmpl;
     }
-    nextButton() { 
-        this.omniNextStep(); 
-    }  
+    nextButton() {
+        this.omniNextStep();
+    }
     // scrollToBottom() {
     //     // Seleciona o elemento com ID 'scrollContainer'
     //     // const container = this.template.querySelector('.bottom');

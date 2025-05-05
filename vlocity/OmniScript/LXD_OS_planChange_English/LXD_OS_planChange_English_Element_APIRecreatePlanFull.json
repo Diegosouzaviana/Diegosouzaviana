@@ -24,7 +24,7 @@
             "WorkOrderId": "%WorkOrderId%",
             "contracted_plan": "%ProductCode%",
             "correlation_id": "%CorrelationId%",
-            "ctoId": "%ctoId%",
+            "ctoId": "%AssetCTO%",
             "customer_current_plan": "%CodigoPlanoAtual%",
             "customer_id": "%customerId%",
             "fixed_discount": "null",
