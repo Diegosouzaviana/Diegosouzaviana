@@ -13,11 +13,12 @@
     },
     "enableLwc": true,
     "isFlex": true,
+    "isRepeatable": false,
     "lwc": {
-        "DeveloperName": "cfLXD_FlexPlanCase_52_Desktop",
-        "Id": "0RbHa000000Ix1dKAC",
+        "DeveloperName": "cfLXD_FlexPlanCase_61_Desktop",
+        "Id": "0RbHa000000ScyPKAS",
         "ManageableState": "unmanaged",
-        "MasterLabel": "cfLXD_FlexPlanCase_52_Desktop",
+        "MasterLabel": "cfLXD_FlexPlanCase_61_Desktop",
         "NamespacePrefix": "c"
     },
     "osSupport": true,
@@ -283,7 +284,7 @@
                             ],
                             "class": "slds-col ",
                             "element": "block",
-                            "elementLabel": "Block-3",
+                            "elementLabel": "Block-0",
                             "name": "Block",
                             "property": {
                                 "action": {
@@ -763,33 +764,24 @@
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-7",
+                                            "id": "state-new-condition-85",
                                             "operator": "==",
                                             "type": "custom",
-                                            "value": "Suporte"
+                                            "value": "Supervisor Indireto"
                                         },
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-14",
+                                            "id": "state-new-condition-92",
                                             "logicalOperator": "||",
                                             "operator": "==",
                                             "type": "custom",
-                                            "value": "SAC"
+                                            "value": "Loja"
                                         },
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-27",
-                                            "logicalOperator": "||",
-                                            "operator": "==",
-                                            "type": "custom",
-                                            "value": "Coordenador Pós Venda"
-                                        },
-                                        {
-                                            "field": "User.userRole",
-                                            "hasMergeField": false,
-                                            "id": "state-new-condition-55",
+                                            "id": "state-new-condition-281",
                                             "logicalOperator": "||",
                                             "operator": "==",
                                             "type": "custom",
@@ -798,43 +790,25 @@
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-112",
+                                            "id": "state-new-condition-731",
                                             "logicalOperator": "||",
                                             "operator": "==",
                                             "type": "custom",
-                                            "value": "Qualidade"
+                                            "value": "Supervisor"
                                         },
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-88",
+                                            "id": "state-new-condition-756",
                                             "logicalOperator": "||",
                                             "operator": "==",
                                             "type": "custom",
-                                            "value": "Financeiro"
+                                            "value": "SAC"
                                         },
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-0",
-                                            "logicalOperator": "||",
-                                            "operator": "==",
-                                            "type": "custom",
-                                            "value": "Ouvidoria"
-                                        },
-                                        {
-                                            "field": "User.userRole",
-                                            "hasMergeField": false,
-                                            "id": "state-new-condition-184",
-                                            "logicalOperator": "||",
-                                            "operator": "==",
-                                            "type": "custom",
-                                            "value": "Faturamento"
-                                        },
-                                        {
-                                            "field": "User.userRole",
-                                            "hasMergeField": false,
-                                            "id": "state-new-condition-299",
+                                            "id": "state-new-condition-781",
                                             "logicalOperator": "||",
                                             "operator": "==",
                                             "type": "custom",
@@ -843,7 +817,25 @@
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-782",
+                                            "id": "state-new-condition-810",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Suporte"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-843",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "Faturamento"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-880",
                                             "logicalOperator": "||",
                                             "operator": "==",
                                             "type": "custom",
@@ -852,20 +844,20 @@
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-25",
+                                            "id": "state-new-condition-921",
                                             "logicalOperator": "||",
                                             "operator": "==",
                                             "type": "custom",
-                                            "value": "Diretoria"
+                                            "value": "Qualidade"
                                         },
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-80",
+                                            "id": "state-new-condition-966",
                                             "logicalOperator": "||",
                                             "operator": "==",
                                             "type": "custom",
-                                            "value": "Supervisor"
+                                            "value": "Ouvidoria"
                                         }
                                     ],
                                     "id": "state-condition-object",
@@ -1287,116 +1279,66 @@
                                 "data-conditions": {
                                     "group": [
                                         {
-                                            "field": "Case.Contrato__r.Status",
+                                            "field": "Case.Contrato__r",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-23",
+                                            "id": "state-new-condition-69",
                                             "operator": "==",
                                             "type": "custom",
                                             "value": "Bloqueado"
                                         },
                                         {
-                                            "group": [
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-3",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Suporte"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-63",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "SAC"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-109",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Retenção"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-138",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Administrador"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-2",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Financeiro"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-223",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Faturamento"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-367",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Qualidade"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-446",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Ouvidoria"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-829",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Financeiro"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-76",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Diretoria"
-                                                },
-                                                {
-                                                    "field": "User.userRole",
-                                                    "hasMergeField": false,
-                                                    "id": "state-new-condition-147",
-                                                    "logicalOperator": "||",
-                                                    "operator": "==",
-                                                    "type": "custom",
-                                                    "value": "Supervisor"
-                                                }
-                                            ],
-                                            "id": "state-new-group-4",
-                                            "logicalOperator": "&&"
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-90",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "Retenção"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-103",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "SAC"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-116",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "Suporte"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-137",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "CRV"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-156",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "Vendas"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-178",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "COP"
                                         }
                                     ],
                                     "id": "state-condition-object",
@@ -1819,10 +1761,473 @@
                                         {
                                             "field": "User.userRole",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-1111",
+                                            "id": "state-new-condition-75",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "CRV"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-82",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "Vendas"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-95",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "COP"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-440",
+                                            "logicalOperator": "&&",
+                                            "operator": "!=",
+                                            "type": "custom",
+                                            "value": "Faturamento"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-460",
+                                            "logicalOperator": "&&",
                                             "operator": "!=",
                                             "type": "custom",
                                             "value": "Financeiro"
+                                        }
+                                    ],
+                                    "id": "state-condition-object",
+                                    "isParent": true
+                                },
+                                "label": "Block",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": true,
+                                "large": "12",
+                                "medium": "12",
+                                "small": "12"
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "background": {
+                                    "color": "",
+                                    "image": "",
+                                    "position": "",
+                                    "repeat": "",
+                                    "size": ""
+                                },
+                                "border": {
+                                    "color": "",
+                                    "radius": "",
+                                    "style": "",
+                                    "type": "",
+                                    "width": ""
+                                },
+                                "class": "slds-p-around_x-small ",
+                                "container": {
+                                    "class": ""
+                                },
+                                "element": "block",
+                                "elementStyleProperties": {
+                                },
+                                "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "margin": [
+                                ],
+                                "padding": [
+                                    {
+                                        "label": "around:x-small",
+                                        "size": "x-small",
+                                        "type": "around"
+                                    }
+                                ],
+                                "selectedStyles": "button__container",
+                                "size": {
+                                    "default": "12",
+                                    "isResponsive": true,
+                                    "large": "12",
+                                    "medium": "12",
+                                    "small": "12"
+                                },
+                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "text": {
+                                    "align": "",
+                                    "color": ""
+                                }
+                            },
+                            "styleObjects": [
+                                {
+                                    "conditionString": "",
+                                    "conditions": "default",
+                                    "draggable": false,
+                                    "key": 0,
+                                    "label": "Default",
+                                    "name": "Default",
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-around_x-small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "block",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "around:x-small",
+                                                "size": "x-small",
+                                                "type": "around"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__container",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "block",
+                            "userUpdatedElementLabel": true
+                        },
+                        {
+                            "children": [
+                                {
+                                    "class": "slds-col ",
+                                    "element": "flexImg",
+                                    "elementLabel": "IMG_SenhadoWi-fi",
+                                    "key": "element_element_block_4_0_flexImg_0_0",
+                                    "name": "Image",
+                                    "parentElementKey": "element_block_4_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "extraclass": "slds-align_absolute-center",
+                                        "record": "{record}",
+                                        "size": "",
+                                        "stateImg": {
+                                            "alternativeText": "Image description",
+                                            "imgsrc": "/resource/1663183427000/icon_sideBar/icon/hammer-wrench.png"
+                                        }
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "flexImg",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width:12px;\nalign-self: center;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                        ],
+                                        "selectedStyles": "button__icon",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width:12px;\nalign-self: center;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "flexImg",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width:12px;\nalign-self: center;",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                ],
+                                                "selectedStyles": "button__icon",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width:12px;\nalign-self: center;",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "element",
+                                    "userUpdatedElementLabel": true
+                                },
+                                {
+                                    "class": "slds-col ",
+                                    "element": "outputField",
+                                    "elementLabel": "Block-SenhadoWi-fi",
+                                    "key": "element_element_block_4_0_outputField_1_0",
+                                    "name": "Text",
+                                    "parentElementKey": "element_block_4_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "mergeField": "%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3ERetomar%20Agendamento%3C/span%3E%3C/div%3E",
+                                        "record": "{record}"
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-left_small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "outputField",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width: calc(100% - 12px);",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "left:small",
+                                                "size": "small",
+                                                "type": "left"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__text",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width: calc(100% - 12px);",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "slds-p-left_small ",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "outputField",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width: calc(100% - 12px);",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                    {
+                                                        "label": "left:small",
+                                                        "size": "small",
+                                                        "type": "left"
+                                                    }
+                                                ],
+                                                "selectedStyles": "button__text",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width: calc(100% - 12px);",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "text",
+                                    "userUpdatedElementLabel": true
+                                }
+                            ],
+                            "class": "slds-col ",
+                            "element": "block",
+                            "elementLabel": "Block-3-clone-0",
+                            "name": "Block",
+                            "property": {
+                                "action": {
+                                    "actionList": [
+                                        {
+                                            "actionIndex": 0,
+                                            "card": "{card}",
+                                            "draggable": false,
+                                            "isOpen": true,
+                                            "key": "1674227600418-njlnmn0zo",
+                                            "label": "ListOfData",
+                                            "stateAction": {
+                                                "cardName": "LXD_FLEXwifiPasswordCRM",
+                                                "cardNode": "{record}",
+                                                "channelName": "close_modal",
+                                                "displayName": "Action",
+                                                "flyoutLwc": "o-s-list-of-data-english",
+                                                "flyoutParams": {
+                                                    "caseId": "{recordId}"
+                                                },
+                                                "flyoutType": "OmniScripts",
+                                                "hasExtraParams": true,
+                                                "id": "flex-action-1731348482743",
+                                                "layoutType": "lightning",
+                                                "openFlyoutIn": "Modal",
+                                                "openUrlIn": "Current Window",
+                                                "osName": "OS/ListOfData/English",
+                                                "type": "Flyout",
+                                                "vlocityIcon": "standard-default"
+                                            }
+                                        }
+                                    ],
+                                    "eventType": "onclick",
+                                    "iconName": "standard-default",
+                                    "label": "Action",
+                                    "showSpinner": "true"
+                                },
+                                "card": "{card}",
+                                "collapsedByDefault": false,
+                                "collapsible": false,
+                                "data-conditions": {
+                                    "group": [
+                                        {
+                                            "field": "WorkOrders",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-9",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "true"
                                         }
                                     ],
                                     "id": "state-condition-object",
@@ -2200,7 +2605,7 @@
                             ],
                             "class": "slds-col ",
                             "element": "block",
-                            "elementLabel": "Block-6-clone-0",
+                            "elementLabel": "Cancelar plano",
                             "name": "Block",
                             "property": {
                                 "action": {
@@ -2251,13 +2656,63 @@
                                             "value": "Retencao"
                                         },
                                         {
-                                            "field": "User.userRole",
+                                            "field": "Parent.CancelamentoVoluntario",
                                             "hasMergeField": false,
-                                            "id": "state-new-condition-2",
+                                            "id": "state-new-condition-54",
                                             "logicalOperator": "&&",
                                             "operator": "==",
                                             "type": "custom",
-                                            "value": "Retenção"
+                                            "value": ""
+                                        },
+                                        {
+                                            "group": [
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-325",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Administrador"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-357",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Supervisor Indireto"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-3",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Retenção"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-83",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Loja"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-245",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Qualidade"
+                                                }
+                                            ],
+                                            "id": "state-new-group-326",
+                                            "logicalOperator": "&&"
                                         }
                                     ],
                                     "id": "state-condition-object",
@@ -2387,9 +2842,9 @@
                                     "class": "slds-col ",
                                     "element": "flexImg",
                                     "elementLabel": "image-Compra ou troca de plano",
-                                    "key": "element_element_block_5_0_flexImg_0_0",
+                                    "key": "element_element_block_6_0_flexImg_0_0",
                                     "name": "Image",
-                                    "parentElementKey": "element_block_5_0",
+                                    "parentElementKey": "element_block_6_0",
                                     "property": {
                                         "card": "{card}",
                                         "extraclass": "slds-align_absolute-center",
@@ -2509,9 +2964,9 @@
                                     "class": "slds-col ",
                                     "element": "outputField",
                                     "elementLabel": "Block-Compra ou troca de plano",
-                                    "key": "element_element_block_5_0_outputField_1_0",
+                                    "key": "element_element_block_6_0_outputField_2_0",
                                     "name": "Text",
-                                    "parentElementKey": "element_block_5_0",
+                                    "parentElementKey": "element_block_6_0",
                                     "property": {
                                         "card": "{card}",
                                         "mergeField": "%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3ETratar%20Revers&atilde;o%3C/span%3E%3C/div%3E",
@@ -2635,7 +3090,7 @@
                             ],
                             "class": "slds-col ",
                             "element": "block",
-                            "elementLabel": "Block-5-clone-0",
+                            "elementLabel": "Tratar reversão",
                             "name": "Block",
                             "property": {
                                 "action": {
@@ -2686,15 +3141,6 @@
                                             "value": "Retencao"
                                         },
                                         {
-                                            "field": "User.userRole",
-                                            "hasMergeField": false,
-                                            "id": "state-new-condition-3",
-                                            "logicalOperator": "&&",
-                                            "operator": "==",
-                                            "type": "custom",
-                                            "value": "Retenção"
-                                        },
-                                        {
                                             "field": "Parent.CancelamentoVoluntario",
                                             "hasMergeField": false,
                                             "id": "state-new-condition-0",
@@ -2702,7 +3148,482 @@
                                             "operator": "!=",
                                             "type": "custom",
                                             "value": ""
+                                        },
+                                        {
+                                            "group": [
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-405",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Administrador"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-437",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Supervisor Indireto"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-147",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Retenção"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-203",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Loja"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-332",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "Qualidade"
+                                                }
+                                            ],
+                                            "id": "state-new-group-406",
+                                            "logicalOperator": "&&"
                                         }
+                                    ],
+                                    "id": "state-condition-object",
+                                    "isParent": true
+                                },
+                                "label": "Block",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": true,
+                                "large": "12",
+                                "medium": "12",
+                                "small": "12"
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "background": {
+                                    "color": "",
+                                    "image": "",
+                                    "position": "",
+                                    "repeat": "",
+                                    "size": ""
+                                },
+                                "border": {
+                                    "color": "",
+                                    "radius": "",
+                                    "style": "",
+                                    "type": "",
+                                    "width": ""
+                                },
+                                "class": "slds-p-around_x-small ",
+                                "container": {
+                                    "class": ""
+                                },
+                                "element": "block",
+                                "elementStyleProperties": {
+                                },
+                                "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "margin": [
+                                ],
+                                "padding": [
+                                    {
+                                        "label": "around:x-small",
+                                        "size": "x-small",
+                                        "type": "around"
+                                    }
+                                ],
+                                "selectedStyles": "button__container",
+                                "size": {
+                                    "default": "12",
+                                    "isResponsive": true,
+                                    "large": "12",
+                                    "medium": "12",
+                                    "small": "12"
+                                },
+                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                "text": {
+                                    "align": "",
+                                    "color": ""
+                                }
+                            },
+                            "styleObjects": [
+                                {
+                                    "conditionString": "",
+                                    "conditions": "default",
+                                    "draggable": false,
+                                    "key": 0,
+                                    "label": "Default",
+                                    "name": "Default",
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-around_x-small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "block",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "around:x-small",
+                                                "size": "x-small",
+                                                "type": "around"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__container",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         display:flex;\nflex-direction: row;\njustify-content:flex-start;\nalign-items: center !important;\nwidth:50%;\nalign-self: center;\ncursor:pointer;\nuser-select: none;\nheight: 45px;\nuser-select: none;\n-webkit-user-select: none;\n-khtml-user-select: none; \n-moz-user-select: none;\n-ms-user-select: none;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "block",
+                            "userUpdatedElementLabel": true
+                        },
+                        {
+                            "children": [
+                                {
+                                    "class": "slds-col ",
+                                    "element": "flexImg",
+                                    "elementLabel": "image-Compra ou troca de plano",
+                                    "key": "element_element_block_7_0_flexImg_0_0",
+                                    "name": "Image",
+                                    "parentElementKey": "element_block_7_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "extraclass": "slds-align_absolute-center",
+                                        "record": "{record}",
+                                        "size": "",
+                                        "stateImg": {
+                                            "alternativeText": "Image description",
+                                            "document": {
+                                                "Id": "068Ha0000033oeUIAQ",
+                                                "attachmentType": "ContentVersion",
+                                                "label": "smartphone (Version:1)",
+                                                "title": "smartphone",
+                                                "value": "/sfc/servlet.shepherd/version/download/068Ha0000033oeUIAQ"
+                                            },
+                                            "imgsrc": "/sfc/servlet.shepherd/version/download/068Ha0000033oeUIAQ"
+                                        }
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "flexImg",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width: 12px;\nalign-self: center;",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                        ],
+                                        "selectedStyles": "button__icon",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width: 12px;\nalign-self: center;",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "flexImg",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width: 12px;\nalign-self: center;",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                ],
+                                                "selectedStyles": "button__icon",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width: 12px;\nalign-self: center;",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "element",
+                                    "userUpdatedElementLabel": true
+                                },
+                                {
+                                    "class": "slds-col ",
+                                    "element": "outputField",
+                                    "elementLabel": "Block-Compra ou troca de plano",
+                                    "key": "element_element_block_7_0_outputField_1_0",
+                                    "name": "Text",
+                                    "parentElementKey": "element_block_7_0",
+                                    "property": {
+                                        "card": "{card}",
+                                        "mergeField": "%3Cdiv%3E%3Cspan%20style=%22font-size:%208pt;%22%3EDados%20M&oacute;veis%3C/span%3E%3C/div%3E",
+                                        "record": "{record}"
+                                    },
+                                    "size": {
+                                        "default": "12",
+                                        "isResponsive": true,
+                                        "large": "12",
+                                        "medium": "12",
+                                        "small": "12"
+                                    },
+                                    "stateIndex": 0,
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-left_small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "element": "outputField",
+                                        "elementStyleProperties": {
+                                        },
+                                        "inlineStyle": "width: calc(100% - 12px);",
+                                        "margin": [
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "left:small",
+                                                "size": "small",
+                                                "type": "left"
+                                            }
+                                        ],
+                                        "selectedStyles": "button__text",
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": true,
+                                            "large": "12",
+                                            "medium": "12",
+                                            "small": "12"
+                                        },
+                                        "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                        "style": "      \n         width: calc(100% - 12px);",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    },
+                                    "styleObjects": [
+                                        {
+                                            "conditionString": "",
+                                            "conditions": "default",
+                                            "draggable": false,
+                                            "key": 0,
+                                            "label": "Default",
+                                            "name": "Default",
+                                            "styleObject": {
+                                                "background": {
+                                                    "color": "",
+                                                    "image": "",
+                                                    "position": "",
+                                                    "repeat": "",
+                                                    "size": ""
+                                                },
+                                                "border": {
+                                                    "color": "",
+                                                    "radius": "",
+                                                    "style": "",
+                                                    "type": "",
+                                                    "width": ""
+                                                },
+                                                "class": "slds-p-left_small ",
+                                                "container": {
+                                                    "class": ""
+                                                },
+                                                "element": "outputField",
+                                                "elementStyleProperties": {
+                                                },
+                                                "inlineStyle": "width: calc(100% - 12px);",
+                                                "margin": [
+                                                ],
+                                                "padding": [
+                                                    {
+                                                        "label": "left:small",
+                                                        "size": "small",
+                                                        "type": "left"
+                                                    }
+                                                ],
+                                                "selectedStyles": "button__text",
+                                                "size": {
+                                                    "default": "12",
+                                                    "isResponsive": true,
+                                                    "large": "12",
+                                                    "medium": "12",
+                                                    "small": "12"
+                                                },
+                                                "sizeClass": "slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12 ",
+                                                "style": "      \n         width: calc(100% - 12px);",
+                                                "text": {
+                                                    "align": "",
+                                                    "color": ""
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "text",
+                                    "userUpdatedElementLabel": true
+                                }
+                            ],
+                            "class": "slds-col ",
+                            "element": "block",
+                            "elementLabel": "Dados moveis",
+                            "name": "Block",
+                            "property": {
+                                "action": {
+                                    "actionList": [
+                                        {
+                                            "actionIndex": 0,
+                                            "card": "{card}",
+                                            "contextId": "\\{recordId}",
+                                            "draggable": false,
+                                            "isOpen": true,
+                                            "key": "1687543480277-qt1hhg05o",
+                                            "label": "Dados Móveis",
+                                            "stateAction": {
+                                                "channelName": "close_modal",
+                                                "displayName": "Action",
+                                                "flyoutLwc": "every-dados-moveis-english",
+                                                "flyoutParams": {
+                                                    "ContextId": "{Parent.CaseId}"
+                                                },
+                                                "flyoutType": "OmniScripts",
+                                                "hasExtraParams": true,
+                                                "id": "flex-action-1741789040433",
+                                                "layoutType": "lightning",
+                                                "openFlyoutIn": "Modal",
+                                                "openUrlIn": "New Tab/Window",
+                                                "osName": "Every/DadosMoveis/English",
+                                                "type": "Flyout",
+                                                "vlocityIcon": "standard-default"
+                                            }
+                                        }
+                                    ],
+                                    "eventType": "onclick",
+                                    "iconName": "standard-default",
+                                    "label": "Action",
+                                    "showSpinner": "false"
+                                },
+                                "card": "{card}",
+                                "collapsedByDefault": false,
+                                "collapsible": false,
+                                "data-conditions": {
+                                    "group": [
                                     ],
                                     "id": "state-condition-object",
                                     "isParent": true
@@ -2839,6 +3760,11 @@
                 ]
             },
             "documents": [
+                {
+                    "Id": "068Ha0000033oeUIAQ",
+                    "developerName": "smartphone",
+                    "type": "ContentVersion"
+                }
             ],
             "fields": [
             ],

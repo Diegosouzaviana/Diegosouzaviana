@@ -21,7 +21,7 @@
     "%vlocity_namespace%__ParentElementName__c": "Block5",
     "%vlocity_namespace%__ParentElementType__c": "Block",
     "%vlocity_namespace%__PropertySet__c": {
-        "bStandalone": false,
+        "bStandalone": true,
         "conditionType": "Hide if False",
         "controlWidth": 12,
         "customAttributes": [

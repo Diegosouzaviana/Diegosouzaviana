@@ -28,17 +28,17 @@
         "sanitize": false,
         "show": {
             "group": {
-                "operator": "AND",
+                "operator": "OR",
                 "rules": [
                     {
-                        "condition": "<>",
-                        "data": "200",
+                        "condition": "=",
+                        "data": "404",
                         "field": "success"
                     }
                 ]
             }
         },
-        "text": "<p style=\"text-align: center;\"><strong>%result:message%</strong></p>",
+        "text": "<div>\n<div style=\"text-align: center;\"><strong>Erro&nbsp;ao&nbsp;encontrar&nbsp;informa&ccedil;&otilde;es&nbsp;do&nbsp;cliente</strong></div>\n</div>",
         "textKey": ""
     },
     "%vlocity_namespace%__ReusableOmniScript__c": true,

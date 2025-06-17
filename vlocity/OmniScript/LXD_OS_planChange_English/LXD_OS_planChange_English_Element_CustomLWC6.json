@@ -60,6 +60,10 @@
             {
                 "name": "CRM",
                 "source": "%ClienteFidelizado%"
+            },
+            {
+                "name": "categoriaplanoatualasset",
+                "source": ""
             }
         ],
         "hide": false,

@@ -67,8 +67,13 @@
                 "rules": [
                     {
                         "condition": "=",
-                        "data": "%CategoriaPlanoNovo%",
-                        "field": "CategoriaPlanoAtual"
+                        "data": "mesmoplano",
+                        "field": "selectedItem:lwctipodeplano"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "continua",
+                        "field": "validadorplanocategoria"
                     }
                 ]
             }

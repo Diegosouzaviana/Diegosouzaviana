@@ -68,11 +68,6 @@
                         "condition": "=",
                         "data": "Manutenção",
                         "field": "TipoServico"
-                    },
-                    {
-                        "condition": "=",
-                        "data": "true",
-                        "field": "VelocidaCompativel"
                     }
                 ]
             }

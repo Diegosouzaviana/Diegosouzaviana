@@ -52,11 +52,6 @@
                 "operator": "AND",
                 "rules": [
                     {
-                        "condition": "=",
-                        "data": "Serviços Adicionais",
-                        "field": "TipoServico"
-                    },
-                    {
                         "group": {
                             "operator": "OR",
                             "rules": [
@@ -66,8 +61,13 @@
                                     "field": "statusCode"
                                 },
                                 {
-                                    "condition": "<>",
-                                    "data": "200",
+                                    "condition": "=",
+                                    "data": "404",
+                                    "field": "success"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "500",
                                     "field": "success"
                                 }
                             ]

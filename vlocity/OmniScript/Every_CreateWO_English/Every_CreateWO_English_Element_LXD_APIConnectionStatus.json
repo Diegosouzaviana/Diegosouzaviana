@@ -54,11 +54,16 @@
         "sendOnlyExtraPayload": true,
         "show": {
             "group": {
-                "operator": "AND",
+                "operator": "OR",
                 "rules": [
                     {
                         "condition": "=",
                         "data": "Serviços Adicionais",
+                        "field": "TipoServico"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Retirada de Equipamento",
                         "field": "TipoServico"
                     }
                 ]

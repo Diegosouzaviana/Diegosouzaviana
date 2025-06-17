@@ -10,10 +10,14 @@
         "actionMessage": "",
         "additionalInput": {
             "CaseId": "%CaseId%",
+            "NumeroSerialSelecionadoMESH": "%NumeroSerialSelecionadoMESH%",
+            "NumeroSerialSelecionadoTV": "%NumeroSerialSelecionadoTV%",
             "QuantidadePontoTV": "%QuantidadePontoTV%",
             "QuantidadePontoTVMesh": "%QuantidadePontoTVMesh%",
             "RecordTypeId": "%WorkOrderRecordType:RecordTypeId%",
             "pontoMesh": "%pontoMesh%",
+            "removerPontoMesh": "%removerPontoMesh%",
+            "removerPontoTV": "%removerPontoTV%",
             "spMotivoTrabalho": "%spMotivoTrabalho%",
             "spSubtipoTrabalho": "%spSubtipoTrabalho%"
         },

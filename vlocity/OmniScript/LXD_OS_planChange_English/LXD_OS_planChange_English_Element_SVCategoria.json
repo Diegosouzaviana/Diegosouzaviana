@@ -11,7 +11,8 @@
         "controlWidth": 12,
         "elementValueMap": {
             "SVCategoriaSelected": "d",
-            "SVCategoriaSelected_Old": "=IF(%RdoTelefone% == \"true\",IF(%RdoTV% == \"true\", \"z\",\"Z\"),IF(%RdoTV% == \"true\", \"d\",\"D\"))"
+            "SVCategoriaSelected_Old": "=IF(%RdoTelefone% == \"true\",IF(%RdoTV% == \"true\", \"z\",\"Z\"),IF(%RdoTV% == \"true\", \"d\",\"D\"))",
+            "ValidaUserRole": "=IF(%UserRole% == \"Retenção\", true, false)"
         },
         "label": "SVCategoria",
         "message": {

@@ -1,0 +1,49 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Every_CreateWO",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Every/CreateWO/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "JsonRemocaoMeshAlteracaoPlano": {
+                "FluxoOrigem": "CriarOS",
+                "TipoServico": "Alteração de Plano",
+                "caseId": "%ContextId%",
+                "redirecionaParaAlteracaoDePlanoMesh": "%redirecionaParaAlteracaoDePlanoMesh%"
+            }
+        },
+        "label": "Json para o fluxo de remoção de mesh",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "AlteracaoDePlano",
+                        "field": "redirecionaParaAlteracaoDePlanoMesh"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "SVDadosParaAlteracaoPlanoRemocaoMesh",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CreateWO/English/SVDadosParaAlteracaoPlanoRemocaoMesh"
+}

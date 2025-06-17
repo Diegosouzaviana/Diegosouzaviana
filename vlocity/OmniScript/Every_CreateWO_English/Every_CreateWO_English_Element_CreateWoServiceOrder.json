@@ -20,10 +20,14 @@
         },
         "extraPayload": {
             "CaseId": "%caseId%",
+            "NumeroSerialSelecionadoMESH": "%NumeroSerialSelecionadoMESH%",
+            "NumeroSerialSelecionadoTV": "%NumeroSerialSelecionadoTV%",
             "QuantidadePontoTV": "%QuantidadePontoTV%",
             "QuantidadePontoTVMesh": "%Pontosadicionalpagos:BlockTV:RPontoTvmesh%",
             "aptoparamoto": "%aptoparamoto%",
             "pontoMesh": "%pontoMesh%",
+            "removerPontoMesh": "%removerPontoMesh%",
+            "removerPontoTV": "%removerPontoTV%",
             "spMotivoTrabalho": "%spMotivoTrabalho%",
             "spSubtipoTrabalho": "%spSubtipoTrabalho%"
         },

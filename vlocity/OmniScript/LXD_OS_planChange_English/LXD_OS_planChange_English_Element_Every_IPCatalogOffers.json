@@ -20,12 +20,15 @@
         },
         "extraPayload": {
             "PlanoAntigoId": "%IdProdutoAtual%",
-            "category": "%SVCategoriaSelected%",
+            "category": "%CategoriaPlanoAtualAsset%",
             "city": "%ShippingCity%",
+            "currentPlan": "%CodigoPlanoAtual%",
             "loyalty_contract": false,
             "maxDownloadSpeed": "1000000",
             "migrated_provider": false,
-            "minDownloadSpeed": 1,
+            "minDownloadSpeed": "1",
+            "retentionPlan": "%ValidaUserRole%",
+            "sameCategory": true,
             "seller_id": "7540"
         },
         "failureAbortLabel": "Abort",

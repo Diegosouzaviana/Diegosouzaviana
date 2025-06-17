@@ -22,47 +22,21 @@
     "%vlocity_namespace%__ParentElementType__c": "Step",
     "%vlocity_namespace%__PropertySet__c": {
         "HTMLTemplateId": "",
-        "accessibleInFutureSteps": false,
-        "conditionType": "Hide if False",
         "controlWidth": 12,
-        "controllingField": {
-            "element": "mMotivoTrabalho",
-            "source": "WorkOrder.Work_Type_WO__c",
-            "type": ""
-        },
+        "dataType": "Text",
+        "dateFormat": "MM-dd-yyyy",
         "disOnTplt": false,
-        "help": false,
-        "helpText": "",
-        "helpTextPos": "",
-        "hide": false,
+        "expression": "IF(%TrabalhoSub% != NULL, %TrabalhoSub%,IF( %mSubtipoTrabalho2% != NULL, %mSubtipoTrabalho2%, IF( %mSubtipoTrabalho3% != NULL, %mSubtipoTrabalho3%, %TrabalhoSub%)))",
+        "hide": true,
+        "hideGroupSep": false,
         "inputWidth": 12,
-        "label": "Subtipo de trabalho",
-        "optionSource": {
-            "source": "WorkOrder.Work_Subtype_WO__c",
-            "type": ""
-        },
-        "options": [
-            {
-                "autoAdv": null,
-                "name": "Preventiva",
-                "value": "Preventiva"
-            },
-            {
-                "autoAdv": null,
-                "name": "Corretiva",
-                "value": "Corretiva"
-            }
-        ],
-        "readOnly": false,
-        "repeat": false,
-        "repeatClone": false,
-        "repeatLimit": null,
-        "required": true,
+        "label": "visualizarCampo",
+        "mask": null,
         "show": null,
         "showInputWidth": false
     },
     "%vlocity_namespace%__ReusableOmniScript__c": true,
-    "%vlocity_namespace%__Type__c": "Select",
+    "%vlocity_namespace%__Type__c": "Formula",
     "Name": "mSubtipoTrabalho",
     "VlocityDataPackType": "SObject",
     "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",

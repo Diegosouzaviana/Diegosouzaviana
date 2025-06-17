@@ -27,7 +27,7 @@
         "label": "TextBlock5",
         "sanitize": false,
         "show": null,
-        "text": "<p><strong>Error na cria&ccedil;&atilde;o da OS.</strong></p>",
+        "text": "<h4><strong>Erro na cria&ccedil;&atilde;o da OS</strong></h4>",
         "textKey": ""
     },
     "%vlocity_namespace%__ReusableOmniScript__c": true,

@@ -13,30 +13,26 @@
             "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Every/CreateWO/English",
             "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
         },
-        "Name": "Remocaopontosadicionaispagos",
+        "Name": "Step4",
         "VlocityDataPackType": "VlocityMatchingKeyObject",
-        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CreateWO/English/Remocaopontosadicionaispagos",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Every/CreateWO/English/Step4",
         "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
     },
-    "%vlocity_namespace%__ParentElementName__c": "Remocaopontosadicionaispagos",
+    "%vlocity_namespace%__ParentElementName__c": "Step4",
     "%vlocity_namespace%__ParentElementType__c": "Step",
     "%vlocity_namespace%__PropertySet__c": {
         "bStandalone": false,
         "conditionType": "Hide if False",
-        "controlWidth": 12,
+        "controlWidth": 3,
         "customAttributes": [
             {
-                "name": "step-name",
-                "source": "%Remocaopontosadicionaispagos%"
-            },
-            {
-                "name": "contador",
-                "source": "%contador%"
+                "name": "parent-attribute",
+                "source": "%JsonRemocaoMeshAlteracaoPlano%"
             }
         ],
         "hide": false,
-        "label": "CustomLWC2",
-        "lwcName": "lwc_BotaoNextRemocaoPontoMesh",
+        "label": "CustomLWC3",
+        "lwcName": "cfEvery_PlanChangeButton",
         "show": null
     },
     "%vlocity_namespace%__ReusableOmniScript__c": true,

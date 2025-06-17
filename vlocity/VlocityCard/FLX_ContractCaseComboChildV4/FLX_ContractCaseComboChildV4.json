@@ -29,15 +29,17 @@
     ],
     "isFlex": true,
     "lwc": {
-        "DeveloperName": "cfLXD_FlexPlanCase",
-        "Id": "0RbHa000000Iv9VKAS",
+        "DeveloperName": "cfFLX_ContractCaseComboChildV4_17_LabsXD",
+        "Id": "0RbHa000000SclVKAS",
         "ManageableState": "unmanaged",
-        "MasterLabel": "cfLXD_FlexPlanCase",
+        "MasterLabel": "cfFLX_ContractCaseComboChildV4_17_LabsXD",
         "NamespacePrefix": "c"
     },
     "osSupport": true,
     "selectableMode": "Multi",
     "selectedCardsLabel": "",
+    "sessionVars": [
+    ],
     "states": [
         {
             "actions": [
@@ -1309,7 +1311,7 @@
                                                             "id": "state-new-condition-0",
                                                             "operator": "==",
                                                             "type": "custom",
-                                                            "value": "ATIVO"
+                                                            "value": "Ativo"
                                                         }
                                                     ],
                                                     "id": "state-condition-object",
@@ -1543,7 +1545,7 @@
                                                             "id": "state-new-condition-9",
                                                             "operator": "==",
                                                             "type": "custom",
-                                                            "value": "CANCELADO"
+                                                            "value": "Cancelado"
                                                         }
                                                     ],
                                                     "id": "state-condition-object",
@@ -3219,122 +3221,6 @@
                                                 "collapsible": false,
                                                 "data-conditions": {
                                                     "group": [
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-8",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Administrador"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-72",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "SAC"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-25",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Retenção"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-77",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Ouvidoria"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-98",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Coordenador Pós Venda"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-50",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Qualidade"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-48",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Faturamento"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-615",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Financeiro"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-951",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Diretoria"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-297",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Supervisor"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-12",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "COP"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-127",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "CRV"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-192",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Gerente e Coordenação de Campo"
-                                                        }
                                                     ],
                                                     "id": "state-condition-object",
                                                     "isParent": true
@@ -3947,100 +3833,10 @@
                                                         {
                                                             "field": "User.userRole",
                                                             "hasMergeField": false,
-                                                            "id": "state-new-condition-0",
-                                                            "operator": "==",
+                                                            "id": "state-new-condition-9",
+                                                            "operator": "!=",
                                                             "type": "custom",
-                                                            "value": "Administrador"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-7",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Retenção"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-23",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Suporte"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-40",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "SAC"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-20",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Ouvidoria"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-46",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Coordenador Pós Venda"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-135",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Qualidade"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-93",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Faturamento"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-675",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Financeiro"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-1017",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Diretoria"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-346",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Supervisor"
+                                                            "value": "COP"
                                                         }
                                                     ],
                                                     "id": "state-condition-object",
@@ -5105,113 +4901,6 @@
                                                 "collapsible": false,
                                                 "data-conditions": {
                                                     "group": [
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-7",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Suporte"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-23",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "SAC"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-8",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Retenção"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-25",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Administrador"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-45",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Ouvidoria"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-81",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Coordenador Pós Venda"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-175",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Qualidade"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-0",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Financeiro"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-130",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Faturamento"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-716",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Financeiro"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-1062",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Diretoria"
-                                                        },
-                                                        {
-                                                            "field": "User.userRole",
-                                                            "hasMergeField": false,
-                                                            "id": "state-new-condition-395",
-                                                            "logicalOperator": "||",
-                                                            "operator": "==",
-                                                            "type": "custom",
-                                                            "value": "Supervisor"
-                                                        }
                                                     ],
                                                     "id": "state-condition-object",
                                                     "isParent": true
@@ -6248,7 +5937,8 @@
                                 },
                                 "isChildCardTrackingEnabled": false,
                                 "parentAttribute": {
-                                    "CancelamentoVoluntario": "{Case.CancelamentoVoluntario__c}"
+                                    "CancelamentoVoluntario": "{Case.CancelamentoVoluntario__c}",
+                                    "CaseId": "{Case.Id}"
                                 },
                                 "recordId": "{recordId}",
                                 "selectedState": "Active"

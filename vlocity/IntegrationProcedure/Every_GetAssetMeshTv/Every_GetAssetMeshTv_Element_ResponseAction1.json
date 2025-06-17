@@ -8,6 +8,7 @@
     },
     "%vlocity_namespace%__PropertySet__c": {
         "additionalOutput": {
+            "UserRole": "%EveryDRGetUser:UserRole%"
         },
         "disOnTplt": false,
         "executionConditionalFormula": "",

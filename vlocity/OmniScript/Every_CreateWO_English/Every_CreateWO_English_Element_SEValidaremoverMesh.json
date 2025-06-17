@@ -10,7 +10,7 @@
         "HTMLTemplateId": "",
         "controlWidth": 12,
         "elementErrorMap": {
-            "removerMesh": "Campo obrigatório."
+            "removerMesh": "Por favor, selecione pontos Mesh a serem removidos"
         },
         "label": "Valida o mesh foi selecionado",
         "message": {
@@ -22,13 +22,23 @@
                 "rules": [
                     {
                         "condition": "=",
-                        "data": null,
+                        "data": "Sim",
                         "field": "removerMesh"
                     },
                     {
-                        "condition": "<>",
-                        "data": "Não",
-                        "field": "removerMesh"
+                        "condition": "=",
+                        "data": "Nao",
+                        "field": "removerTV"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "Formula1"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "false",
+                        "field": "Formula2"
                     }
                 ]
             }

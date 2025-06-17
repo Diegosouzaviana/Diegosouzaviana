@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <p class="upgrade-downgrade-title">Planos disponíveis para o contrato.</p>
+    <p class="upgrade-downgrade-title">Planos recomendados para o contrato.</p>
     <template for:each={productList} for:item='product' for:index="index">
         <template if:true={product.isUpgrade}>
             <c-l-x-d_-select-plan-items index={index} customlabels={customlabels} onclick={handleClick}
@@ -20,29 +20,30 @@
             </c-l-x-d_-select-plan-items>
         </template>
     </template>
-    <div if:false={crm}>
-        <div class="h_line slds-size--10-of-12"></div>
-        <p class="upgrade-downgrade-title">Planos que possibilitem fazer o downgrade.</p>
-        <template for:each={productList} for:item='product' for:index="index">
-            <template if:false={product.isUpgrade}>
-                <c-l-x-d_-select-plan-items index={index} customlabels={customlabels} onclick={handleClick}
-                    data-name={index} product={product} userprofile={userprofile} key={product.planName}
-                    oncancelarproduct={cancelProduct} defaultproductimage={defaultProductImage}>
-                </c-l-x-d_-select-plan-items>
-            </template>
+    <!-- <div if:false={crm}> -->
+    <div class="h_line slds-size--10-of-12"></div>
+    <p class="upgrade-downgrade-title">Planos que possibilitem fazer o downgrade.</p>
+    <template for:each={productList} for:item='product' for:index="index">
+        <template if:false={product.isUpgrade}>
+            <c-l-x-d_-select-plan-items index={index} customlabels={customlabels} onclick={handleClick}
+                data-name={index} product={product} userprofile={userprofile} key={product.planName}
+                oncancelarproduct={cancelProduct} defaultproductimage={defaultProductImage}>
+            </c-l-x-d_-select-plan-items>
         </template>
+    </template>
+    <!-- </div> -->
+
+    <div class={exibeMuitosDados}>
+        <div class="slds-button-group" role="group">
+            <button if:true={showButonMesmo} class="slds-button slds-button_neutral slds-m-right_small"
+                data-id="mesma-categoria" onclick={handleGetPlano}>Planos compatíveis</button>
+            <button if:true={showButonTodos} class="slds-button slds-button_destructive slds-m-right_small"
+                data-id="outro-planos" onclick={handleGetPlano}>Outros planos</button>
+            <button class="slds-button slds-button_destructive" onclick={nextButton}>Prosseguir</button>
+        </div>
     </div>
 
-    <div class="slds-grid slds-wrap">
-        <div class="slds-col slds-size_9-of-12">
-        </div>
-        <div class="slds-col slds-size_1-of-12">
-        </div>
-        <div class="slds-col slds-size_2-of-12 ">
-            <button class="slds-button slds-button_destructive fixed-bottom-button"
-                onclick={nextButton}>Prosseguir</button>
-        </div>
-    </div>
+
     <!-- <div class="bottom"></div>
 
      <button class="scroll-to-bottom" onclick={scrollToBottom}>

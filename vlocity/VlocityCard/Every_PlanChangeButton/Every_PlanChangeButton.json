@@ -17,13 +17,15 @@
     "enableLwc": true,
     "isFlex": true,
     "lwc": {
-        "DeveloperName": "cfEvery_AppointmentButton_1_Desktop",
-        "Id": "0RbHa000000Tw73KAC",
+        "DeveloperName": "cfEvery_PlanChangeButton_3_Desktop",
+        "Id": "0RbHa000000Wv3BKAS",
         "ManageableState": "unmanaged",
-        "MasterLabel": "cfEvery_AppointmentButton_1_Desktop",
+        "MasterLabel": "cfEvery_PlanChangeButton_3_Desktop",
         "NamespacePrefix": "c"
     },
     "selectableMode": "Multi",
+    "sessionVars": [
+    ],
     "states": [
         {
             "actions": [
@@ -55,11 +57,12 @@
                                             "flyoutParams": {
                                                 "ContextId": "{Parent.caseId}",
                                                 "FluxoOrigem": "{Parent.FluxoOrigem}",
-                                                "TipoServico": "{Parent.TipoServico}"
+                                                "TipoServico": "{Parent.TipoServico}",
+                                                "redirecionaParaAlteracaoDePlanoMesh": "{Parent.redirecionaParaAlteracaoDePlanoMesh}"
                                             },
                                             "flyoutType": "OmniScripts",
                                             "hasExtraParams": true,
-                                            "id": "flex-action-1744132636998",
+                                            "id": "flex-action-1747066637302",
                                             "layoutType": "lightning",
                                             "openFlyoutIn": "Modal",
                                             "openUrlIn": "Current Window",

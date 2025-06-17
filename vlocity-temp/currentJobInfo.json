@@ -1,0 +1,192 @@
+{
+    "projectPath": "vlocity",
+    "queries": [
+        {
+            "VlocityDataPackType": "VlocityCard",
+            "query": "Select Id, Name from %vlocity_namespace%__VlocityCard__c where Name = 'Every_PlanChangeButton' AND %vlocity_namespace%__Active__c = true\t LIMIT 1"
+        }
+    ],
+    "jobName": "Example.yaml",
+    "job": "Example.yaml",
+    "propertyfile": "build_source.properties",
+    "tempFolder": "./vlocity-temp/",
+    "source": "local",
+    "target": "local",
+    "sfdxUsername": "Desktop_Partial",
+    "passedInOptionsOverride": {
+        "job": "Example.yaml",
+        "propertyfile": "build_source.properties"
+    },
+    "jobAction": "Export",
+    "expansionPath": ".",
+    "buildFile": "AllDataPacks.json",
+    "postStepApex": {
+        "Deploy": {
+            "Product2": {
+                "apexClass": "EPCProductJSONUpdate.cls",
+                "namespace": "vlocity_cmt"
+            }
+        }
+    },
+    "delete": true,
+    "activate": true,
+    "compileOnBuild": true,
+    "maxDepth": -1,
+    "defaultMaxParallel": 20,
+    "defaultMinToWaitForLWCOmniScript": 10,
+    "defaultMinToWaitForLWCClassicCards": 10,
+    "defaultMinToWaitForLWCFlexCards": 5,
+    "defaultLWCPullTimeInSeconds": 5,
+    "loginTimeoutForLoginLWC": 300000,
+    "puppeteerHeadless": true,
+    "lookForParentLayoutsForlWCCards": true,
+    "exportPacksMaxSize": 5,
+    "useAllRelationships": false,
+    "ignoreAllErrors": false,
+    "addSourceKeys": false,
+    "maximumDeployCount": 10,
+    "manifestOnly": false,
+    "autoUpdateSettings": true,
+    "supportHeadersOnly": true,
+    "allowHeadersPartial": true,
+    "supportForceDeploy": true,
+    "strict": false,
+    "cleanTestData": true,
+    "autoFixPicklists": true,
+    "reactivateOmniScriptsWhenEmbeddedTemplateFound": false,
+    "autoFixDeployErrors": {
+        "AttributeCategoryDisplaySequence": true
+    },
+    "tests": [
+        "Local",
+        "Org"
+    ],
+    "npmRepository": "https://repo.vlocity.com/repository/vlocity-public/",
+    "startTime": 1750125641671,
+    "originalAction": "Export",
+    "logName": "Example-yaml-2025-06-17T02-01-02-324Z-Export.yaml",
+    "alreadyExportedKeys": [
+        "a55b3a2e143eb505e9d79d0547cbd679"
+    ],
+    "allParents": [
+        "VlocityCard/Every_PlanChangeButton"
+    ],
+    "errors": [],
+    "report": [],
+    "postDeployResults": [],
+    "preDeployDataSummary": [],
+    "refreshVlocityBase": [],
+    "expandedDataPacks": [
+        "a55b3a2e143eb505e9d79d0547cbd679",
+        "a55b3a2e143eb505e9d79d0547cbd679"
+    ],
+    "currentStatus": {
+        "a55b3a2e143eb505e9d79d0547cbd679": "Success"
+    },
+    "currentErrors": {},
+    "parallelStatus": {},
+    "sourceKeysByParent": {
+        "%vlocity_namespace%__VlocityCard__c/Every_PlanChangeButton": [
+            "a55b3a2e143eb505e9d79d0547cbd679"
+        ]
+    },
+    "alreadyExportedIdsByType": {
+        "VlocityCard": [
+            "a5bHa000000pDeLIAU",
+            "a5bHa000000pDeL",
+            "Every_PlanChangeButton"
+        ]
+    },
+    "alreadyErroredIdsByType": {
+        "VlocityCard": []
+    },
+    "alreadyRetriedIdsByType": {},
+    "keyToType": {},
+    "vlocityKeysToNewNamesMap": {
+        "VlocityRecordSourceKey:a5bHa000000pDeLIAU": "%vlocity_namespace%__VlocityCard__c/Every_PlanChangeButton",
+        "a55b3a2e143eb505e9d79d0547cbd679": "VlocityCard/Every_PlanChangeButton",
+        "VlocityCard/Every_PlanChangeButton": "VlocityCard/Every_PlanChangeButton"
+    },
+    "vlocityRecordSourceKeyMap": {
+        "VlocityRecordSourceKey:a5bHa000000pDeLIAU": {
+            "VlocityRecordSourceKeyOriginal": "VlocityRecordSourceKey:a5bHa000000pDeLIAU",
+            "VlocityRecordSourceKeyNew": "%vlocity_namespace%__VlocityCard__c/Every_PlanChangeButton",
+            "Name": "Every_PlanChangeButton"
+        },
+        "a5bHa000000pDeLIAU": {
+            "VlocityRecordSourceKeyOriginal": "VlocityRecordSourceKey:a5bHa000000pDeLIAU",
+            "VlocityRecordSourceKeyNew": "%vlocity_namespace%__VlocityCard__c/Every_PlanChangeButton",
+            "Name": "Every_PlanChangeButton"
+        }
+    },
+    "VlocityDataPackIds": {
+        "a5eHa000002FOaLIAW": "Complete"
+    },
+    "generatedKeysToNames": {},
+    "sourceKeyToRecordId": {},
+    "sourceKeyToMatchingKeysData": {},
+    "dataPackKeyToPrimarySourceKey": {},
+    "diffType": {},
+    "sourceHashCodes": {},
+    "targetHashCodes": {},
+    "fullManifest": {
+        "VlocityCard": {
+            "a5bHa000000pDeLIAU": {
+                "Id": "a5bHa000000pDeLIAU",
+                "Name": "Every_PlanChangeButton",
+                "CreatedDate": "2025-05-12T16:12:39.000+0000",
+                "LastModifiedDate": "2025-05-12T16:18:05.000+0000",
+                "VlocityDataPackType": "VlocityCard",
+                "VlocityRecordSObjectType": "%vlocity_namespace%__VlocityCard__c",
+                "CreatedByName": "Diego Viana",
+                "LastModifiedByName": "Diego Viana",
+                "VlocityDataPackDisplayLabel": "Every_PlanChangeButton",
+                "orgUrl": "/a5bHa000000pDeLIAU"
+            }
+        }
+    },
+    "manifestFound": {},
+    "dataPackDisplayLabels": {},
+    "allDataSummary": {
+        "a55b3a2e143eb505e9d79d0547cbd679": {
+            "VlocityDataPackDisplayLabel": "Every_PlanChangeButton",
+            "VlocityDataPackType": "VlocityCard"
+        }
+    },
+    "pendingFromManifest": {},
+    "keysToDirectories": {},
+    "VlocityDataPackKeyToUrlMapping": {},
+    "relationshipKeyToChildKeys": {},
+    "dataPackLabelsByDir": {},
+    "upgradeDataPackFields": false,
+    "supportParallel": true,
+    "specificManifestObjects": null,
+    "shouldSendUpdates": true,
+    "initialized": true,
+    "toExportGroups": [
+        [
+            {
+                "Id": "a5bHa000000pDeLIAU",
+                "Name": "Every_PlanChangeButton",
+                "CreatedDate": "2025-05-12T16:12:39.000+0000",
+                "LastModifiedDate": "2025-05-12T16:18:05.000+0000",
+                "VlocityDataPackType": "VlocityCard",
+                "VlocityRecordSObjectType": "%vlocity_namespace%__VlocityCard__c",
+                "CreatedByName": "Diego Viana",
+                "LastModifiedByName": "Diego Viana",
+                "VlocityDataPackDisplayLabel": "Every_PlanChangeButton",
+                "orgUrl": "/a5bHa000000pDeLIAU"
+            }
+        ]
+    ],
+    "exportRemaining": 0,
+    "elapsedTime": "1m 7s",
+    "records": [
+        {
+            "VlocityDataPackKey": "VlocityCard/Every_PlanChangeButton",
+            "VlocityDataPackDisplayLabel": "Every_PlanChangeButton",
+            "VlocityDataPackType": "VlocityCard",
+            "VlocityDataPackStatus": "Success"
+        }
+    ]
+}

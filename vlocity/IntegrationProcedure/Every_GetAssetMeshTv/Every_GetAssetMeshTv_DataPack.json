@@ -4,6 +4,7 @@
     "%vlocity_namespace%__ElementTypeToHTMLTemplateList__c": "{\"ElementTypeToHTMLTemplateList\":[]}",
     "%vlocity_namespace%__Element__c": [
         "Every_GetAssetMeshTv_Element_Every_DRGetAssetMeshTv.json",
+        "Every_GetAssetMeshTv_Element_EveryDRGetUser.json",
         "Every_GetAssetMeshTv_Element_ResponseAction1.json"
     ],
     "%vlocity_namespace%__IsLwcEnabled__c": false,

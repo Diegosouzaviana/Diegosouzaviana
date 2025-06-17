@@ -1,0 +1,11 @@
+{
+    "username": "diego.viana@desktop.com.br.partial",
+    "id": "00DHa000000LsS1MAK",
+    "connectedStatus": "Connected",
+    "accessToken": "00DHa000000LsS1!AQEAQCCQnP8jdDc7u5EIlbbE87LUhpOTkdmpabrBax1SEDcsBWsZqXH341Cr6RnEOqTEh7IVAy.Fch070bm6i69Gwo5FIVsW",
+    "instanceUrl": "https://desktopsa--partial.sandbox.my.salesforce.com",
+    "clientId": "PlatformCLI",
+    "sfdxAuthUrl": "force://PlatformCLI::5Aep861dGfrsDEfsAwpJbMFkXVH2IXfxRWud3JvOrxJekencbhxu5a2eQhHn_Z7epIZzFsiO9CEQtUtHlE9.1PV@desktopsa--partial.sandbox.my.salesforce.com",
+    "alias": "Desktop_Partial",
+    "vbtSfdxUsername": "Desktop_Partial"
+}

@@ -39,7 +39,7 @@
         "hide": false,
         "horizontalMode": true,
         "imageCountInRow": 3,
-        "label": "Deseja retirar ponto adicional Mesh?",
+        "label": "Deseja retirar ponto Mesh?",
         "optionHeight": 100,
         "optionSource": {
             "source": "",

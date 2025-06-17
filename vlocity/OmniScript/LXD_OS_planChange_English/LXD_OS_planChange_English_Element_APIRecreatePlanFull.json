@@ -70,9 +70,14 @@
                 "operator": "AND",
                 "rules": [
                     {
-                        "condition": "<>",
-                        "data": "%CategoriaPlanoNovo%",
-                        "field": "CategoriaPlanoAtual"
+                        "condition": "=",
+                        "data": "outroplano",
+                        "field": "selectedItem:lwctipodeplano"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "continua",
+                        "field": "validadorplanocategoria"
                     }
                 ]
             }

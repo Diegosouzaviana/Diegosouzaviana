@@ -1,0 +1,45 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "LXD_planChange",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "dadoparametrojson": {
+                "PlanoAntigoId": "%IdProdutoAtual%",
+                "category": "%CategoriaPlanoAtualAsset%",
+                "city": "%ShippingCity%",
+                "currentPlan": "%CodigoPlanoAtual%",
+                "loyalty_contract": false,
+                "maxDownloadSpeed": "1000000",
+                "migrated_provider": false,
+                "minDownloadSpeed": "1",
+                "retentionPlan": "%ValidaUserRole%",
+                "sameCategory": true,
+                "seller_id": "7540"
+            }
+        },
+        "label": "Jsom com parametros de para api de catalogo",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "SVparametroscatalogo",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/LXD/OS_planChange/English/SVparametroscatalogo"
+}

@@ -10,7 +10,8 @@
         "actionMessage": "",
         "additionalInput": {
             "IndicadorTentativaAgendamento": "%IndicadorTentativaAgendamento%",
-            "ServiceAppointmentId": "%ServiceAppointmentId%"
+            "ServiceAppointmentId": "%ServiceAppointmentId%",
+            "messageupdatespeed": "%messageupdatespeed%"
         },
         "additionalOutput": {
         },

@@ -1,7 +1,6 @@
 {
-    "CaseId": "500Ha00000Br71vIAB",
-    "aptoparamoto": false,
-    "pontoMesh": "3",
+    "CaseId": "500Ha00000Bj3m9IAB",
+    "aptoparamoto": true,
     "spMotivoTrabalho": "Manutenção",
-    "spSubtipoTrabalho": "Análise Técnica"
+    "spSubtipoTrabalho": "Preventiva"
 }

@@ -1,0 +1,13 @@
+{
+    "PlanoAntigoId": "01tHa000008CdCJIA0",
+    "category": "3",
+    "city": "Sumare",
+    "currentPlan": "CLIG-F-23.250M.4000G",
+    "loyalty_contract": false,
+    "maxDownloadSpeed": "1000000",
+    "migrated_provider": false,
+    "minDownloadSpeed": "1",
+    "retentionPlan": false,
+    "sameCategory": true,
+    "seller_id": "7540"
+}

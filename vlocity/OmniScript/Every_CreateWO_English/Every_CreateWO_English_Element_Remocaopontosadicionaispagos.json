@@ -36,9 +36,9 @@
         "message": {
         },
         "nextLabel": "Prosseguir",
-        "nextWidth": "0",
+        "nextWidth": "3",
         "previousLabel": "Voltar",
-        "previousWidth": "0",
+        "previousWidth": "3",
         "pubsub": false,
         "remoteClass": "",
         "remoteMethod": "",
@@ -53,8 +53,13 @@
                 "rules": [
                     {
                         "condition": "=",
-                        "data": "Desabilitado",
-                        "field": "Desabilitado"
+                        "data": "Retirada de Equipamento",
+                        "field": "spMotivoTrabalho"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Cancelamento Parcial",
+                        "field": "spSubtipoTrabalho"
                     }
                 ]
             }
