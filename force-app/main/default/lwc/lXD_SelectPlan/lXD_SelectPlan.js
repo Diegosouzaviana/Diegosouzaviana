@@ -54,7 +54,8 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
 
     connectedCallback() {
         this.dadoparametro = this.omniJsonData?.dadoparametrojson;
-        console.log("dadoparametro", JSON.stringify(this.dadoparametro));
+        // console.log("productList", JSON.stringify(this.productList));
+        // console.log("dadoparametro", JSON.stringify(this.dadoparametro));
         if (this._products.length == 0) {
             this.exibeMuitosDados = 'fixed-bottom-button-sem-dado';
         }
@@ -122,25 +123,24 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
             // console.log('response', JSON.stringify(response));
             this.disableLoading();
 
-
             if (response?.result?.IPResult?.productList?.length > 0) {
-                console.log('entrou ak 1');
+                // console.log('entrou ak 1');
                 this.exibeMuitosDados = 'fixed-bottom-button';
-                this._products = response.result.IPResult.productList.map(plano => {
+                this.productList = response.result.IPResult.productList.map(plano => {
                     return {
                         ...plano,
                         lwctipodeplano: tipodeplano
                     };
                 });
-                console.log("this._products", JSON.stringify(this._products));
+                console.log("this._products", JSON.stringify(this.productList));
                 // this._products = response.result.IPResult.productList;
 
             } else {
                 if (response?.result?.IPResult?.plans == 0) {
-                    console.log('entrou ak 2');
+                    // console.log('entrou ak 2');
                     this.exibeMuitosDados = 'fixed-bottom-button-sem-dado';
                     this._products = [];
-                    console.log("_products", JSON.stringify(this._products));
+                    // console.log("_products", JSON.stringify(this._products));
                     const resultsToast = new ShowToastEvent({
                         variant: "warning",
                         message: "Nenhum plano semelhante disponível no momento. Clique em 'Outros planos' para ver mais opções.",
@@ -148,7 +148,7 @@ export default class LXD_SelectPlan extends OmniscriptBaseMixin(LightningElement
                     });
                     this.dispatchEvent(resultsToast);
                 } else {
-                    console.log('entrou ak 3');
+                    // console.log('entrou ak 3');
                     this.exibeMuitosDados = 'fixed-bottom-button-sem-dado';
                     this._products = [];
                     const resultsToast = new ShowToastEvent({

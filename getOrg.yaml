@@ -1,0 +1,11 @@
+projectPath: vlocity
+
+queries:
+  # - VlocityDataPackType: OmniScript
+  #   query: Select Id, %vlocity_namespace%__Type__c, %vlocity_namespace%__SubType__c, %vlocity_namespace%__Language__c from %vlocity_namespace%__OmniScript__c where Name = 'Tetse_Tetseterste' AND %vlocity_namespace%__IsActive__c = true AND %vlocity_namespace%__IsProcedure__c = false LIMIT 1
+  - VlocityDataPackType: VlocityCard
+    query: Select Id, Name from %vlocity_namespace%__VlocityCard__c where Name = 'Every_MobileData' AND %vlocity_namespace%__Active__c = true	 LIMIT 1
+  - VlocityDataPackType: VlocityCard
+    query: Select Id, Name from %vlocity_namespace%__VlocityCard__c where Name = 'LXD_FlexPlanCase' AND %vlocity_namespace%__Active__c = true	 LIMIT 1
+  # - VlocityDataPackType: IntegrationProcedure
+  #   query: Select Id, %vlocity_namespace%__Type__c, %vlocity_namespace%__SubType__c from %vlocity_namespace%__OmniScript__c where Name = 'TesteDiego' AND %vlocity_namespace%__IsActive__c = true AND %vlocity_namespace%__IsProcedure__c = true LIMIT 1

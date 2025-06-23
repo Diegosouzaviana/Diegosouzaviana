@@ -1,0 +1,10 @@
+{
+    "username": "service.user@everymind.com",
+    "id": "00D8b000002BSGwEAO",
+    "accessToken": "00D8b000002BSGw!AQEAQChDK044DoF.bm2nfQzGFJRmbeYYUL.6U42CdDLFLEEucg3K0eN1sRZ37723sQJZEMJNJBaeWgQ_yvkaNd5vopFdGbHI",
+    "instanceUrl": "https://desktopsa.my.salesforce.com",
+    "clientId": "PlatformCLI",
+    "sfdxAuthUrl": "force://PlatformCLI::5Aep861MkcausaJMymUu1Aa6cTODUaPV7YGUkeyskG9l1UZlYdq8AcPqcjb9P_XKjgze6rhpq85n7jR.BH2tvOa@desktopsa.my.salesforce.com",
+    "alias": "PROD-USERNOVO",
+    "vbtSfdxUsername": "PROD-USERNOVO"
+}

@@ -858,6 +858,15 @@
                                             "operator": "==",
                                             "type": "custom",
                                             "value": "Ouvidoria"
+                                        },
+                                        {
+                                            "field": "User.userRole",
+                                            "hasMergeField": false,
+                                            "id": "state-new-condition-0",
+                                            "logicalOperator": "||",
+                                            "operator": "==",
+                                            "type": "custom",
+                                            "value": "BackOffice CSC"
                                         }
                                     ],
                                     "id": "state-condition-object",
@@ -1279,7 +1288,7 @@
                                 "data-conditions": {
                                     "group": [
                                         {
-                                            "field": "Case.Contrato__r",
+                                            "field": "Case.Contrato__r.Status",
                                             "hasMergeField": false,
                                             "id": "state-new-condition-69",
                                             "operator": "==",
@@ -2709,6 +2718,15 @@
                                                     "operator": "==",
                                                     "type": "custom",
                                                     "value": "Qualidade"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-168",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "BackOffice CSC"
                                                 }
                                             ],
                                             "id": "state-new-group-326",
@@ -3194,6 +3212,15 @@
                                                     "operator": "==",
                                                     "type": "custom",
                                                     "value": "Qualidade"
+                                                },
+                                                {
+                                                    "field": "User.userRole",
+                                                    "hasMergeField": false,
+                                                    "id": "state-new-condition-69",
+                                                    "logicalOperator": "||",
+                                                    "operator": "==",
+                                                    "type": "custom",
+                                                    "value": "BackOffice CSC"
                                                 }
                                             ],
                                             "id": "state-new-group-406",
@@ -3338,11 +3365,16 @@
                                         "stateImg": {
                                             "alternativeText": "Image description",
                                             "document": {
+                                                "ContentDocumentId": "069Ha0000038O1qIAE",
+                                                "FileExtension": "png",
+                                                "FileType": "PNG",
                                                 "Id": "068Ha0000033oeUIAQ",
+                                                "IsAssetEnabled": false,
+                                                "PublishStatus": "P",
+                                                "Title": "smartphone",
+                                                "VersionNumber": "1",
                                                 "attachmentType": "ContentVersion",
-                                                "label": "smartphone (Version:1)",
-                                                "title": "smartphone",
-                                                "value": "/sfc/servlet.shepherd/version/download/068Ha0000033oeUIAQ"
+                                                "title": "smartphone"
                                             },
                                             "imgsrc": "/sfc/servlet.shepherd/version/download/068Ha0000033oeUIAQ"
                                         }

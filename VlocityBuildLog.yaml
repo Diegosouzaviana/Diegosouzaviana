@@ -1,0 +1,22 @@
+Org: PROD-USERNOVO
+Version: 1.17.6
+Node: v18.18.0
+PackageVersion: '900.604'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity
+TotalTime: 9m 59s
+Count:
+  Success: {}
+  Error: {}
+Errors:
+  - 'LWC Activation Error >> VlocityCard/LXD_FlexPlanCase - OmniStudioLwcUtilityImpl.deploy: deployment failed for resource: lwc/cfLXD_FlexPlanCase/cfLXD_FlexPlanCase.js, with exception: Could not deploy. Error msg: No MODULE named markup://c:everyDadosMoveisEnglish found : [markup://c:cfLXD_FlexPlanCase],  '
+Status:
+  Success: {}
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 104
+  Error: 1
+id: !<tag:yaml.org,2002:js/undefined> ''
